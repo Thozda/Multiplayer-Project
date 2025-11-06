@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\unrealeditor\\inc\\mptesting\\uht\\sidescrollingplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\x64\\mptestingeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\mptesting\\definitions.mptesting.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\source\\mptesting\\variant_sidescrolling\\sidescrollingplayercontroller.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputaction.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmodifiers.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmodifiers.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputtriggers.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputtriggers.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputaction.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\unrealeditor\\inc\\mptesting\\uht\\sidescrollingplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

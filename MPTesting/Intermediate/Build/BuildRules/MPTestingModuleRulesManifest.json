@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"P:\\Coding\\Unreal Projects\\Multiplayer-Project\\Source\\MPTesting\\MPTesting.Build.cs",
+		"P:\\Coding\\Unreal Projects\\Multiplayer-Project\\Source\\MPTesting.Target.cs",
+		"P:\\Coding\\Unreal Projects\\Multiplayer-Project\\Source\\MPTestingEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

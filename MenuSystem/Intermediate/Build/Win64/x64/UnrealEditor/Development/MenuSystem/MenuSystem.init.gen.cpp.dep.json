@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealeditor\\inc\\menusystem\\uht\\menusystem.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\menusystemeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\menusystem\\definitions.menusystem.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

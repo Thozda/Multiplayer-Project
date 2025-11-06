@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealeditor\\inc\\menusystem\\uht\\menusystemcharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\menusystemeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\menusystem\\definitions.menusystem.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\source\\menusystem\\menusystemcharacter.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealeditor\\inc\\menusystem\\uht\\menusystemcharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "MPTesting",
+			"Path": "..\\Source\\MPTesting.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "MPTestingEditor",
+			"Path": "..\\Source\\MPTestingEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

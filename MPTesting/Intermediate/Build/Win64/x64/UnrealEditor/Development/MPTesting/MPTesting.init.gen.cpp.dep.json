@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\unrealeditor\\inc\\mptesting\\uht\\mptesting.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\x64\\mptestingeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\mptesting\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\mptesting\\definitions.mptesting.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
