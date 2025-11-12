@@ -146,6 +146,8 @@
 /engine/enginematerials/baseflattennormalmap
 /engine/enginematerials/baseflattennormalmap_vt
 /engine/enginematerials/black_1x1_exr_texture_vt
+/engine/enginematerials/blendfunc_defbase
+/engine/enginematerials/blendfunc_defblend
 /engine/enginematerials/defaultbloomkernel
 /engine/enginematerials/defaultbokeh
 /engine/enginematerials/defaultcalibrationcolor
@@ -264,6 +266,7 @@
 /engine/functions/engine_materialfunctions02/worldpositionoffset/cameraoffset
 /engine/functions/engine_materialfunctions02/worldpositionoffset/localposition
 /engine/functions/engine_materialfunctions02/worldpositionoffset/objectscale
+/engine/functions/engine_materialfunctions03/blends/blend_overlay
 /engine/functions/engine_materialfunctions03/math/remapvaluerange
 /engine/functions/engine_materialfunctions03/math/withinrangefloat2
 /engine/maps/entry
@@ -271,6 +274,10 @@
 /engine/maptemplates/sm_template_map_floor
 /engine/mobileresources/hud/virtualjoystick_background
 /engine/mobileresources/hud/virtualjoystick_thumb
+/engine/openworldtemplate/landscapematerial/m_procgrid
+/engine/openworldtemplate/landscapematerial/mf_procgrid
+/engine/openworldtemplate/landscapematerial/mi_procgrid
+/engine/openworldtemplate/landscapematerial/t_gridchecker_a
 /engine/vreditor/laserpointer/vr_laserpower_01
 /engine/vreditor/snapgrid/snapgridmaterial
 /engine/vreditor/snapgrid/snapgridplanemesh
@@ -357,6 +364,7 @@
 /game/levelprototyping/meshes/sm_quartercylinder
 /game/levelprototyping/meshes/sm_ramp
 /game/levelprototyping/textures/t_gridchecker_a
+/game/maps/lobby
 /game/thirdperson/blueprints/bp_thirdpersoncharacter
 /game/thirdperson/blueprints/bp_thirdpersongamemode
 /game/thirdperson/blueprints/bp_thirdpersonplayercontroller

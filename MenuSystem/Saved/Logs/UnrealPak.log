@@ -1,8 +1,8 @@
-﻿Log file open, 11/09/25 11:28:09
+﻿Log file open, 11/10/25 16:54:09
 LogTrace: Initializing trace...
 LogTrace: Finished trace initialization.
 LogInit: Session CrashGUID >====================================================
-         Session CrashGUID >   UECC-Windows-90F2C6444B981B4200D59BAF36E1458B
+         Session CrashGUID >   UECC-Windows-0CAC554A467E35F1A3A982B29EB6EF6B
          Session CrashGUID >====================================================
 LogConfig: No local boot hotfix file found at: [P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Saved/PersistentDownloadDir/HotfixForNextBoot.txt]
 LogPluginManager: Mounting Engine plugin PlatformCrypto
@@ -69,155 +69,154 @@ LogConfig: CVar [[p.chaos.AllowCreatePhysxBodies:1]] deferred - dummy variable c
 LogConfig: CVar [[fx.SkipVectorVMBackendOptimizations:1]] deferred - dummy variable created
 LogConfig: CVar [[ds.CADTranslator.Meshing.ActivateThinZoneMeshing:0]] deferred - dummy variable created
 LogConfig: CVar [[ds.CADTranslator.Stitching.RemoveThinFaces:0]] deferred - dummy variable created
-LogConfig: Applying CVar settings from Section [Startup_Windows] File [../../../Engine/Config/ConsoleVariables.ini]
-[2025.11.09-11.28.09:072][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [Engine]
-[2025.11.09-11.28.09:072][  0]LogInit: Computer: THEBATLESTATION
-[2025.11.09-11.28.09:072][  0]LogInit: User: jacob
-[2025.11.09-11.28.09:072][  0]LogInit: CPU Page size=4096, Cores=6
-[2025.11.09-11.28.09:072][  0]LogInit: High frequency timer resolution =10.000000 MHz
-[2025.11.09-11.28.09:072][  0]LogMemory: Process is running as part of a Windows Job with separate resource limits
-[2025.11.09-11.28.09:072][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx) Virtual=45.9GB
-[2025.11.09-11.28.09:072][  0]LogMemory: Platform Memory Stats for WindowsEditor
-[2025.11.09-11.28.09:072][  0]LogMemory: Process Physical Memory: 65.19 MB used, 65.19 MB peak
-[2025.11.09-11.28.09:072][  0]LogMemory: Process Virtual Memory: 119.69 MB used, 119.69 MB peak
-[2025.11.09-11.28.09:072][  0]LogMemory: Physical Memory: 25438.82 MB used,  7255.35 MB free, 32694.17 MB total
-[2025.11.09-11.28.09:072][  0]LogMemory: Virtual Memory: 40617.66 MB used,  6412.51 MB free, 47030.17 MB total
-[2025.11.09-11.28.09:079][  0]LogAssetRegistry: FAssetRegistry took 0.0001 seconds to start up
-[2025.11.09-11.28.09:080][  0]LogUObjectArray: 462 objects as part of root set at end of initial load.
-[2025.11.09-11.28.09:080][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2025.11.09-11.28.09:080][  0]LogInit: Using OS detected language ().
-[2025.11.09-11.28.09:080][  0]LogInit: Using OS detected locale ().
-[2025.11.09-11.28.09:081][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the language.
-[2025.11.09-11.28.09:081][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the locale.
-[2025.11.09-11.28.09:081][  0]LogInit: Using OS detected language ().
-[2025.11.09-11.28.09:081][  0]LogInit: Using OS detected locale ().
-[2025.11.09-11.28.09:081][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the language.
-[2025.11.09-11.28.09:081][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the locale.
-[2025.11.09-11.28.09:081][  0]LogPakFile: Display: ProjectDir: P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/
-[2025.11.09-11.28.09:088][  0]LogIoStore: Display: ==================== IoStore Utils ====================
-[2025.11.09-11.28.09:102][  0]LogIoStore: Display: Parsing crypto keys from a crypto key cache file 'P:\Coding\Unreal Projects\Multiplayer-Project\MenuSystem\Saved\Cooked\Windows\MenuSystem\Metadata\Crypto.json'
-[2025.11.09-11.28.09:264][  0]LogIoStore: Display: Container signing - DISABLED
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Directory index - ENABLED
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using compression format 'Oodle'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using memory mapping alignment '16384'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using compression block size '65536'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using compression block alignment '2048'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using compression min bytes saved '1024'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using compression min percent saved '5'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using max partition size '0'
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Not using DDC for compression
-[2025.11.09-11.28.09:265][  0]LogIoStore: Display: Using command list file: 'C:\Users\jacob\AppData\Roaming\Unreal Engine\AutomationTool\Logs\S+UE5+UE_5.6\IoStoreCommands.txt'
-[2025.11.09-11.28.09:268][  0]LogIoStore: Display: Selected Oodle level 4 (Normal) from command line for shaders
-[2025.11.09-11.28.09:272][  0]LogIoStore: Display: Fetched 522 oplog items from Manifest in 0.00 seconds
-[2025.11.09-11.28.09:292][  0]LogIoStore: Display: Parsed 522 oplog items 0.02 seconds, 648 chunks
-[2025.11.09-11.28.09:304][  0]LogIoStore: Display: Using input asset registry: P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Saved/Cooked/Windows/MenuSystem/Metadata/DevelopmentAssetRegistry.bin
-[2025.11.09-11.28.09:336][  0]LogIoStore: Display: Loaded 133 chunk hashes from AssetRegistry in 0.04 seconds, 133 hashes updated in 0.00 seconds
-[2025.11.09-11.28.09:339][  0]LogIoStore: Display: Searching for cooked assets in folder 'P:\Coding\Unreal Projects\Multiplayer-Project\MenuSystem\Saved\Cooked\Windows'
-[2025.11.09-11.28.09:353][  0]LogIoStore: Display: Found '1171' files
-[2025.11.09-11.28.09:377][  0]LogIoStore: Display: Creating container targets...
-[2025.11.09-11.28.09:396][  0]OodleDataCompression: Display: Oodle v2.9.13 format for pak/iostore with method=Kraken, level=4=Normal
-[2025.11.09-11.28.09:454][  0]LogIoStore: Display: Parsing packages...
-[2025.11.09-11.28.09:454][  0]LogIoStore: Display: Reading package assets...
-[2025.11.09-11.28.09:462][  0]LogIoStore: Display: Packages read 515 files in 0.01 seconds, 795,030 total bytes, 108,960,460 bytes per second
-[2025.11.09-11.28.09:470][  0]LogIoStore: Display: Processing shader libraries, compressing with Oodle Mermaid, level 4 (Normal)
-[2025.11.09-11.28.09:491][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 379 groups (139 of them didn't need new indices), average uncompressed size 150965 bytes, min 249 bytes, max 1048075 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
-[2025.11.09-11.28.09:688][  0]LogIoStore: Display: Global-PCD3D_SM5(PCD3D_SM5): Recompressed 4106 shaders as 379 groups. Library size changed from 12766 KB (4.38 : 1 ratio) to 5612 KB (9.96 : 1 ratio), 43.96% of previous.
-[2025.11.09-11.28.09:746][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 636 groups (187 of them didn't need new indices), average uncompressed size 298237 bytes, min 1249 bytes, max 1045520 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
-[2025.11.09-11.28.11:202][  0]LogIoStore: Display: Global-PCD3D_SM6(PCD3D_SM6): Recompressed 10691 shaders as 636 groups. Library size changed from 140593 KB (1.32 : 1 ratio) to 82364 KB (2.25 : 1 ratio), 58.58% of previous.
-[2025.11.09-11.28.11:215][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 168 groups (76 of them didn't need new indices), average uncompressed size 75322 bytes, min 490 bytes, max 966610 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
-[2025.11.09-11.28.11:251][  0]LogIoStore: Display: MenuSystem-PCD3D_SM5(PCD3D_SM5): Recompressed 1142 shaders as 168 groups. Library size changed from 3376 KB (3.66 : 1 ratio) to 1439 KB (8.59 : 1 ratio), 42.62% of previous.
-[2025.11.09-11.28.11:262][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 195 groups (56 of them didn't need new indices), average uncompressed size 137213 bytes, min 2342 bytes, max 967464 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
-[2025.11.09-11.28.11:451][  0]LogIoStore: Display: MenuSystem-PCD3D_SM6(PCD3D_SM6): Recompressed 2150 shaders as 195 groups. Library size changed from 20008 KB (1.31 : 1 ratio) to 13061 KB (2.00 : 1 ratio), 65.28% of previous.
-[2025.11.09-11.28.11:454][  0]LogIoStore: Display: Shaders processed in 1.98 seconds
-[2025.11.09-11.28.11:455][  0]LogIoStore: Display: Initialized WriteRequestManager with MaxConcurrentSourceReads=6 (12 cores), MaxSourceBufferMemory=3072MiB
-[2025.11.09-11.28.11:458][  0]LogIoStore: Display: Processing redirects...
-[2025.11.09-11.28.11:458][  0]LogIoStore: Display: Creating disk layout...
-[2025.11.09-11.28.11:458][  0]LogIoStore: Display: Ordered 515 packages using fallback bundle order
-[2025.11.09-11.28.11:478][  0]LogIoStore: Display: Serializing container(s)...
-[2025.11.09-11.28.12:297][  0]LogIoStore: Display: Writing and compressing took 0.75 seconds, writes to disk took 0.34 seconds for 244,088,688 bytes @ 717,824,089 bytes per second.
-[2025.11.09-11.28.12:297][  0]LogIoStore: Display: global: Found perfect hashmap for 1 items.
-[2025.11.09-11.28.12:297][  0]LogIoStore: Display: MenuSystem-Windows: Found perfect hashmap for 2030 items.
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Finalize took 0.1 seconds for 2 writers to write 205,483 bytes, 1,824,515 bytes per second
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Writing tocs... [Physical: 728 MiB, Virtual: 3429 MiB]
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 133 / 2,031 hashes were loaded from the hash database, by type:
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     BulkData                   133
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 648 / 2,031 chunks attempted to compress, by type:
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     ExportBundleData           515 / 515
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     BulkData                   133 / 133
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     ScriptObjects              0 / 1
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     ContainerHeader            0 / 1
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     ShaderCodeLibrary          0 / 4
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     ShaderCode                 0 / 1,377
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Source bytes read:
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     Zen:                                  0
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     Loose File:                 370,208,040
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:         ExportBundleData        340,336,596 bytes over 1,030 reads
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:         BulkData                 29,871,444 bytes over 133 reads
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:     Memory:                     211,318,158
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:         ShaderCodeLibrary         1,444,760 bytes over 8 reads
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display:         ShaderCode              209,873,398 bytes over 2,754 reads
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Calculating stats...
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container Summary
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ==================
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container                                               Flags      Chunk(s) #       TOC (KiB)       Raw Size (MiB)           Size (MiB)
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: global                                              -/-/-/-/-               1            0.66                 2.44                 2.44 -
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: MenuSystem-Windows                                  C/-/-/I/-            2030          200.01               293.49               230.34 (21.52% Oodle)
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Total                                                                    2031          200.67               295.94               232.78
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ** Flags: (C)ompressed / (E)ncrypted / (S)igned) / (I)ndexed) / (O)nDemand **
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Compression block padding:     1.47 MiB
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container Directory Index
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ==========================
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container                                          Size (KiB)
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: global                                                   0.00
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: MenuSystem-Windows                                      31.44
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container Patch Report
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ========================
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container                                             Total #       Modified #          Added #   Modified (MiB)      Added (MiB)
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: global                                                      1                0                0             0.00             0.00
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: MenuSystem-Windows                                       2030                0             2030             0.00           228.87
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: PackageStore
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: =============
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Container                                          Size (KiB)      Packages #     Localized #
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: MenuSystem-Windows                                         17             515               0
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Total                                                      17             515               0
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:       515 Packages
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:      0.16 GB UExp
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:      0.00 GB UAsset
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:      0.03 GB UBulk
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:     85.91 MB for 1015 Global shaders
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:      1.52 MB for 165 Shared shaders
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:      0.00 MB for 0 Unique shaders
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: Input:     12.64 MB for 197 Inline shaders
-[2025.11.09-11.28.12:410][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:411][  0]LogIoStore: Display: Output:     5052 Name map entries
-[2025.11.09-11.28.12:411][  0]LogIoStore: Display: Output:      561 Imported package entries
-[2025.11.09-11.28.12:412][  0]LogIoStore: Display: Output:      296 Packages without imports
-[2025.11.09-11.28.12:412][  0]LogIoStore: Display: Output:        0 Public runtime script objects
-[2025.11.09-11.28.12:412][  0]LogIoStore: Display: Output:     0.00 GB HeaderData
-[2025.11.09-11.28.12:412][  0]LogIoStore: Display: Output:     2.44 MB InitialLoadData
-[2025.11.09-11.28.12:412][  0]LogIoStore: Display: 
-[2025.11.09-11.28.12:417][  0]LogPakFile: Display: UnrealPak executed in 3.335761 seconds
-[2025.11.09-11.28.12:420][  0]LogCore: Engine exit requested (reason: UnrealPak Exiting)
-[2025.11.09-11.28.12:420][  0]LogExit: Preparing to exit.
-[2025.11.09-11.28.12:420][  0]LogExit: Object subsystem successfully closed.
-[2025.11.09-11.28.12:421][  0]LogPakFile: Destroying PakPlatformFile
-[2025.11.09-11.28.12:421][  0]LogExit: Exiting.
-[2025.11.09-11.28.12:482][  0]Log file closed, 11/09/25 11:28:12
+[2025.11.10-16.54.09:209][  0]LogConfig: Applying CVar settings from Section [Startup_Windows] File [../../../Engine/Config/ConsoleVariables.ini]
+[2025.11.10-16.54.09:209][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [Engine]
+[2025.11.10-16.54.09:209][  0]LogInit: Computer: THEBATLESTATION
+[2025.11.10-16.54.09:209][  0]LogInit: User: jacob
+[2025.11.10-16.54.09:209][  0]LogInit: CPU Page size=4096, Cores=6
+[2025.11.10-16.54.09:209][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2025.11.10-16.54.09:209][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx) Virtual=50.8GB
+[2025.11.10-16.54.09:209][  0]LogMemory: Platform Memory Stats for WindowsEditor
+[2025.11.10-16.54.09:209][  0]LogMemory: Process Physical Memory: 65.07 MB used, 65.07 MB peak
+[2025.11.10-16.54.09:209][  0]LogMemory: Process Virtual Memory: 119.30 MB used, 119.30 MB peak
+[2025.11.10-16.54.09:209][  0]LogMemory: Physical Memory: 26307.98 MB used,  6386.19 MB free, 32694.17 MB total
+[2025.11.10-16.54.09:209][  0]LogMemory: Virtual Memory: 44365.97 MB used,  7647.15 MB free, 52013.12 MB total
+[2025.11.10-16.54.09:216][  0]LogAssetRegistry: FAssetRegistry took 0.0001 seconds to start up
+[2025.11.10-16.54.09:217][  0]LogUObjectArray: 462 objects as part of root set at end of initial load.
+[2025.11.10-16.54.09:217][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2025.11.10-16.54.09:217][  0]LogInit: Using OS detected language ().
+[2025.11.10-16.54.09:217][  0]LogInit: Using OS detected locale ().
+[2025.11.10-16.54.09:218][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the language.
+[2025.11.10-16.54.09:218][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the locale.
+[2025.11.10-16.54.09:218][  0]LogInit: Using OS detected language ().
+[2025.11.10-16.54.09:218][  0]LogInit: Using OS detected locale ().
+[2025.11.10-16.54.09:218][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the language.
+[2025.11.10-16.54.09:218][  0]LogTextLocalizationManager: No localization for '' exists, so 'en' will be used for the locale.
+[2025.11.10-16.54.09:218][  0]LogPakFile: Display: ProjectDir: P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/
+[2025.11.10-16.54.09:220][  0]LogIoStore: Display: ==================== IoStore Utils ====================
+[2025.11.10-16.54.09:223][  0]LogIoStore: Display: Parsing crypto keys from a crypto key cache file 'P:\Coding\Unreal Projects\Multiplayer-Project\MenuSystem\Saved\Cooked\Windows\MenuSystem\Metadata\Crypto.json'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Container signing - DISABLED
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Directory index - ENABLED
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using compression format 'Oodle'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using memory mapping alignment '16384'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using compression block size '65536'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using compression block alignment '2048'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using compression min bytes saved '1024'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using compression min percent saved '5'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using max partition size '0'
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Not using DDC for compression
+[2025.11.10-16.54.09:232][  0]LogIoStore: Display: Using command list file: 'C:\Users\jacob\AppData\Roaming\Unreal Engine\AutomationTool\Logs\S+UE5+UE_5.6\IoStoreCommands.txt'
+[2025.11.10-16.54.09:235][  0]LogIoStore: Display: Selected Oodle level 4 (Normal) from command line for shaders
+[2025.11.10-16.54.09:237][  0]LogIoStore: Display: Fetched 530 oplog items from Manifest in 0.00 seconds
+[2025.11.10-16.54.09:244][  0]LogIoStore: Display: Parsed 530 oplog items 0.01 seconds, 657 chunks
+[2025.11.10-16.54.09:250][  0]LogIoStore: Display: Using input asset registry: P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Saved/Cooked/Windows/MenuSystem/Metadata/DevelopmentAssetRegistry.bin
+[2025.11.10-16.54.09:269][  0]LogIoStore: Display: Loaded 134 chunk hashes from AssetRegistry in 0.02 seconds, 134 hashes updated in 0.00 seconds
+[2025.11.10-16.54.09:271][  0]LogIoStore: Display: Searching for cooked assets in folder 'P:\Coding\Unreal Projects\Multiplayer-Project\MenuSystem\Saved\Cooked\Windows'
+[2025.11.10-16.54.09:283][  0]LogIoStore: Display: Found '1188' files
+[2025.11.10-16.54.09:299][  0]LogIoStore: Display: Creating container targets...
+[2025.11.10-16.54.09:305][  0]OodleDataCompression: Display: Oodle v2.9.13 format for pak/iostore with method=Kraken, level=4=Normal
+[2025.11.10-16.54.09:359][  0]LogIoStore: Display: Parsing packages...
+[2025.11.10-16.54.09:359][  0]LogIoStore: Display: Reading package assets...
+[2025.11.10-16.54.09:371][  0]LogIoStore: Display: Packages read 523 files in 0.01 seconds, 809,679 total bytes, 140,559,510 bytes per second
+[2025.11.10-16.54.09:379][  0]LogIoStore: Display: Processing shader libraries, compressing with Oodle Mermaid, level 4 (Normal)
+[2025.11.10-16.54.09:393][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 379 groups (139 of them didn't need new indices), average uncompressed size 150965 bytes, min 249 bytes, max 1048075 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+[2025.11.10-16.54.09:552][  0]LogIoStore: Display: Global-PCD3D_SM5(PCD3D_SM5): Recompressed 4106 shaders as 379 groups. Library size changed from 12766 KB (4.38 : 1 ratio) to 5612 KB (9.96 : 1 ratio), 43.96% of previous.
+[2025.11.10-16.54.09:604][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 636 groups (187 of them didn't need new indices), average uncompressed size 298237 bytes, min 1249 bytes, max 1045520 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+[2025.11.10-16.54.11:080][  0]LogIoStore: Display: Global-PCD3D_SM6(PCD3D_SM6): Recompressed 10691 shaders as 636 groups. Library size changed from 140593 KB (1.32 : 1 ratio) to 82364 KB (2.25 : 1 ratio), 58.58% of previous.
+[2025.11.10-16.54.11:089][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 170 groups (76 of them didn't need new indices), average uncompressed size 74653 bytes, min 490 bytes, max 966610 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+[2025.11.10-16.54.11:124][  0]LogIoStore: Display: MenuSystem-PCD3D_SM5(PCD3D_SM5): Recompressed 1147 shaders as 170 groups. Library size changed from 3389 KB (3.66 : 1 ratio) to 1447 KB (8.56 : 1 ratio), 42.71% of previous.
+[2025.11.10-16.54.11:135][  0]LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 197 groups (56 of them didn't need new indices), average uncompressed size 137498 bytes, min 2342 bytes, max 967464 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+[2025.11.10-16.54.11:310][  0]LogIoStore: Display: MenuSystem-PCD3D_SM6(PCD3D_SM6): Recompressed 2172 shaders as 197 groups. Library size changed from 20265 KB (1.31 : 1 ratio) to 13255 KB (2.00 : 1 ratio), 65.41% of previous.
+[2025.11.10-16.54.11:313][  0]LogIoStore: Display: Shaders processed in 1.93 seconds
+[2025.11.10-16.54.11:315][  0]LogIoStore: Display: Initialized WriteRequestManager with MaxConcurrentSourceReads=6 (12 cores), MaxSourceBufferMemory=3072MiB
+[2025.11.10-16.54.11:318][  0]LogIoStore: Display: Processing redirects...
+[2025.11.10-16.54.11:318][  0]LogIoStore: Display: Creating disk layout...
+[2025.11.10-16.54.11:318][  0]LogIoStore: Display: Ordered 523 packages using fallback bundle order
+[2025.11.10-16.54.11:347][  0]LogIoStore: Display: Serializing container(s)...
+[2025.11.10-16.54.12:150][  0]LogIoStore: Display: Writing and compressing took 0.74 seconds, writes to disk took 0.32 seconds for 244,322,880 bytes @ 774,159,499 bytes per second.
+[2025.11.10-16.54.12:150][  0]LogIoStore: Display: global: Found perfect hashmap for 1 items.
+[2025.11.10-16.54.12:153][  0]LogIoStore: Display: MenuSystem-Windows: Found perfect hashmap for 2043 items.
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: Finalize took 0.3 seconds for 2 writers to write 206,684 bytes, 787,515 bytes per second
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: Writing tocs... [Physical: 712 MiB, Virtual: 3408 MiB]
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: 134 / 2,044 hashes were loaded from the hash database, by type:
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     BulkData                   134
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: 657 / 2,044 chunks attempted to compress, by type:
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     ExportBundleData           523 / 523
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     BulkData                   134 / 134
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     ScriptObjects              0 / 1
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     ContainerHeader            0 / 1
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     ShaderCodeLibrary          0 / 4
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     ShaderCode                 0 / 1,381
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: Source bytes read:
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     Zen:                                  0
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     Loose File:                 370,443,020
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:         ExportBundleData        340,399,544 bytes over 1,046 reads
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:         BulkData                 30,043,476 bytes over 134 reads
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:     Memory:                     211,733,666
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:         ShaderCodeLibrary         1,447,192 bytes over 8 reads
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display:         ShaderCode              210,286,474 bytes over 2,762 reads
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: Calculating stats...
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: Container Summary
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: ==================
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: Container                                               Flags      Chunk(s) #       TOC (KiB)       Raw Size (MiB)           Size (MiB)
+[2025.11.10-16.54.12:413][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: global                                              -/-/-/-/-               1            0.66                 2.44                 2.44 -
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: MenuSystem-Windows                                  C/-/-/I/-            2043          201.18               293.91               230.56 (21.55% Oodle)
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Total                                                                    2044          201.84               296.35               233.00
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ** Flags: (C)ompressed / (E)ncrypted / (S)igned) / (I)ndexed) / (O)nDemand **
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Compression block padding:     1.48 MiB
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Container Directory Index
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ==========================
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Container                                          Size (KiB)
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: global                                                   0.00
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: MenuSystem-Windows                                      31.80
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Container Patch Report
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ========================
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Container                                             Total #       Modified #          Added #   Modified (MiB)      Added (MiB)
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: global                                                      1                0                0             0.00             0.00
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: MenuSystem-Windows                                       2043                0             2043             0.00           229.08
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: PackageStore
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: =============
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Container                                          Size (KiB)      Packages #     Localized #
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: MenuSystem-Windows                                         17             523               0
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: ----------------------------------------------------------------------------------------------------------------------------------------------
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Total                                                      17             523               0
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:       523 Packages
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:      0.16 GB UExp
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:      0.00 GB UAsset
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:      0.03 GB UBulk
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:     85.91 MB for 1015 Global shaders
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:      1.52 MB for 165 Shared shaders
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:      0.00 MB for 0 Unique shaders
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Input:     12.84 MB for 201 Inline shaders
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Output:     5122 Name map entries
+[2025.11.10-16.54.12:414][  0]LogIoStore: Display: Output:      576 Imported package entries
+[2025.11.10-16.54.12:415][  0]LogIoStore: Display: Output:      301 Packages without imports
+[2025.11.10-16.54.12:415][  0]LogIoStore: Display: Output:        0 Public runtime script objects
+[2025.11.10-16.54.12:415][  0]LogIoStore: Display: Output:     0.00 GB HeaderData
+[2025.11.10-16.54.12:415][  0]LogIoStore: Display: Output:     2.44 MB InitialLoadData
+[2025.11.10-16.54.12:415][  0]LogIoStore: Display: 
+[2025.11.10-16.54.12:419][  0]LogPakFile: Display: UnrealPak executed in 3.200733 seconds
+[2025.11.10-16.54.12:496][  0]LogCore: Engine exit requested (reason: UnrealPak Exiting)
+[2025.11.10-16.54.12:496][  0]LogExit: Preparing to exit.
+[2025.11.10-16.54.12:497][  0]LogExit: Object subsystem successfully closed.
+[2025.11.10-16.54.12:498][  0]LogPakFile: Destroying PakPlatformFile
+[2025.11.10-16.54.12:499][  0]LogExit: Exiting.
+[2025.11.10-16.54.12:528][  0]Log file closed, 11/10/25 16:54:12

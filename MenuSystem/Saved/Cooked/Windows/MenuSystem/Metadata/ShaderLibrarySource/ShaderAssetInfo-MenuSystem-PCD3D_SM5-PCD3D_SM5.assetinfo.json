@@ -44,6 +44,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "2649DB0A12B3E9938D78DB86E52280C0E0E798A5",
+			"Assets": [
+				"/Engine/OpenWorldTemplate/LandscapeMaterial/M_ProcGrid"
+			]
+		},
+		{
 			"ShaderMapHash": "999DEF0BB35022312342C4731F2D8E040340063F",
 			"Assets": [
 				"/Engine/VREditor/TransformGizmo/TransformGizmoMaterial"
@@ -417,6 +423,12 @@
 			"ShaderMapHash": "0D06D6A1ADEB38E9B8EE75D14841CEA5B4DEDE4A",
 			"Assets": [
 				"/InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Opaque_DS"
+			]
+		},
+		{
+			"ShaderMapHash": "6ADA0DA80C805FA623049C28460CEAF6A85069BF",
+			"Assets": [
+				"/Engine/OpenWorldTemplate/LandscapeMaterial/MI_ProcGrid"
 			]
 		},
 		{

@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealgame\\inc\\menusystem\\uht\\sidescrollingaicontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\menusystem\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\unrealgame\\development\\menusystem\\definitions.menusystem.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\source\\menusystem\\variant_sidescrolling\\ai\\sidescrollingaicontroller.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\aicontroller.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentselector.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\navagentselector.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aitypes.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytaskownerinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\gameplaytasks\\public\\gameplaytasktypes.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytasks\\uht\\gameplaytaskownerinterface.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytask.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytasks\\uht\\gameplaytask.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptionlistenerinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aiperceptionlistenerinterface.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\public\\visuallogger\\visualloggerdebugsnapshotinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\visualloggerdebugsnapshotinterface.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aicontroller.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealgame\\inc\\menusystem\\uht\\sidescrollingaicontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-MultiplayerSessions.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Intermediate/Build/Win64/x64/MenuSystemEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/MultiplayerSessions.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/MultiplayerSessionsSubsystem.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/PerModuleInline.gen.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/MultiplayerSessions.init.gen.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/MultiplayerSessionsSubsystem.gen.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/Default.rc2.res"
+/OUT:"P:/Coding/Unreal Projects/Multiplayer-Project/MenuSystem/Plugins/MultiplayerSessions/Intermediate/Build/Win64/x64/UnrealEditor/Development/MultiplayerSessions/UnrealEditor-MultiplayerSessions.lib"

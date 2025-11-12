@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealgame\\inc\\menusystem\\uht\\envquerycontext_player.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\menusystem\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\unrealgame\\development\\menusystem\\definitions.menusystem.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\source\\menusystem\\variant_combat\\ai\\envquerycontext_player.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\aimodule\\classes\\environmentquery\\envquerycontext.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\envquerycontext.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealgame\\inc\\menusystem\\uht\\envquerycontext_player.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

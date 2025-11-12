@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.MenuSystem.1.cpp.obj": [
+			"MenuSystem.cpp.obj",
 			"AnimNotify_CheckChargedAttack.gen.cpp.obj",
 			"AnimNotify_CheckCombo.gen.cpp.obj",
 			"AnimNotify_DoAttackTrace.gen.cpp.obj",
@@ -21,9 +22,7 @@
 			"CombatLavaFloor.gen.cpp.obj",
 			"CombatLifeBar.gen.cpp.obj",
 			"CombatPlayerController.gen.cpp.obj",
-			"CombatStateTreeUtility.gen.cpp.obj"
-		],
-		"Module.MenuSystem.2.cpp.obj": [
+			"CombatStateTreeUtility.gen.cpp.obj",
 			"EnvQueryContext_Player.gen.cpp.obj",
 			"MenuSystem.init.gen.cpp.obj",
 			"MenuSystemCharacter.gen.cpp.obj",
@@ -44,8 +43,9 @@
 			"SideScrollingPlayerController.gen.cpp.obj",
 			"SideScrollingSoftPlatform.gen.cpp.obj",
 			"SideScrollingStateTreeUtility.gen.cpp.obj",
-			"SideScrollingUI.gen.cpp.obj",
-			"MenuSystem.cpp.obj",
+			"SideScrollingUI.gen.cpp.obj"
+		],
+		"Module.MenuSystem.2.cpp.obj": [
 			"MenuSystemGameMode.cpp.obj",
 			"MenuSystemPlayerController.cpp.obj",
 			"CombatAIController.cpp.obj",
@@ -70,9 +70,6 @@
 			"CombatLifeBar.cpp.obj",
 			"AnimNotify_EndDash.cpp.obj",
 			"PlatformingCharacter.cpp.obj",
-			"MenuSystemCharacter.cpp.obj"
-		],
-		"Module.MenuSystem.3.cpp.obj": [
 			"PlatformingGameMode.cpp.obj",
 			"PlatformingPlayerController.cpp.obj",
 			"SideScrollingAIController.cpp.obj",
@@ -87,7 +84,8 @@
 			"SideScrollingCharacter.cpp.obj",
 			"SideScrollingGameMode.cpp.obj",
 			"SideScrollingPlayerController.cpp.obj",
-			"SideScrollingUI.cpp.obj"
+			"SideScrollingUI.cpp.obj",
+			"MenuSystemCharacter.cpp.obj"
 		]
 	}
 }

@@ -146,6 +146,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "8A1E623E35E08CB972756F8AFFF1319675EC6D1F",
+			"Assets": [
+				"/Engine/OpenWorldTemplate/LandscapeMaterial/M_ProcGrid"
+			]
+		},
+		{
 			"ShaderMapHash": "F0F9D33E64EDA10AF653D8550BE6F72F3D9867D5",
 			"Assets": [
 				"/InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Opaque_DS"
@@ -180,6 +186,12 @@
 			"ShaderMapHash": "30000A455ABFCDC00C20FF127B2136B3CF53A8E3",
 			"Assets": [
 				"/DeformerGraph/Deformers/DG_LinearBlendSkin_Morph_Cloth_RecomputeNormals"
+			]
+		},
+		{
+			"ShaderMapHash": "1B665D4D7E32FCD38E868608853F395EA0EE85DD",
+			"Assets": [
+				"/Engine/OpenWorldTemplate/LandscapeMaterial/MI_ProcGrid"
 			]
 		},
 		{

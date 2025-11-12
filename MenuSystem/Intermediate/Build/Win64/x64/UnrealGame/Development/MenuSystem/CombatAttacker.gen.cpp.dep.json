@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealgame\\inc\\menusystem\\uht\\combatattacker.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\menusystem\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\x64\\unrealgame\\development\\menusystem\\definitions.menusystem.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\source\\menusystem\\variant_combat\\interfaces\\combatattacker.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\intermediate\\build\\win64\\unrealgame\\inc\\menusystem\\uht\\combatattacker.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

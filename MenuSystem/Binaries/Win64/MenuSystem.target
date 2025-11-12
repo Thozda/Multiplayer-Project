@@ -3707,6 +3707,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Runtime/Steam/SteamSockets/SteamSockets.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Runtime/Synthesis/Synthesis.uplugin",
 			"Type": "UFS"
 		},
@@ -3921,6 +3925,7 @@
 		"SpeedTreeImporter",
 		"StateTree",
 		"SteamShared",
+		"SteamSockets",
 		"SubversionSourceControl",
 		"Synthesis",
 		"Takes",

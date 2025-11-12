@@ -25,6 +25,8 @@
 		],
 		"Module.MenuSystem.2.cpp.obj": [
 			"EnvQueryContext_Player.gen.cpp.obj",
+			"MenuSystem.init.gen.cpp.obj",
+			"MenuSystemCharacter.gen.cpp.obj",
 			"MenuSystemGameMode.gen.cpp.obj",
 			"MenuSystemPlayerController.gen.cpp.obj",
 			"PlatformingCharacter.gen.cpp.obj",
@@ -69,13 +71,11 @@
 			"CombatLifeBar.cpp.obj",
 			"AnimNotify_EndDash.cpp.obj",
 			"PlatformingCharacter.cpp.obj",
-			"PlatformingGameMode.cpp.obj",
-			"PlatformingPlayerController.cpp.obj",
-			"MenuSystem.init.gen.cpp.obj",
-			"MenuSystemCharacter.gen.cpp.obj",
 			"MenuSystemCharacter.cpp.obj"
 		],
 		"Module.MenuSystem.3.cpp.obj": [
+			"PlatformingGameMode.cpp.obj",
+			"PlatformingPlayerController.cpp.obj",
 			"SideScrollingAIController.cpp.obj",
 			"SideScrollingNPC.cpp.obj",
 			"SideScrollingStateTreeUtility.cpp.obj",
