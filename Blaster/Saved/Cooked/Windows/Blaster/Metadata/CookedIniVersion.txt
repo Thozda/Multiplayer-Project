@@ -972,11 +972,13 @@ ConfigSystem.<Editor>.Engine:Kismet:bChangeDefaultValueWithoutReinstancing:0=tru
 ConfigSystem.<Editor>.Engine:Kismet:bDeferDependencyLoads:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bDisplaysLayout:0=false
 ConfigSystem.<Editor>.Engine:Kismet:bEnableInheritableComponents:0=true
+ConfigSystem.<Editor>.Engine:Kismet:bExecutionAfterReturn:0=false
 ConfigSystem.<Editor>.Engine:Kismet:bIgnoreCompileOnLoadErrorsOnBuildMachine:0=false
 ConfigSystem.<Editor>.Engine:Kismet:bOptimizeAdjacentStates:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bOptimizeExecutionFlowStack:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bPersistentUberGraphFrame:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bTurnOffEditorConstructionScript:0=false
+ConfigSystem.<Editor>.Engine:Kismet:bUseLegacyAnimBlueprintThreadSafetyChecks:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bUseLocalGraphVariables:0=false
 ConfigSystem.<Editor>.Engine:LogFiles:LogTimes:0=True
 ConfigSystem.<Editor>.Engine:LogFiles:MaxLogFilesOnDisk:0=10
@@ -1230,6 +1232,8 @@ ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:PackageComp
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:UsePakFile:0=True
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:WriteBackMetadataToAssetRegistry:0=Disabled
 ConfigSystem.<Editor>.Game:Internationalization:LocalizationPaths:0=%GAMEDIR%Content/Localization/Game
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:ActionMappings:0=(ActionName="Jump",bShift=False,bCtrl=False,bAlt=False,bCmd=False,Key=Gamepad_FaceButton_Bottom)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:ActionMappings:1=(ActionName="Jump",bShift=False,bCtrl=False,bAlt=False,bCmd=False,Key=SpaceBar)
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:0=(AxisKeyName="Gamepad_LeftX",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:1=(AxisKeyName="Gamepad_LeftY",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:2=(AxisKeyName="Gamepad_RightX",AxisProperties=(DeadZone=0.250000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
@@ -1282,9 +1286,20 @@ ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:48=(AxisKeyN
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:49=(AxisKeyName="ValveIndex_Right_Trackpad_X",AxisProperties=(DeadZone=0.000000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:50=(AxisKeyName="ValveIndex_Right_Trackpad_Y",AxisProperties=(DeadZone=0.000000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisConfig:51=(AxisKeyName="ValveIndex_Right_Trackpad_Force",AxisProperties=(DeadZone=0.000000,Sensitivity=1.000000,Exponent=1.000000,bInvert=False))
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:0=(AxisName="Look Up / Down Gamepad",Scale=1.000000,Key=Gamepad_RightY)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:1=(AxisName="Look Up / Down Mouse",Scale=-1.000000,Key=MouseY)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:2=(AxisName="Move Forward / Backward",Scale=1.000000,Key=Gamepad_LeftY)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:3=(AxisName="Move Forward / Backward",Scale=-1.000000,Key=S)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:4=(AxisName="Move Forward / Backward",Scale=1.000000,Key=W)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:5=(AxisName="Move Right / Left",Scale=-1.000000,Key=A)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:6=(AxisName="Move Right / Left",Scale=1.000000,Key=D)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:7=(AxisName="Move Right / Left",Scale=1.000000,Key=Gamepad_LeftX)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:8=(AxisName="Turn Right / Left Gamepad",Scale=1.000000,Key=Gamepad_RightX)
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:AxisMappings:9=(AxisName="Turn Right / Left Mouse",Scale=1.000000,Key=MouseX)
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bAltEnterTogglesFullscreen:0=True
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bAlwaysShowTouchInterface:0=False
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bCaptureMouseOnLaunch:0=True
+ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bEnableDynamicComponentInputBinding:0=True
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bEnableFOVScaling:0=True
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bEnableGestureRecognizer:0=False
 ConfigSystem.<Editor>.Input:/Script/Engine.InputSettings:bEnableLegacyInputScales:0=True
@@ -2471,6 +2486,59 @@ ConfigSystem.<Editor>.Scalability:TextureQuality@3:r.Streaming.PoolSize:0=1000
 ConfigSystem.<Editor>.Scalability:TextureQuality@3:r.VT.MaxAnisotropy:0=8
 ConfigSystem.<Editor>.Scalability:ViewDistanceQuality@3:r.SkeletalMeshLODBias:0=0
 ConfigSystem.<Editor>.Scalability:ViewDistanceQuality@3:r.ViewDistanceScale:0=1.0
+ConfigSystem.Windows.DeviceProfiles:Windows DeviceProfile:BaseProfileName:0=
+ConfigSystem.Windows.DeviceProfiles:Windows DeviceProfile:CVars:0=UI.SlateSDFText.RasterizationMode=Msdf
+ConfigSystem.Windows.DeviceProfiles:Windows DeviceProfile:CVars:1=UI.SlateSDFText.ResolutionLevel=2
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.ActorClusteringEnabled:0=False
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.AllowParallelGC:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.AssetClustreringEnabled:0=False
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.CreateGCClusters:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.FlushStreamingOnGC:0=0
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.GarbageEliminationEnabled:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.IncrementalBeginDestroyEnabled:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MaxObjectsInEditor:0=25165824
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MaxObjectsNotConsideredByGC:0=1
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.MinGCClusterSize:0=5
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.NumRetriesBeforeForcingGC:0=10
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.TimeBetweenPurgingPendingKillObjects:0=61.1
+ConfigSystem.Windows.Engine:/Script/Engine.GarbageCollectionSettings:gc.VerifyUObjectsAreNotFGCObjects:0=False
+ConfigSystem.Windows.Engine:/Script/Engine.NetworkSettings:NetworkEmulationProfiles:0=(ProfileName="Average",ToolTip="Simulates average internet conditions")
+ConfigSystem.Windows.Engine:/Script/Engine.NetworkSettings:NetworkEmulationProfiles:1=(ProfileName="Bad",ToolTip="Simulates laggy internet conditions")
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:MaxSkinBones:0=(Default=65536,PerPlatform=(("Mobile", 256)))
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.AllowStaticLighting:0=False
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.DefaultFeature.LocalExposure.HighlightContrastScale:0=0.8
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.DefaultFeature.LocalExposure.ShadowContrastScale:0=0.8
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.DynamicGlobalIlluminationMethod:0=1
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.GenerateMeshDistanceFields:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.GPUCrashDebugging:0=false
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.RayTracing:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.RayTracing.RayTracingProxies.ProjectEnabled:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.ReflectionMethod:0=1
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.Shaders.RemoveUnusedInterpolators:0=1
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.Shadow.DetectVertexShaderLayerAtRuntime:0=1
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.Shadow.Virtual.Enable:0=1
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:r.SkinCache.CompileShaders:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:VisualizeCalibrationColorMaterialPath:0=/Engine/EngineMaterials/PPM_DefaultCalibrationColor.PPM_DefaultCalibrationColor
+ConfigSystem.Windows.Engine:/Script/Engine.RendererSettings:VisualizeCalibrationGrayscaleMaterialPath:0=/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale.PPM_DefaultCalibrationGrayscale
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:FixedBootOrder:0=/Script/Engine/Default__SoundBase
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:FixedBootOrder:1=/Script/Engine/Default__MaterialInterface
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:FixedBootOrder:2=/Script/Engine/Default__DeviceProfileManager
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.AsyncLoadingThreadEnabled:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.EventDrivenLoaderEnabled:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.FlushStreamingOnExit:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.LevelStreamingActorsUpdateTimeLimit:0=5.0
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.LevelStreamingComponentsRegistrationGranularity:0=10
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.LevelStreamingComponentsUnregistrationGranularity:0=5
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.MaxPackageSummarySize:0=16384
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.MinBulkDataSizeForAsyncLoading:0=131072
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.PriorityAsyncLoadingExtraTime:0=15.0
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.PriorityLevelStreamingActorsUpdateExtraTime:0=5.0
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.TimeLimitExceededMinTime:0=0.005
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.TimeLimitExceededMultiplier:0=1.5
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.UnregisterComponentsTimeLimit:0=1.0
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.UseBackgroundLevelStreaming:0=True
+ConfigSystem.Windows.Engine:/Script/Engine.StreamingSettings:s.WarnIfTimeLimitExceeded:0=False
 ConfigSystem.Windows.Engine:AlternateTextureCompression:TextureCompressionFormat:0=TextureFormatOodle
 ConfigSystem.Windows.Engine:PCD3D_SM6:BindlessResources:0=RayTracingOnly
 ConfigSystem.Windows.Engine:PCD3D_SM6:BindlessSamplers:0=RayTracingOnly
@@ -2485,7 +2553,175 @@ ConfigSystem.Windows.Engine:StaticMeshLODSettings:LargeProp:0=(NumLODs=4,MaxNumS
 ConfigSystem.Windows.Engine:StaticMeshLODSettings:LevelArchitecture:0=(NumLODs=4,MaxNumStreamedLODs=0,bSupportLODStreaming=0,LightMapResolution=32,LODPercentTriangles=50,PixelError=12,SilhouetteImportance=4,Name=LOCTEXT("LevelArchitectureLOD","Level Architecture"))
 ConfigSystem.Windows.Engine:StaticMeshLODSettings:SmallProp:0=(NumLODs=4,MaxNumStreamedLODs=0,bSupportLODStreaming=0,LODPercentTriangles=50,PixelError=10,Name=LOCTEXT("SmallPropLOD","Small Prop"))
 ConfigSystem.Windows.Engine:StaticMeshLODSettings:Vista:0=(NumLODs=1,MaxNumStreamedLODs=0,bSupportLODStreaming=0,Name=LOCTEXT("VistaLOD","Vista"))
+ConfigSystem.Windows.Engine:SystemSettings:con.DebugEarlyCheat:0=True
+ConfigSystem.Windows.Engine:SystemSettings:con.DebugEarlyDefault:0=True
+ConfigSystem.Windows.Engine:SystemSettings:con.DebugLateCheat:0=True
+ConfigSystem.Windows.Engine:SystemSettings:con.DebugLateDefault:0=True
+ConfigSystem.Windows.Engine:SystemSettings:D3D12.Bindless.ResourceDescriptorHeapSize:0=32768
+ConfigSystem.Windows.Engine:SystemSettings:D3D12.Bindless.SamplerDescriptorHeapSize:0=2048
+ConfigSystem.Windows.Engine:SystemSettings:framepro.ScopeMinTimeMicroseconds:0=10
+ConfigSystem.Windows.Engine:SystemSettings:fx.NiagaraAllowRuntimeScalabilityChanges:0=1
+ConfigSystem.Windows.Engine:SystemSettings:LogNamedEventFilters:0=Frame *
+ConfigSystem.Windows.Engine:SystemSettings:QualityLevelMapping:0=high
+ConfigSystem.Windows.Engine:SystemSettings:r.Nanite.Streaming.ReservedResources:0=1
+ConfigSystem.Windows.Engine:SystemSettings:r.Occlusion.SingleRHIThreadStall:0=1
+ConfigSystem.Windows.Engine:SystemSettings:r.PSOPrecache.GlobalShaders:0=1
+ConfigSystem.Windows.Engine:SystemSettings:r.setres:0=1280x720
+ConfigSystem.Windows.Engine:SystemSettings:r.VRS.ContrastAdaptiveShading:0=1
+ConfigSystem.Windows.Engine:SystemSettings:r.VRS.EnableSoftware:0=1
 ConfigSystem.Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:MaxChunkSize:0=0
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.FXAA.Quality:0=4
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TemporalAA.Quality:0=2
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.History.R11G11B10:0=1
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.History.ScreenPercentage:0=200
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.History.UpdateQuality:0=3
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.RejectionAntiAliasingQuality:0=2
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.ReprojectionField:0=1
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.Resurrection:0=1
+ConfigSystem.Windows.Scalability:AntiAliasingQuality@3:r.TSR.ShadingRejection.Flickering:0=1
+ConfigSystem.Windows.Scalability:EffectsQuality@3:fx.Niagara.QualityLevel:0=3
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.DetailMode:0=3
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.EmitterSpawnRateScale:0=1.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.HeterogeneousVolumes.DownsampleFactor:0=2
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.HeterogeneousVolumes.MaxStepCount:0=256
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.HeterogeneousVolumes.Shadows.MaxSampleCount:0=8
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.HeterogeneousVolumes.Shadows.Resolution:0=256
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.HeterogeneousVolumes.UseExistenceMask:0=0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.MaterialQualityLevel:0=1 ; High quality
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.ParticleLightQuality:0=2
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.Refraction.OffsetQuality:0=1
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.RefractionQuality:0=2
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SceneColorFormat:0=4
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:0=16.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:0=1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:0=4
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.FastSkyLUT:0=1
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.FastSkyLUT.SampleCountMax:0=128.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.FastSkyLUT.SampleCountMin:0=4.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.MultiScatteringLUT.SampleCount:0=15.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.SampleCountMax:0=128.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.SampleCountMin:0=4.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.TransmittanceLUT.SampleCount:0=10.0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0=0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SSGI.Quality:0=3
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SSS.HalfRes:0=0
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SSS.Quality:0=1
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SSS.SampleSet:0=2
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.SSS.Scale:0=1
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.TranslucencyLightingVolumeDim:0=64
+ConfigSystem.Windows.Scalability:EffectsQuality@3:r.TranslucencyVolumeBlur:0=1
+ConfigSystem.Windows.Scalability:FoliageQuality@3:foliage.DensityScale:0=1.0
+ConfigSystem.Windows.Scalability:FoliageQuality@3:grass.DensityScale:0=1.0
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.AOQuality:0=2
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.DistanceFieldAO:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.DiffuseIndirect.Allow:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.DownsampleFactor:0=16
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.FullResolutionJitterWidth:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.IrradianceFormat:0=0
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.NumAdaptiveProbes:0=8
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget:0=100
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution:0=32
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.ShortRangeAO.BentNormal:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.ShortRangeAO.HardwareRayTracing:0=0
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.StochasticInterpolation:0=0
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.TracingOctahedronResolution:0=8
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.TraceMeshSDFs.Allow:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.TranslucencyVolume.GridPixelSize:0=32
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget:0=70
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution:0=8
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.TranslucencyVolume.TraceFromVolume:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.Lumen.TranslucencyVolume.TracingOctahedronResolution:0=3
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.LumenScene.DirectLighting.MaxLightsPerTile:0=8
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.LumenScene.DirectLighting.UpdateFactor:0=32
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.LumenScene.Radiosity.HemisphereProbeResolution:0=4
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.LumenScene.Radiosity.ProbeSpacing:0=4
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.LumenScene.Radiosity.UpdateFactor:0=64
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.RayTracing.Scene.BuildMode:0=1
+ConfigSystem.Windows.Scalability:GlobalIlluminationQuality@3:r.SkylightIntensityMultiplier:0=1.0
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.AmbientOcclusionLevels:0=-1
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.AmbientOcclusionMaxQuality:0=100
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.AmbientOcclusionMipLevelFactor:0=0.4
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.AmbientOcclusionRadiusScale:0=1.0
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.Bloom.ScreenPercentage:0=50.000
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.BloomQuality:0=5
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DepthOfFieldQuality:0=2
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Gather.AccumulatorQuality:0=1        ; higher gathering accumulator quality
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Gather.EnableBokehSettings:0=0       ; no bokeh simulation when gathering
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Gather.PostfilterMethod:0=1          ; Median3x3 postfilering method
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Gather.ResolutionDivisor:0=2         ; lower gathering resolution
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Gather.RingCount:0=4                 ; medium number of samples when gathering
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Kernel.MaxBackgroundRadius:0=0.025
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Kernel.MaxForegroundRadius:0=0.025
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Recombine.EnableBokehSettings:0=0    ; no bokeh simulation on slight out of focus
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Recombine.Quality:0=1                ; cheap slight out of focus
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Scatter.BackgroundCompositing:0=2    ; additive background scattering
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Scatter.EnableBokehSettings:0=1      ; bokeh simulation when scattering
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Scatter.ForegroundCompositing:0=1    ; additive foreground scattering
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.Scatter.MaxSpriteRatio:0=0.1         ; only a maximum of 10% of scattered bokeh
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.DOF.TemporalAAQuality:0=1                ; more stable temporal accumulation
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.EyeAdaptationQuality:0=2
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.FastBlurThreshold:0=100
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.Filter.SizeScale:0=1
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.LensFlareQuality:0=2
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.LightShaftQuality:0=1
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.MotionBlur.HalfResGather:0=0
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.MotionBlurQuality:0=4
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.RenderTargetPoolMin:0=400
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.SceneColorFringeQuality:0=1
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.Tonemapper.Quality:0=5
+ConfigSystem.Windows.Scalability:PostProcessQuality@3:r.Upscale.Quality:0=3
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.Reflections.Allow:0=1
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.Reflections.DownsampleFactor:0=1
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.Reflections.MaxRoughnessToTraceForFoliage:0=0.4
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.Reflections.ScreenSpaceReconstruction.MinWeight:0=0
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.Reflections.ScreenSpaceReconstruction.NumSamples:0=5
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.ScreenProbeGather.MaxRoughnessToEvaluateRoughSpecularForFoliage:0=0.8
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.TranslucencyReflections.FrontLayer.Allow:0=1
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.Lumen.TranslucencyReflections.FrontLayer.Enable:0=0
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.SSR.HalfResSceneColor:0=0
+ConfigSystem.Windows.Scalability:ReflectionQuality@3:r.SSR.Quality:0=3
+ConfigSystem.Windows.Scalability:ShadingQuality@3:r.AnisotropicMaterials:0=1
+ConfigSystem.Windows.Scalability:ShadingQuality@3:r.HairStrands.SkyAO.SampleCount:0=4
+ConfigSystem.Windows.Scalability:ShadingQuality@3:r.HairStrands.SkyLighting.IntegrationType:0=2
+ConfigSystem.Windows.Scalability:ShadingQuality@3:r.HairStrands.Visibility.MSAA.SamplePerPixel:0=4
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.CapsuleShadows:0=1
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.DistanceFieldShadowing:0=1
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.LightFunctionQuality:0=1
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.LightMaxDrawDistanceScale:0=1
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.CSM.MaxCascades:0=10
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.CSM.TransitionScale:0=1.0
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.DistanceScale:0=1.0
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.MaxCSMResolution:0=2048
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.MaxResolution:0=2048
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.PreShadowResolutionFactor:0=1.0
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.RadiusThreshold:0=0.01
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.MaxPhysicalPages:0=4096
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.ResolutionLodBiasDirectional:0=-1.5
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.ResolutionLodBiasDirectionalMoving:0=-1.5
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.ResolutionLodBiasLocal:0=0.0
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.ResolutionLodBiasLocalMoving:0=1.0
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.SMRT.RayCountDirectional:0=8
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.SMRT.RayCountLocal:0=8
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.SMRT.SamplesPerRayDirectional:0=4
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.Shadow.Virtual.SMRT.SamplesPerRayLocal:0=4
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.ShadowQuality:0=5
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.VolumetricFog:0=1
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.VolumetricFog.GridPixelSize:0=8
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.VolumetricFog.GridSizeZ:0=128
+ConfigSystem.Windows.Scalability:ShadowQuality@3:r.VolumetricFog.HistoryMissSupersampleCount:0=4
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.MaxAnisotropy:0=8
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.AmortizeCPUToGPUCopy:0=0
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.Boost:0=1
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.LimitPoolSizeToVRAM:0=0
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.MaxEffectiveScreenSize:0=0
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.MaxNumTexturesToStreamPerFrame:0=0
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.MipBias:0=0
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.Streaming.PoolSize:0=1000
+ConfigSystem.Windows.Scalability:TextureQuality@3:r.VT.MaxAnisotropy:0=8
+ConfigSystem.Windows.Scalability:ViewDistanceQuality@3:r.SkeletalMeshLODBias:0=0
+ConfigSystem.Windows.Scalability:ViewDistanceQuality@3:r.ViewDistanceScale:0=1.0
 LocalIniFile.Android.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bBuildForES31:0=true
 LocalIniFile.Android.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bSupportsVulkan:0=true
 LocalIniFile.Android.Engine:/Script/AndroidRuntimeSettings.AndroidRuntimeSettings:bSupportsVulkanSM5:0=false

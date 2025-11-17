@@ -521,6 +521,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "21B87DCA8CF7639C8F756B27A83D55DA8685DA7E",
+			"Assets": [
+				"/Game/Characters/Mannequins/Materials/M_Mannequin"
+			]
+		},
+		{
 			"ShaderMapHash": "546776D93FAA41406AEF81D132662CDEF84203A6",
 			"Assets": [
 				"/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale"

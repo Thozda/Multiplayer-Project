@@ -496,6 +496,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "0A171DD80CA70EA8973F37F2CC2E83036E8EEBB8",
+			"Assets": [
+				"/Game/Characters/Mannequins/Materials/M_Mannequin"
+			]
+		},
+		{
 			"ShaderMapHash": "C9EE45DA1FF58ACE12C8ECECDE679BC6AE93EE4D",
 			"Assets": [
 				"/Engine/EditorLandscapeResources/SelectBrushMaterial_SelectedRegion"
