@@ -16,7 +16,20 @@
             "p:\\coding\\unreal projects\\multiplayer-project\\menusystem\\plugins\\multiplayersessions\\intermediate\\build\\win64\\unrealeditor\\inc\\multiplayersessions\\uht\\multiplayersessionssubsystem.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesessionsettings.h",
             "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystem.h",
-            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemmodule.h"
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemmodule.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinebase\\source\\public\\online\\onlinesessionnames.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\public\\onlinesubsystemutils.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlineexternaluiinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinemessageinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlineerror.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\public\\onlinesubsystemutilsmodule.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinefriendsinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlineidentityinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinetitlefileinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlineusercloudinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\voiceinterface.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystempackage.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\multithreadedpatching.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

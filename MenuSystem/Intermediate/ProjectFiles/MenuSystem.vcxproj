@@ -505,6 +505,11 @@
     <ClInclude Include="..\..\Plugins\MultiplayerSessions\Source\MultiplayerSessions\Public\MultiplayerSessionsSubsystem.h"/>
     <None Include="..\..\Plugins\MultiplayerSessions\MultiplayerSessions.uplugin"/>
     <None Include="..\..\Plugins\MultiplayerSessions\Resources\Icon128.png"/>
+    <ClCompile Include="..\..\Source\MenuSystem\LobbyGameMode.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MenuSystem\LobbyGameMode.h"/>
     <None Include="..\..\Source\MenuSystem\MenuSystem.Build.cs"/>
     <ClCompile Include="..\..\Source\MenuSystem\MenuSystem.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>

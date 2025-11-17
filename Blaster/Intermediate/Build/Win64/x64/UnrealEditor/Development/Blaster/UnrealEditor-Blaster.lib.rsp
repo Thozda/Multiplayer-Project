@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Blaster.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Intermediate/Build/Win64/x64/BlasterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Intermediate/Build/Win64/x64/UnrealEditor/Development/Blaster/Blaster.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Intermediate/Build/Win64/x64/UnrealEditor/Development/Blaster/PerModuleInline.gen.cpp.obj"
+"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Intermediate/Build/Win64/x64/UnrealEditor/Development/Blaster/Default.rc2.res"
+/OUT:"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Intermediate/Build/Win64/x64/UnrealEditor/Development/Blaster/UnrealEditor-Blaster.lib"
