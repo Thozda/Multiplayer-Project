@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Blaster.gen.cpp.obj": [
+			"Blaster.init.gen.cpp.obj",
+			"BlasterCharacter.gen.cpp.obj"
+		]
+	}
+}

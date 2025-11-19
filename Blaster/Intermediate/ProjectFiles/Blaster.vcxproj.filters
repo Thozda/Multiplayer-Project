@@ -87,5 +87,23 @@
     <ClInclude Include="..\..\Source\Blaster\Blaster.h">
       <Filter>Source\Blaster</Filter>
     </ClInclude>
+    <Filter Include="Source\Blaster\Private">
+      <UniqueIdentifier>{578AA910-0706-3D25-9BC3-42F9A2EF24CD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Blaster\Private\Character">
+      <UniqueIdentifier>{C6392E4B-E003-359F-BA8E-1E3D7B11B8ED}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Character\BlasterCharacter.cpp">
+      <Filter>Source\Blaster\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\Blaster\Public">
+      <UniqueIdentifier>{4DF4A405-29D2-3BF9-A1E7-AB6747806B7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Blaster\Public\Character">
+      <UniqueIdentifier>{453C402C-31A1-3420-877F-11B3A084A1C1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h">
+      <Filter>Source\Blaster\Public\Character</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
