@@ -43,6 +43,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* LookAction;
 
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* JumpAction;
+
 private:
 	//
 	//Components

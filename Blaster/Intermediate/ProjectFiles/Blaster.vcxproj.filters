@@ -93,6 +93,9 @@
     <Filter Include="Source\Blaster\Private\Character">
       <UniqueIdentifier>{C6392E4B-E003-359F-BA8E-1E3D7B11B8ED}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Character\BlasterAnimInstance.cpp">
+      <Filter>Source\Blaster\Private\Character</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Character\BlasterCharacter.cpp">
       <Filter>Source\Blaster\Private\Character</Filter>
     </ClCompile>
@@ -102,6 +105,9 @@
     <Filter Include="Source\Blaster\Public\Character">
       <UniqueIdentifier>{453C402C-31A1-3420-877F-11B3A084A1C1}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterAnimInstance.h">
+      <Filter>Source\Blaster\Public\Character</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h">
       <Filter>Source\Blaster\Public\Character</Filter>
     </ClInclude>

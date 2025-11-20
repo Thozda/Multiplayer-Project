@@ -3,6 +3,7 @@
 	{
 		"Module.Blaster.gen.cpp.obj": [
 			"Blaster.init.gen.cpp.obj",
+			"BlasterAnimInstance.gen.cpp.obj",
 			"BlasterCharacter.gen.cpp.obj"
 		]
 	}
