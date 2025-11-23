@@ -99,6 +99,12 @@
     <ClCompile Include="..\..\Source\Blaster\Private\Character\BlasterCharacter.cpp">
       <Filter>Source\Blaster\Private\Character</Filter>
     </ClCompile>
+    <Filter Include="Source\Blaster\Private\GameMode">
+      <UniqueIdentifier>{300C1047-325E-3658-9AB2-E341E274BC86}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
+      <Filter>Source\Blaster\Private\GameMode</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Public">
       <UniqueIdentifier>{4DF4A405-29D2-3BF9-A1E7-AB6747806B7F}</UniqueIdentifier>
     </Filter>
@@ -110,6 +116,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h">
       <Filter>Source\Blaster\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\GameMode">
+      <UniqueIdentifier>{A07BE486-48C2-3C2A-BF0C-5BB9CA3D7F7E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h">
+      <Filter>Source\Blaster\Public\GameMode</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\private\\gamemode\\lobbygamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\blastereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blaster\\definitions.blaster.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\gamemode\\lobbygamemode.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemode.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemode.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\lobbygamemode.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamestatebase.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamestatebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
