@@ -105,6 +105,12 @@
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
       <Filter>Source\Blaster\Private\GameMode</Filter>
     </ClCompile>
+    <Filter Include="Source\Blaster\Private\HUD">
+      <UniqueIdentifier>{3AEEA2FD-5C5C-3B2A-A6B1-0BD5C2357D19}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\OverheadWidget.cpp">
+      <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Public">
       <UniqueIdentifier>{4DF4A405-29D2-3BF9-A1E7-AB6747806B7F}</UniqueIdentifier>
     </Filter>
@@ -122,6 +128,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h">
       <Filter>Source\Blaster\Public\GameMode</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\HUD">
+      <UniqueIdentifier>{7044C1BC-C0F4-3D31-ABD5-E14C657CA533}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h">
+      <Filter>Source\Blaster\Public\HUD</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

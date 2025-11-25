@@ -10,6 +10,7 @@ class UInputAction;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
+class UWidgetComponent;
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter
@@ -24,7 +25,7 @@ public:
 	
 protected:
 	virtual void BeginPlay() override;
-
+	
 	//
 	//Input
 	//
@@ -55,5 +56,8 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	UCameraComponent* FollowCamera;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UWidgetComponent* OverheadWidget;
 	
 };
