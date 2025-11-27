@@ -1507,6 +1507,8 @@
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Maps/TransitionMap.umap",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/GameModes/BP_BlasterGameMode.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/HUD/WBP_OverheadWidget.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Weapon/BP_Weapon.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/HUD/WBP_PickupWidget.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Maps/MigratedMap/BlasterMap_BuiltData.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Assets/Input/Touch/BPI_TouchInterface.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Assets/Input/Actions/IA_Jump.uasset",

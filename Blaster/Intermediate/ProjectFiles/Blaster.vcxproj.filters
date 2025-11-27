@@ -111,6 +111,12 @@
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\OverheadWidget.cpp">
       <Filter>Source\Blaster\Private\HUD</Filter>
     </ClCompile>
+    <Filter Include="Source\Blaster\Private\Weapon">
+      <UniqueIdentifier>{32B21630-46DC-3A8D-BC3D-F307B4A5F5F9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Weapon.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Public">
       <UniqueIdentifier>{4DF4A405-29D2-3BF9-A1E7-AB6747806B7F}</UniqueIdentifier>
     </Filter>
@@ -134,6 +140,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h">
       <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\Weapon">
+      <UniqueIdentifier>{DB344B61-2AE6-3B99-B6FC-C5F41F328357}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

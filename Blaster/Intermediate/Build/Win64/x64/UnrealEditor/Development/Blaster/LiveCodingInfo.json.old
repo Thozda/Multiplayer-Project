@@ -5,8 +5,9 @@
 			"BlasterAnimInstance.gen.cpp.obj",
 			"BlasterCharacter.gen.cpp.obj",
 			"LobbyGameMode.gen.cpp.obj",
+			"OverheadWidget.gen.cpp.obj",
 			"Blaster.init.gen.cpp.obj",
-			"OverheadWidget.gen.cpp.obj"
+			"Weapon.gen.cpp.obj"
 		]
 	}
 }
