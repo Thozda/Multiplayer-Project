@@ -492,6 +492,7 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\Blaster\Blaster.h"/>
+    <ClInclude Include="..\..\Source\Blaster\BlasterTypes\TurningInPlace.h"/>
     <ClCompile Include="..\..\Source\Blaster\Private\Character\BlasterAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -500,6 +501,11 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <None Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp~"/>
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -514,6 +520,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterAnimInstance.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h"/>

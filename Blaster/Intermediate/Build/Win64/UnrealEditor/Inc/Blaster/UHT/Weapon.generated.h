@@ -22,6 +22,7 @@ struct FHitResult;
 
 // ********** Begin Class AWeapon ******************************************************************
 #define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnRep_WeaponState); \
 	DECLARE_FUNCTION(execOnSphereEndOverlap); \
 	DECLARE_FUNCTION(execOnSphereOverlap);
 
@@ -36,7 +37,13 @@ private: \
 	friend BLASTER_API UClass* Z_Construct_UClass_AWeapon_NoRegister(); \
 public: \
 	DECLARE_CLASS2(AWeapon, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Blaster"), Z_Construct_UClass_AWeapon_NoRegister) \
-	DECLARE_SERIALIZER(AWeapon)
+	DECLARE_SERIALIZER(AWeapon) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		WeaponState=NETFIELD_REP_START, \
+		NETFIELD_REP_END=WeaponState	}; \
+	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
 #define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_25_ENHANCED_CONSTRUCTORS \

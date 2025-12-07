@@ -7,6 +7,7 @@
         "Includes": [
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blaster\\definitions.blaster.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\character\\blasteraniminstance.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\blastertypes\\turninginplace.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blasteraniminstance.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\character\\blastercharacter.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
@@ -38,7 +39,12 @@
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\networkpredictioninterface.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponentasync.generated.h",
-            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h"
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapon.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\weapon.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

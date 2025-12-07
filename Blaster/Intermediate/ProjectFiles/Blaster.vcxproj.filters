@@ -87,6 +87,12 @@
     <ClInclude Include="..\..\Source\Blaster\Blaster.h">
       <Filter>Source\Blaster</Filter>
     </ClInclude>
+    <Filter Include="Source\Blaster\BlasterTypes">
+      <UniqueIdentifier>{69A66E39-133C-39E2-987D-EBC64A18AEF7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\BlasterTypes\TurningInPlace.h">
+      <Filter>Source\Blaster\BlasterTypes</Filter>
+    </ClInclude>
     <Filter Include="Source\Blaster\Private">
       <UniqueIdentifier>{578AA910-0706-3D25-9BC3-42F9A2EF24CD}</UniqueIdentifier>
     </Filter>
@@ -99,6 +105,15 @@
     <ClCompile Include="..\..\Source\Blaster\Private\Character\BlasterCharacter.cpp">
       <Filter>Source\Blaster\Private\Character</Filter>
     </ClCompile>
+    <Filter Include="Source\Blaster\Private\Components">
+      <UniqueIdentifier>{C8F012C3-08A6-355C-8A7D-DC88B86A82F1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp">
+      <Filter>Source\Blaster\Private\Components</Filter>
+    </ClCompile>
+    <None Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp~">
+      <Filter>Source\Blaster\Private\Components</Filter>
+    </None>
     <Filter Include="Source\Blaster\Private\GameMode">
       <UniqueIdentifier>{300C1047-325E-3658-9AB2-E341E274BC86}</UniqueIdentifier>
     </Filter>
@@ -128,6 +143,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h">
       <Filter>Source\Blaster\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\Components">
+      <UniqueIdentifier>{5DD7ECB6-D376-31A5-BD09-4831FAA9590D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h">
+      <Filter>Source\Blaster\Public\Components</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\GameMode">
       <UniqueIdentifier>{A07BE486-48C2-3C2A-BF0C-5BB9CA3D7F7E}</UniqueIdentifier>

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Blaster/BlasterTypes/TurningInPlace.h"
 #include "GameFramework/Character.h"
 #include "BlasterCharacter.generated.h"
 
@@ -12,6 +13,7 @@ class UCameraComponent;
 class UInputMappingContext;
 class UWidgetComponent;
 class AWeapon;
+class UCombatComponent;
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter
@@ -24,9 +26,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	virtual void PostInitializeComponents() override;
 	
 protected:
 	virtual void BeginPlay() override;
+
+	//
+	//Animation
+	//
+	void AimOffset(float DeltaTime);
 	
 	//
 	//Input
@@ -36,6 +44,20 @@ protected:
 	
 	UFUNCTION()
 	void Look(const FInputActionValue& Value);
+
+	virtual void Jump() override;
+	
+	UFUNCTION()
+	void EquipButtonPressed(const FInputActionValue& Value);
+	
+	UFUNCTION()
+	void CrouchButtonPressed(const FInputActionValue& Value);
+	
+	UFUNCTION()
+	void AimButtonPressed(const FInputActionValue& Value);
+	
+	UFUNCTION()
+	void AimButtonReleased(const FInputActionValue& Value);
 	
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputMappingContext* InputMapping;
@@ -48,6 +70,15 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* JumpAction;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* EquipAction;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* CrouchAction;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* AimAction;
 
 private:
 	//
@@ -62,6 +93,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UWidgetComponent* OverheadWidget;
 
+	UPROPERTY(VisibleAnywhere)
+	UCombatComponent* Combat;
+
 	//
 	//Weapon
 	//
@@ -71,6 +105,26 @@ private:
 	UFUNCTION()
 	void OnRep_OverlappingWeapon(AWeapon* LastWeapon);
 
+	UFUNCTION(Server, Reliable)
+	void ServerEquipButtonPressed();
+
+	//
+	//Animations
+	//
+	void TurnInPlace(float DeltaTime);
+	
+	float AO_Yaw;
+	float InterpAO_Yaw;
+	float AO_Pitch;
+	FRotator StartingAimRotation;
+	ETurningInPlace TurningInPlace;
+
 public:
 	void SetOverlappingWeapon(AWeapon* Weapon);
+	bool IsWeaponEquipped();
+	bool IsAiming();
+	FORCEINLINE float GetAO_Yaw() const { return AO_Yaw; }
+	FORCEINLINE float GetAO_Pitch() const { return AO_Pitch; }
+	FORCEINLINE ETurningInPlace GetTurningInPlace() const { return TurningInPlace; }
+	AWeapon* GetEquippedWeapon();
 };
