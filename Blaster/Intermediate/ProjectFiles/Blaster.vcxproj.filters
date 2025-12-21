@@ -111,9 +111,6 @@
     <ClCompile Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp">
       <Filter>Source\Blaster\Private\Components</Filter>
     </ClCompile>
-    <None Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp~">
-      <Filter>Source\Blaster\Private\Components</Filter>
-    </None>
     <Filter Include="Source\Blaster\Private\GameMode">
       <UniqueIdentifier>{300C1047-325E-3658-9AB2-E341E274BC86}</UniqueIdentifier>
     </Filter>
@@ -129,6 +126,15 @@
     <Filter Include="Source\Blaster\Private\Weapon">
       <UniqueIdentifier>{32B21630-46DC-3A8D-BC3D-F307B4A5F5F9}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Casing.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Projectile.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileWeapon.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Weapon.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
@@ -165,6 +171,15 @@
     <Filter Include="Source\Blaster\Public\Weapon">
       <UniqueIdentifier>{DB344B61-2AE6-3B99-B6FC-C5F41F328357}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Casing.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Projectile.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileWeapon.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>

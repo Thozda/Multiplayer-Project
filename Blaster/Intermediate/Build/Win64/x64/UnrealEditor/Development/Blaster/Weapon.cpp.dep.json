@@ -96,7 +96,11 @@
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetcomponent.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\public\\net\\unrealnetwork.h",
-            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h"
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\skeletalmeshsocket.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\skeletalmeshsocket.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\casing.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\casing.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

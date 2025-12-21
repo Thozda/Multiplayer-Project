@@ -6,6 +6,8 @@
 #include "Components/ActorComponent.h"
 #include "CombatComponent.generated.h"
 
+#define TRACE_LENGTH 80000.f
+
 class AWeapon;
 class ABlasterCharacter;
 
@@ -26,18 +28,34 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	//Equip
+	UFUNCTION()
+	void OnRep_EquippedWeapon();
+	
+	//Aim
 	void SetAiming(bool bIsAiming);
 
 	UFUNCTION(Server, Reliable)
 	void ServerSetAiming(bool bIsAiming);
+
+	//Fire
+	void FireButtonPressed(bool bPressed);
+
+	UFUNCTION(Server, Reliable)
+	void ServerFire(const FVector_NetQuantize& TraceHitTarget);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastFire(const FVector_NetQuantize& TraceHitTarget);
+
+	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 	
-	UFUNCTION()
-	void OnRep_EquippedWeapon();
 private:
 	ABlasterCharacter* Character;
 	
 	UPROPERTY(Replicated)
 	bool bAiming;
+
+	bool bFireButtonPressed;
 	
 	UPROPERTY(ReplicatedUsing = OnRep_EquippedWeapon)
 	AWeapon* EquippedWeapon;
@@ -47,5 +65,4 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float AimWalkSpeed;
-	
 };

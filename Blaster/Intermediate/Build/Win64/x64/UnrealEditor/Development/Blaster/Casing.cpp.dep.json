@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\private\\weapon\\casing.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\blastereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blaster\\definitions.blaster.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\casing.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\casing.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\soundcue.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\audioextensions\\public\\iaudioparametertransmitter.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\soundnode.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundnode.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundcue.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

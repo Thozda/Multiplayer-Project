@@ -2,13 +2,16 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Blaster.gen.cpp.obj": [
+			"BlasterAnimInstance.gen.cpp.obj",
 			"LobbyGameMode.gen.cpp.obj",
 			"OverheadWidget.gen.cpp.obj",
-			"Blaster.init.gen.cpp.obj",
-			"BlasterAnimInstance.gen.cpp.obj",
-			"BlasterCharacter.gen.cpp.obj",
-			"CombatComponent.gen.cpp.obj",
 			"TurningInPlace.gen.cpp.obj",
+			"Blaster.init.gen.cpp.obj",
+			"BlasterCharacter.gen.cpp.obj",
+			"Casing.gen.cpp.obj",
+			"CombatComponent.gen.cpp.obj",
+			"Projectile.gen.cpp.obj",
+			"ProjectileWeapon.gen.cpp.obj",
 			"Weapon.gen.cpp.obj"
 		]
 	}

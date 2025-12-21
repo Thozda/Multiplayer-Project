@@ -13,11 +13,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 
 // ********** Begin Cross Module References ********************************************************
+BLASTER_API UClass* Z_Construct_UClass_ACasing_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_AWeapon();
 BLASTER_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 BLASTER_API UEnum* Z_Construct_UEnum_Blaster_EWeaponState();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UAnimationAsset_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
@@ -337,12 +340,34 @@ struct Z_Construct_UClass_AWeapon_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Weapon/Weapon.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FireAnimation_MetaData[] = {
+		{ "Category", "Weapon Properties" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n//Animation\n//\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Weapon/Weapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Animation" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CasingClass_MetaData[] = {
+		{ "Category", "Weapon" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n//Casing\n//\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Weapon/Weapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Casing" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_WeaponState_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_WeaponState;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_WeaponMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AreaSphere;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupWidget;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_FireAnimation;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_CasingClass;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -361,12 +386,16 @@ const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AWeapon_Statics:
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_WeaponMesh = { "WeaponMesh", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeapon, WeaponMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponMesh_MetaData), NewProp_WeaponMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_AreaSphere = { "AreaSphere", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeapon, AreaSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AreaSphere_MetaData), NewProp_AreaSphere_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_PickupWidget = { "PickupWidget", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeapon, PickupWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupWidget_MetaData), NewProp_PickupWidget_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_FireAnimation = { "FireAnimation", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeapon, FireAnimation), Z_Construct_UClass_UAnimationAsset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FireAnimation_MetaData), NewProp_FireAnimation_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_CasingClass = { "CasingClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeapon, CasingClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ACasing_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CasingClass_MetaData), NewProp_CasingClass_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeapon_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_WeaponState_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_WeaponState,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_WeaponMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_AreaSphere,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_PickupWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_FireAnimation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_CasingClass,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AWeapon_Statics::DependentSingletons[])() = {
@@ -417,10 +446,10 @@ struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__
 		{ EWeaponState_StaticEnum, TEXT("EWeaponState"), &Z_Registration_Info_UEnum_EWeaponState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1739138149U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWeapon, AWeapon::StaticClass, TEXT("AWeapon"), &Z_Registration_Info_UClass_AWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWeapon), 1082144807U) },
+		{ Z_Construct_UClass_AWeapon, AWeapon::StaticClass, TEXT("AWeapon"), &Z_Registration_Info_UClass_AWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWeapon), 3206292190U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__Script_Blaster_745744025(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__Script_Blaster_3714476189(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__Script_Blaster_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h__Script_Blaster_Statics::EnumInfo));

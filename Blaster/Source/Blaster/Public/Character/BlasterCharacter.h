@@ -14,6 +14,7 @@ class UInputMappingContext;
 class UWidgetComponent;
 class AWeapon;
 class UCombatComponent;
+class UAnimMontage;
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter
@@ -27,6 +28,8 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 	virtual void PostInitializeComponents() override;
+
+	void PlayFireMontage(bool bAiming);
 	
 protected:
 	virtual void BeginPlay() override;
@@ -59,6 +62,12 @@ protected:
 	UFUNCTION()
 	void AimButtonReleased(const FInputActionValue& Value);
 	
+	UFUNCTION()
+	void FireButtonPressed(const FInputActionValue& Value);
+	
+	UFUNCTION()
+	void FireButtonReleased(const FInputActionValue& Value);
+	
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputMappingContext* InputMapping;
 
@@ -79,6 +88,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* AimAction;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* FireAction;
 
 private:
 	//
@@ -118,6 +130,9 @@ private:
 	float AO_Pitch;
 	FRotator StartingAimRotation;
 	ETurningInPlace TurningInPlace;
+
+	UPROPERTY(EditAnywhere, Category = Combat)
+	UAnimMontage* FireWeaponMontage;
 
 public:
 	void SetOverlappingWeapon(AWeapon* Weapon);

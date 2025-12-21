@@ -18,6 +18,7 @@ BLASTER_API UClass* Z_Construct_UClass_ABlasterCharacter_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_UCombatComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
@@ -207,6 +208,96 @@ DEFINE_FUNCTION(ABlasterCharacter::execEquipButtonPressed)
 }
 // ********** End Class ABlasterCharacter Function EquipButtonPressed ******************************
 
+// ********** Begin Class ABlasterCharacter Function FireButtonPressed *****************************
+struct Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics
+{
+	struct BlasterCharacter_eventFireButtonPressed_Parms
+	{
+		FInputActionValue Value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/BlasterCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BlasterCharacter_eventFireButtonPressed_Parms, Value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) }; // 203218767
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABlasterCharacter, nullptr, "FireButtonPressed", Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::BlasterCharacter_eventFireButtonPressed_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::BlasterCharacter_eventFireButtonPressed_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABlasterCharacter::execFireButtonPressed)
+{
+	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FireButtonPressed(Z_Param_Out_Value);
+	P_NATIVE_END;
+}
+// ********** End Class ABlasterCharacter Function FireButtonPressed *******************************
+
+// ********** Begin Class ABlasterCharacter Function FireButtonReleased ****************************
+struct Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics
+{
+	struct BlasterCharacter_eventFireButtonReleased_Parms
+	{
+		FInputActionValue Value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/BlasterCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BlasterCharacter_eventFireButtonReleased_Parms, Value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) }; // 203218767
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABlasterCharacter, nullptr, "FireButtonReleased", Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::BlasterCharacter_eventFireButtonReleased_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::BlasterCharacter_eventFireButtonReleased_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABlasterCharacter::execFireButtonReleased)
+{
+	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FireButtonReleased(Z_Param_Out_Value);
+	P_NATIVE_END;
+}
+// ********** End Class ABlasterCharacter Function FireButtonReleased ******************************
+
 // ********** Begin Class ABlasterCharacter Function Look ******************************************
 struct Z_Construct_UFunction_ABlasterCharacter_Look_Statics
 {
@@ -389,6 +480,8 @@ void ABlasterCharacter::StaticRegisterNativesABlasterCharacter()
 		{ "AimButtonReleased", &ABlasterCharacter::execAimButtonReleased },
 		{ "CrouchButtonPressed", &ABlasterCharacter::execCrouchButtonPressed },
 		{ "EquipButtonPressed", &ABlasterCharacter::execEquipButtonPressed },
+		{ "FireButtonPressed", &ABlasterCharacter::execFireButtonPressed },
+		{ "FireButtonReleased", &ABlasterCharacter::execFireButtonReleased },
 		{ "Look", &ABlasterCharacter::execLook },
 		{ "Move", &ABlasterCharacter::execMove },
 		{ "OnRep_OverlappingWeapon", &ABlasterCharacter::execOnRep_OverlappingWeapon },
@@ -461,6 +554,10 @@ struct Z_Construct_UClass_ABlasterCharacter_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/Character/BlasterCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FireAction_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/Character/BlasterCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[] = {
 		{ "Category", "Camera" },
 #if !UE_BUILD_SHIPPING
@@ -497,6 +594,10 @@ struct Z_Construct_UClass_ABlasterCharacter_Statics
 		{ "ToolTip", "Weapon" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FireWeaponMontage_MetaData[] = {
+		{ "Category", "Combat" },
+		{ "ModuleRelativePath", "Public/Character/BlasterCharacter.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InputMapping;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
@@ -505,11 +606,13 @@ struct Z_Construct_UClass_ABlasterCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EquipAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CrouchAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AimAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_FireAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverheadWidget;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Combat;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappingWeapon;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_FireWeaponMontage;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -517,6 +620,8 @@ struct Z_Construct_UClass_ABlasterCharacter_Statics
 		{ &Z_Construct_UFunction_ABlasterCharacter_AimButtonReleased, "AimButtonReleased" }, // 292021356
 		{ &Z_Construct_UFunction_ABlasterCharacter_CrouchButtonPressed, "CrouchButtonPressed" }, // 644599290
 		{ &Z_Construct_UFunction_ABlasterCharacter_EquipButtonPressed, "EquipButtonPressed" }, // 3762841454
+		{ &Z_Construct_UFunction_ABlasterCharacter_FireButtonPressed, "FireButtonPressed" }, // 3733087656
+		{ &Z_Construct_UFunction_ABlasterCharacter_FireButtonReleased, "FireButtonReleased" }, // 1337240573
 		{ &Z_Construct_UFunction_ABlasterCharacter_Look, "Look" }, // 2014398258
 		{ &Z_Construct_UFunction_ABlasterCharacter_Move, "Move" }, // 38782147
 		{ &Z_Construct_UFunction_ABlasterCharacter_OnRep_OverlappingWeapon, "OnRep_OverlappingWeapon" }, // 15218718
@@ -535,11 +640,13 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharac
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_EquipAction = { "EquipAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, EquipAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EquipAction_MetaData), NewProp_EquipAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_CrouchAction = { "CrouchAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, CrouchAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CrouchAction_MetaData), NewProp_CrouchAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_AimAction = { "AimAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, AimAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AimAction_MetaData), NewProp_AimAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_FireAction = { "FireAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, FireAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FireAction_MetaData), NewProp_FireAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraBoom_MetaData), NewProp_CameraBoom_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FollowCamera_MetaData), NewProp_FollowCamera_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_OverheadWidget = { "OverheadWidget", nullptr, (EPropertyFlags)0x004000000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, OverheadWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverheadWidget_MetaData), NewProp_OverheadWidget_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_Combat = { "Combat", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, Combat), Z_Construct_UClass_UCombatComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Combat_MetaData), NewProp_Combat_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_OverlappingWeapon = { "OverlappingWeapon", "OnRep_OverlappingWeapon", (EPropertyFlags)0x0040000100000020, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, OverlappingWeapon), Z_Construct_UClass_AWeapon_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappingWeapon_MetaData), NewProp_OverlappingWeapon_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_FireWeaponMontage = { "FireWeaponMontage", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterCharacter, FireWeaponMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FireWeaponMontage_MetaData), NewProp_FireWeaponMontage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlasterCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_InputMapping,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_MoveAction,
@@ -548,11 +655,13 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlasterC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_EquipAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_CrouchAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_AimAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_FireAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_FollowCamera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_OverheadWidget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_Combat,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_OverlappingWeapon,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterCharacter_Statics::NewProp_FireWeaponMontage,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABlasterCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABlasterCharacter_Statics::DependentSingletons[])() = {
@@ -600,10 +709,10 @@ ABlasterCharacter::~ABlasterCharacter() {}
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h__Script_Blaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlasterCharacter, ABlasterCharacter::StaticClass, TEXT("ABlasterCharacter"), &Z_Registration_Info_UClass_ABlasterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterCharacter), 3370824351U) },
+		{ Z_Construct_UClass_ABlasterCharacter, ABlasterCharacter::StaticClass, TEXT("ABlasterCharacter"), &Z_Registration_Info_UClass_ABlasterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterCharacter), 3197744464U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h__Script_Blaster_1413523699(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h__Script_Blaster_1820165298(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

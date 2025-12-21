@@ -16,17 +16,23 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+struct FVector_NetQuantize;
+
 // ********** Begin Class UCombatComponent *********************************************************
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void MulticastFire_Implementation(FVector_NetQuantize const& TraceHitTarget); \
+	virtual void ServerFire_Implementation(FVector_NetQuantize const& TraceHitTarget); \
 	virtual void ServerSetAiming_Implementation(bool bIsAiming); \
-	DECLARE_FUNCTION(execOnRep_EquippedWeapon); \
-	DECLARE_FUNCTION(execServerSetAiming);
+	DECLARE_FUNCTION(execMulticastFire); \
+	DECLARE_FUNCTION(execServerFire); \
+	DECLARE_FUNCTION(execServerSetAiming); \
+	DECLARE_FUNCTION(execOnRep_EquippedWeapon);
 
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_CALLBACK_WRAPPERS
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_CALLBACK_WRAPPERS
 BLASTER_API UClass* Z_Construct_UClass_UCombatComponent_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCombatComponent(); \
 	friend struct Z_Construct_UClass_UCombatComponent_Statics; \
@@ -44,7 +50,7 @@ public: \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCombatComponent(UCombatComponent&&) = delete; \
 	UCombatComponent(const UCombatComponent&) = delete; \
@@ -54,14 +60,14 @@ public: \
 	NO_API virtual ~UCombatComponent();
 
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_12_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_14_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_CALLBACK_WRAPPERS \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_CALLBACK_WRAPPERS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

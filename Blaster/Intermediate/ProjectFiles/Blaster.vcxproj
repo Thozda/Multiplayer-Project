@@ -505,12 +505,23 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
-    <None Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp~"/>
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\OverheadWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Casing.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Projectile.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileWeapon.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
@@ -523,6 +534,9 @@
     <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Casing.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Projectile.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileWeapon.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h"/>
   </ItemGroup>
   <PropertyGroup>
