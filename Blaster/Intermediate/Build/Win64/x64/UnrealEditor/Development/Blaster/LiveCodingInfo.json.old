@@ -1,18 +1,39 @@
 {
 	"RemapUnityFiles": 
 	{
-		"Module.Blaster.gen.cpp.obj": [
-			"BlasterAnimInstance.gen.cpp.obj",
+		"Module.Blaster.cpp.obj": [
 			"Casing.gen.cpp.obj",
 			"LobbyGameMode.gen.cpp.obj",
 			"OverheadWidget.gen.cpp.obj",
-			"TurningInPlace.gen.cpp.obj",
-			"Blaster.init.gen.cpp.obj",
-			"BlasterCharacter.gen.cpp.obj",
-			"CombatComponent.gen.cpp.obj",
 			"Projectile.gen.cpp.obj",
+			"TurningInPlace.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"LobbyGameMode.cpp.obj",
+			"OverheadWidget.cpp.obj",
+			"Casing.cpp.obj",
+			"ProjectileWeapon.cpp.obj",
+			"Blaster.init.gen.cpp.obj",
+			"BlasterAnimInstance.gen.cpp.obj",
+			"BlasterCharacter.gen.cpp.obj",
+			"BlasterHUD.gen.cpp.obj",
+			"BlasterPlayerController.gen.cpp.obj",
+			"CharacterOverlay.gen.cpp.obj",
+			"CombatComponent.gen.cpp.obj",
+			"InteractWithCrosshairsInterface.gen.cpp.obj",
+			"ProjectileBullet.gen.cpp.obj",
 			"ProjectileWeapon.gen.cpp.obj",
-			"Weapon.gen.cpp.obj"
+			"Weapon.gen.cpp.obj",
+			"Blaster.cpp.obj",
+			"BlasterAnimInstance.cpp.obj",
+			"BlasterCharacter.cpp.obj",
+			"CombatComponent.cpp.obj",
+			"BlasterHUD.cpp.obj",
+			"CharacterOverlay.cpp.obj",
+			"InteractWithCrosshairsInterface.cpp.obj",
+			"BlasterPlayerController.cpp.obj",
+			"Projectile.cpp.obj",
+			"ProjectileBullet.cpp.obj",
+			"Weapon.cpp.obj"
 		]
 	}
 }

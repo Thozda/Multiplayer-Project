@@ -509,7 +509,23 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\BlasterHUD.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\CharacterOverlay.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\OverheadWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Interfaces\InteractWithCrosshairsInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\PlayerController\BlasterPlayerController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
@@ -518,6 +534,10 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Projectile.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileBullet.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
@@ -533,9 +553,14 @@
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\BlasterHUD.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\CharacterOverlay.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Interfaces\InteractWithCrosshairsInterface.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\PlayerController\BlasterPlayerController.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Casing.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Projectile.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileBullet.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileWeapon.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h"/>
   </ItemGroup>

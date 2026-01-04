@@ -120,8 +120,26 @@
     <Filter Include="Source\Blaster\Private\HUD">
       <UniqueIdentifier>{3AEEA2FD-5C5C-3B2A-A6B1-0BD5C2357D19}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\BlasterHUD.cpp">
+      <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\CharacterOverlay.cpp">
+      <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\OverheadWidget.cpp">
       <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
+    <Filter Include="Source\Blaster\Private\Interfaces">
+      <UniqueIdentifier>{3187915E-8B29-3138-B228-2B86896C0D19}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Interfaces\InteractWithCrosshairsInterface.cpp">
+      <Filter>Source\Blaster\Private\Interfaces</Filter>
+    </ClCompile>
+    <Filter Include="Source\Blaster\Private\PlayerController">
+      <UniqueIdentifier>{75EDA697-8EF9-345C-AD08-4F5BE9D7693F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\PlayerController\BlasterPlayerController.cpp">
+      <Filter>Source\Blaster\Private\PlayerController</Filter>
     </ClCompile>
     <Filter Include="Source\Blaster\Private\Weapon">
       <UniqueIdentifier>{32B21630-46DC-3A8D-BC3D-F307B4A5F5F9}</UniqueIdentifier>
@@ -130,6 +148,9 @@
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Projectile.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileBullet.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileWeapon.cpp">
@@ -165,8 +186,26 @@
     <Filter Include="Source\Blaster\Public\HUD">
       <UniqueIdentifier>{7044C1BC-C0F4-3D31-ABD5-E14C657CA533}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\BlasterHUD.h">
+      <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\CharacterOverlay.h">
+      <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h">
       <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\Interfaces">
+      <UniqueIdentifier>{B85AF12C-083D-3495-9398-C5C7F7A3EC81}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Interfaces\InteractWithCrosshairsInterface.h">
+      <Filter>Source\Blaster\Public\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\PlayerController">
+      <UniqueIdentifier>{6A1A9EDD-1E73-363E-8D02-A48466F2B3CE}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\PlayerController\BlasterPlayerController.h">
+      <Filter>Source\Blaster\Public\PlayerController</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\Weapon">
       <UniqueIdentifier>{DB344B61-2AE6-3B99-B6FC-C5F41F328357}</UniqueIdentifier>
@@ -175,6 +214,9 @@
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Projectile.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileBullet.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileWeapon.h">
