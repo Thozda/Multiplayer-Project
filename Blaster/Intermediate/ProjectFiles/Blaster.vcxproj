@@ -505,6 +505,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\GameMode\BlasterGameMode.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -526,6 +530,10 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\PlayerController\BlasterPlayerController.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\PlayerState\BlasterPlayerState.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
@@ -552,12 +560,14 @@
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterAnimInstance.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\GameMode\BlasterGameMode.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\BlasterHUD.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\CharacterOverlay.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Interfaces\InteractWithCrosshairsInterface.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\PlayerController\BlasterPlayerController.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\PlayerState\BlasterPlayerState.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Casing.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Projectile.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileBullet.h"/>

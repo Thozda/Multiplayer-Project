@@ -6,6 +6,7 @@
 #include "Blaster/BlasterTypes/TurningInPlace.h"
 #include "GameFramework/Character.h"
 #include "Interfaces/InteractWithCrosshairsInterface.h"
+#include "Components/TimelineComponent.h"
 #include "BlasterCharacter.generated.h"
 
 class UInputAction;
@@ -17,6 +18,8 @@ class AWeapon;
 class UCombatComponent;
 class UAnimMontage;
 class ABlasterPlayerController;
+class USoundCue;
+class ABlasterPlayerState;
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter, public IInteractWithCrosshairsInterface
@@ -31,11 +34,19 @@ public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 	virtual void PostInitializeComponents() override;
 	virtual void OnRep_ReplicatedMovement() override;
+	virtual void Destroyed() override;
 
 	void PlayFireMontage(bool bAiming);
+	void PlayElimMontage();
+	void Elim();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastElim();
 
 protected:
 	virtual void BeginPlay() override;
+	//poll for any relevant classes and init HUD
+	void PollInit();
 
 	//
 	//Animation
@@ -163,12 +174,20 @@ private:
 	UPROPERTY(EditAnywhere, Category = Combat)
 	UAnimMontage* HitReactMontage;
 
+	UPROPERTY(EditAnywhere, Category = Combat)
+	UAnimMontage* ElimMontage;
+
 	//
 	//Player Health
 	//
 	UFUNCTION()
 	void OnRep_Health();
+	void ElimTimerfinished();
+	
+	bool bElimmed = false;
+	FTimerHandle ElimTimer;
 
+	UPROPERTY()
 	ABlasterPlayerController* BlasterPlayerController;
 	
 	UPROPERTY(ReplicatedUsing = OnRep_Health, VisibleAnywhere, Category = "Player Stats")
@@ -176,7 +195,52 @@ private:
 	
 	UPROPERTY(EditAnywhere, Category = "Player Stats")
 	float MaxHealth = 100.f;
+	
+	UPROPERTY(EditDefaultsOnly)
+	float ElimDelay = 3.f;
 
+	//
+	//Dissolve Effect
+	//
+	void StartDissolve();
+	
+	UFUNCTION()
+	void UpdateDissolveMaterial(float DissolveValue);
+	
+	FOnTimelineFloat DissolveTrack;
+	
+	UPROPERTY(VisibleAnywhere)
+	UTimelineComponent* DissolveTimeline;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* DissolveCurve;
+
+	//Dynamic Instance that can be changed at runtime
+	UPROPERTY(VisibleAnywhere, Category = Elim)
+	UMaterialInstanceDynamic* DynamicDissolveMaterialInstance;
+
+	//Material instance set in blueprint used by dynamic instance
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* DissolveMaterialInstance;
+
+	//
+	//ElimBot
+	//
+	UPROPERTY(EditAnywhere)
+	UParticleSystem* ElimBotEffect;
+
+	UPROPERTY(VisibleAnywhere)
+	UParticleSystemComponent* ElimBotComponent;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase* ElimBotSound;
+
+	//
+	//Score
+	//
+	UPROPERTY()
+	ABlasterPlayerState* BlasterPlayerState;
+	
 public:
 	void SetOverlappingWeapon(AWeapon* Weapon);
 	bool IsWeaponEquipped();
@@ -185,7 +249,10 @@ public:
 	FORCEINLINE float GetAO_Pitch() const { return AO_Pitch; }
 	FORCEINLINE ETurningInPlace GetTurningInPlace() const { return TurningInPlace; }
 	AWeapon* GetEquippedWeapon();
-	FVector GetHitTarget() const;
+	FVector GetHitTarget() const; 
 	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	FORCEINLINE bool ShouldRotateRootBone() const { return bRotateRootBone; }
+	FORCEINLINE bool IsElimmed() const { return bElimmed; }
+	FORCEINLINE float GetHealth() const { return Health; }
+	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
 };

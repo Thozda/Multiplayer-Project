@@ -71,7 +71,12 @@ void UCombatComponent::OnRep_EquippedWeapon()
 {
 	if (EquippedWeapon && Character)
 	{
-		
+		EquippedWeapon->SetWeaponState(EWeaponState::EWS_Equipped);
+		const USkeletalMeshSocket* HandSocket = Character->GetMesh()->GetSocketByName(FName("RightHandSocket"));
+		if (HandSocket)
+		{
+			HandSocket->AttachActor(EquippedWeapon, Character->GetMesh());
+		}
 		Character->GetCharacterMovement()->bOrientRotationToMovement = false;
 		Character->bUseControllerRotationYaw = true;
 	}
@@ -81,6 +86,11 @@ void UCombatComponent::EquipWeapon(AWeapon* WeaponToEquip)
 {
 	if (Character == nullptr || WeaponToEquip == nullptr) return;
 
+	if (EquippedWeapon)
+	{
+		EquippedWeapon->Dropped();
+	}
+
 	EquippedWeapon = WeaponToEquip;
 	EquippedWeapon->SetWeaponState(EWeaponState::EWS_Equipped);
 	const USkeletalMeshSocket* HandSocket = Character->GetMesh()->GetSocketByName(FName("RightHandSocket"));
@@ -89,6 +99,7 @@ void UCombatComponent::EquipWeapon(AWeapon* WeaponToEquip)
 		HandSocket->AttachActor(EquippedWeapon, Character->GetMesh());
 	}
 	EquippedWeapon->SetOwner(Character);
+	EquippedWeapon->SetHUDAmmo();
 
 	Character->GetCharacterMovement()->bOrientRotationToMovement = false;
 	Character->bUseControllerRotationYaw = true;
@@ -320,20 +331,21 @@ void UCombatComponent::TraceUnderCrosshairs(FHitResult& TraceHitResult)
 
 void UCombatComponent::StartFireTimer()
 {
-	if (EquippedWeapon == nullptr || Character == nullptr) return;
+	if (Character == nullptr) return;
 	
+	float FireDelay = EquippedWeapon ? EquippedWeapon->FireDelay : 0.1f;
 	Character->GetWorldTimerManager().SetTimer(FireTimer, this, &ThisClass::FireTimerFinished,
-		EquippedWeapon->FireDelay
+	FireDelay
 	);
 }
 
 void UCombatComponent::FireTimerFinished()
 {
-	if (EquippedWeapon == nullptr) return;
+	//if (EquippedWeapon == nullptr) return;
 	
 	bCanFire = true;
 	
-	if (bFireButtonPressed && EquippedWeapon->bAutomatic)
+	if (EquippedWeapon && bFireButtonPressed && EquippedWeapon->bAutomatic)
 	{
 		Fire();
 	}

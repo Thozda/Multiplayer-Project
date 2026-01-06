@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlasterModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31e78a6f8a8bf57fec182aba03de649bcd65d225")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe74fa0d5344ae1d52d6185881e90f3d8c392f32")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlasterModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlasterModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

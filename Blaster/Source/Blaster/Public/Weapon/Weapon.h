@@ -11,6 +11,8 @@ class USphereComponent;
 class UAnimationAsset;
 class ACasing;
 class UTexture2D;
+class ABlasterCharacter;
+class ABlasterPlayerController;
 
 UENUM(BlueprintType)
 enum class EWeaponState : uint8
@@ -32,9 +34,12 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+	virtual void OnRep_Owner() override;
+	virtual void Fire(const FVector& HitTarget);
 	
 	void ShowPickupWidget(bool bShowWidget);
-	virtual void Fire(const FVector& HitTarget);
+	void Dropped(); 
+	void SetHUDAmmo();
 	
 	//
 	//Crosshair Textures
@@ -75,6 +80,12 @@ protected:
 		OtherComp, int32 OtherBodyIndex);
 
 private:
+	UPROPERTY()
+	ABlasterCharacter* BlasterOwnerCharacter;
+
+	UPROPERTY()
+	ABlasterPlayerController* BlasterOwnerController;
+	
 	//
 	//Weapon State
 	//
@@ -116,6 +127,20 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float ZoomInterpSpeed = 20.f;
+
+	//
+	//Ammo
+	//
+	void SpendRound();
+
+	UFUNCTION()
+	void OnRep_Ammo();
+	
+	UPROPERTY(EditAnywhere, ReplicatedUsing = OnRep_Ammo)
+	int32 Ammo;
+
+	UPROPERTY(EditAnywhere)
+	int32 MagCapacity;
 
 public:
 	void SetWeaponState(EWeaponState state);

@@ -49,6 +49,7 @@ private:
 	//
 	//FX
 	//
+	UPROPERTY()
 	UParticleSystemComponent* TracerComponent;
 
 	UPROPERTY(EditAnywhere)

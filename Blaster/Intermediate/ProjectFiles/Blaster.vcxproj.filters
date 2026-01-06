@@ -114,6 +114,9 @@
     <Filter Include="Source\Blaster\Private\GameMode">
       <UniqueIdentifier>{300C1047-325E-3658-9AB2-E341E274BC86}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\GameMode\BlasterGameMode.cpp">
+      <Filter>Source\Blaster\Private\GameMode</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
       <Filter>Source\Blaster\Private\GameMode</Filter>
     </ClCompile>
@@ -140,6 +143,12 @@
     </Filter>
     <ClCompile Include="..\..\Source\Blaster\Private\PlayerController\BlasterPlayerController.cpp">
       <Filter>Source\Blaster\Private\PlayerController</Filter>
+    </ClCompile>
+    <Filter Include="Source\Blaster\Private\PlayerState">
+      <UniqueIdentifier>{21018D01-7D2E-3B55-AE58-8AA070DF11BB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\PlayerState\BlasterPlayerState.cpp">
+      <Filter>Source\Blaster\Private\PlayerState</Filter>
     </ClCompile>
     <Filter Include="Source\Blaster\Private\Weapon">
       <UniqueIdentifier>{32B21630-46DC-3A8D-BC3D-F307B4A5F5F9}</UniqueIdentifier>
@@ -180,6 +189,9 @@
     <Filter Include="Source\Blaster\Public\GameMode">
       <UniqueIdentifier>{A07BE486-48C2-3C2A-BF0C-5BB9CA3D7F7E}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\GameMode\BlasterGameMode.h">
+      <Filter>Source\Blaster\Public\GameMode</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h">
       <Filter>Source\Blaster\Public\GameMode</Filter>
     </ClInclude>
@@ -206,6 +218,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\Blaster\Public\PlayerController\BlasterPlayerController.h">
       <Filter>Source\Blaster\Public\PlayerController</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\PlayerState">
+      <UniqueIdentifier>{70548E4F-C738-3812-A188-F35F48565DFF}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\PlayerState\BlasterPlayerState.h">
+      <Filter>Source\Blaster\Public\PlayerState</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\Weapon">
       <UniqueIdentifier>{DB344B61-2AE6-3B99-B6FC-C5F41F328357}</UniqueIdentifier>

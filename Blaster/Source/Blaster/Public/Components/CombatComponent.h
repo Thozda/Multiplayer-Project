@@ -64,13 +64,16 @@ private:
 	//
 	//Animation
 	//
+	bool bFireButtonPressed;
+	
+	UPROPERTY()
 	ABlasterCharacter* Character;
+	
+	UPROPERTY()
 	ABlasterPlayerController* Controller;
 	
 	UPROPERTY(Replicated)
 	bool bAiming;
-
-	bool bFireButtonPressed;
 	
 	UPROPERTY(ReplicatedUsing = OnRep_EquippedWeapon)
 	AWeapon* EquippedWeapon;
@@ -85,13 +88,15 @@ private:
 	//HUD
 	//
 	FHUDPackage HUDPackage;
-	ABlasterHUD* HUD;
 	float CrosshairVelocityFactor;
 	float CrosshairInAirFactor;
 	float CrosshairAimFactor;
 	float CrosshairShootingFactor;
 	float CrosshairTargetFactor;
 	float CrosshairTargetFactorInterp;
+
+	UPROPERTY()
+	ABlasterHUD* HUD;
 
 	//
 	//Aiming
