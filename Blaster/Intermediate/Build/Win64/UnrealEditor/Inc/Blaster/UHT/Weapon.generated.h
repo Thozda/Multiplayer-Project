@@ -21,7 +21,7 @@ class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Class AWeapon ******************************************************************
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnRep_Ammo); \
 	DECLARE_FUNCTION(execOnRep_WeaponState); \
 	DECLARE_FUNCTION(execOnSphereEndOverlap); \
@@ -30,7 +30,7 @@ struct FHitResult;
 
 BLASTER_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeapon(); \
 	friend struct Z_Construct_UClass_AWeapon_Statics; \
@@ -48,7 +48,7 @@ public: \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AWeapon(AWeapon&&) = delete; \
 	AWeapon(const AWeapon&) = delete; \
@@ -58,13 +58,13 @@ public: \
 	NO_API virtual ~AWeapon();
 
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_27_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_29_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_30_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

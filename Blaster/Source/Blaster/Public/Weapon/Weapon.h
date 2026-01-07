@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "WeaponTypes.h"
 #include "Weapon.generated.h"
 
 class UWidgetComponent;
@@ -13,6 +14,7 @@ class ACasing;
 class UTexture2D;
 class ABlasterCharacter;
 class ABlasterPlayerController;
+class USoundCue;
 
 UENUM(BlueprintType)
 enum class EWeaponState : uint8
@@ -40,6 +42,13 @@ public:
 	void ShowPickupWidget(bool bShowWidget);
 	void Dropped(); 
 	void SetHUDAmmo();
+	void AddAmmo(int32 AmmoToAdd);
+
+	//
+	//Equip
+	//
+	UPROPERTY(EditAnywhere)
+	USoundCue* EquipSound;
 	
 	//
 	//Crosshair Textures
@@ -80,6 +89,9 @@ protected:
 		OtherComp, int32 OtherBodyIndex);
 
 private:
+	UPROPERTY(EditAnywhere)
+	EWeaponType WeaponType;
+	
 	UPROPERTY()
 	ABlasterCharacter* BlasterOwnerCharacter;
 
@@ -148,4 +160,8 @@ public:
 	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
 	FORCEINLINE float GetZoomedFOV() const { return ZoomedFOV; }
 	FORCEINLINE float GetZoomInterpSpeed() const { return ZoomInterpSpeed; }
+	bool IsEmpty();
+	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
+	FORCEINLINE int32 GetAmmo() const { return Ammo; }
+	FORCEINLINE int32 GetMagCapacity() const { return MagCapacity; }
 };

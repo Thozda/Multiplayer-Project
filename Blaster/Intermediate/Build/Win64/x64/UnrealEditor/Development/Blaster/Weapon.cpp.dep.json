@@ -7,6 +7,7 @@
         "Includes": [
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blaster\\definitions.blaster.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapon.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapontypes.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\weapon.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\spherecomponent.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
@@ -27,6 +28,7 @@
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\interactwithcrosshairsinterface.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\timelinecomponent.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\timelinecomponent.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\blastertypes\\combatstate.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blastercharacter.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\widgetcomponent.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\blueprint\\userwidget.h",
@@ -103,6 +105,8 @@
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\skeletalmeshsocket.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\skeletalmeshsocket.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\playercontroller\\blasterplayercontroller.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blasterplayercontroller.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\casing.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\casing.generated.h"
         ],

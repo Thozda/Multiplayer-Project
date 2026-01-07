@@ -7,7 +7,14 @@
 			"files": [
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/HUD/WBP_CharacterOverlay.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/GameModes/BP_BlasterGameMode.uasset",
-				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Weapon/BP_AssaultRifle.uasset"
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Weapon/BP_AssaultRifle.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/Input/IA_Reload.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/Input/IMC_Base.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/BP_BlasterCharacter.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Assets/Animations/Reload_Rifle_Hip_Adjusted.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/Animation/AM_Reload.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/Animation/ABP_BlasterCharacter.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Assets/Animations/Reload_Rifle_Hip1.uasset"
 			]
 		}
 	]

@@ -14,6 +14,8 @@
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blasterhud.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapontypes.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\blastertypes\\combatstate.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\combatcomponent.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
@@ -69,7 +71,12 @@
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\playercontroller\\blasterplayercontroller.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blasterplayercontroller.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapon.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\weapon.generated.h"
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\weapon.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\soundcue.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\audioextensions\\public\\iaudioparametertransmitter.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\sound\\soundnode.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundnode.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundcue.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -23,6 +23,7 @@
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\interactwithcrosshairsinterface.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\timelinecomponent.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\timelinecomponent.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\blastertypes\\combatstate.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blastercharacter.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\progressbar.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\sprogressbar.h",
@@ -109,11 +110,7 @@
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\moviescene\\public\\entitysystem\\relativeptr.h",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\moviescene\\public\\evaluation\\moviescenepreanimatedstate.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\characteroverlay.generated.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\playerstate\\blasterplayerstate.h",
-            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
-            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playerstate.generated.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blasterplayerstate.generated.h"
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\characteroverlay.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

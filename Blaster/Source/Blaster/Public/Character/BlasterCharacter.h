@@ -7,6 +7,7 @@
 #include "GameFramework/Character.h"
 #include "Interfaces/InteractWithCrosshairsInterface.h"
 #include "Components/TimelineComponent.h"
+#include "Blaster/BlasterTypes/CombatState.h"
 #include "BlasterCharacter.generated.h"
 
 class UInputAction;
@@ -38,6 +39,7 @@ public:
 
 	void PlayFireMontage(bool bAiming);
 	void PlayElimMontage();
+	void PlayReloadMontage();
 	void Elim();
 
 	UFUNCTION(NetMulticast, Reliable)
@@ -85,6 +87,9 @@ protected:
 	UFUNCTION()
 	void FireButtonReleased(const FInputActionValue& Value);
 
+	UFUNCTION()
+	void ReloadButtonPressed(const FInputActionValue& Value);
+
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputMappingContext* InputMapping;
 
@@ -108,6 +113,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* FireAction;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* ReloadAction;
 
 	//
 	//Damage
@@ -134,7 +142,7 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UWidgetComponent* OverheadWidget;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UCombatComponent* Combat;
 
 	//
@@ -176,6 +184,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = Combat)
 	UAnimMontage* ElimMontage;
+
+	UPROPERTY(EditAnywhere, Category = Combat)
+	UAnimMontage* ReloadMontage;
 
 	//
 	//Player Health
@@ -255,4 +266,5 @@ public:
 	FORCEINLINE bool IsElimmed() const { return bElimmed; }
 	FORCEINLINE float GetHealth() const { return Health; }
 	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
+	FORCEINLINE ECombatState GetCombatState() const;
 };

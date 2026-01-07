@@ -163,6 +163,21 @@ struct Z_Construct_UClass_UBlasterAnimInstance_Statics
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Public/Character/BlasterAnimInstance.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bUseFABRIK_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Character/BlasterAnimInstance.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bUseAimOffsets_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Character/BlasterAnimInstance.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bTransformRightHand_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Character/BlasterAnimInstance.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LeftHandTransform_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
@@ -201,6 +216,12 @@ struct Z_Construct_UClass_UBlasterAnimInstance_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bRotateRootBone;
 	static void NewProp_bElimmed_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bElimmed;
+	static void NewProp_bUseFABRIK_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseFABRIK;
+	static void NewProp_bUseAimOffsets_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseAimOffsets;
+	static void NewProp_bTransformRightHand_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bTransformRightHand;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_LeftHandTransform;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -259,6 +280,21 @@ void Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bElimmed_SetBit(vo
 	((UBlasterAnimInstance*)Obj)->bElimmed = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bElimmed = { "bElimmed", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UBlasterAnimInstance), &Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bElimmed_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bElimmed_MetaData), NewProp_bElimmed_MetaData) };
+void Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseFABRIK_SetBit(void* Obj)
+{
+	((UBlasterAnimInstance*)Obj)->bUseFABRIK = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseFABRIK = { "bUseFABRIK", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UBlasterAnimInstance), &Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseFABRIK_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bUseFABRIK_MetaData), NewProp_bUseFABRIK_MetaData) };
+void Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseAimOffsets_SetBit(void* Obj)
+{
+	((UBlasterAnimInstance*)Obj)->bUseAimOffsets = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseAimOffsets = { "bUseAimOffsets", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UBlasterAnimInstance), &Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseAimOffsets_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bUseAimOffsets_MetaData), NewProp_bUseAimOffsets_MetaData) };
+void Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bTransformRightHand_SetBit(void* Obj)
+{
+	((UBlasterAnimInstance*)Obj)->bTransformRightHand = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bTransformRightHand = { "bTransformRightHand", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UBlasterAnimInstance), &Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bTransformRightHand_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bTransformRightHand_MetaData), NewProp_bTransformRightHand_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_LeftHandTransform = { "LeftHandTransform", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBlasterAnimInstance, LeftHandTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LeftHandTransform_MetaData), NewProp_LeftHandTransform_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBlasterAnimInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_RightHandRotation,
@@ -279,6 +315,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBlasterA
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bIsLocallyControlled,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bRotateRootBone,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bElimmed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseFABRIK,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bUseAimOffsets,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_bTransformRightHand,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBlasterAnimInstance_Statics::NewProp_LeftHandTransform,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UBlasterAnimInstance_Statics::PropPointers) < 2048);
@@ -319,10 +358,10 @@ UBlasterAnimInstance::~UBlasterAnimInstance() {}
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterAnimInstance_h__Script_Blaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBlasterAnimInstance, UBlasterAnimInstance::StaticClass, TEXT("UBlasterAnimInstance"), &Z_Registration_Info_UClass_UBlasterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBlasterAnimInstance), 1915455536U) },
+		{ Z_Construct_UClass_UBlasterAnimInstance, UBlasterAnimInstance::StaticClass, TEXT("UBlasterAnimInstance"), &Z_Registration_Info_UClass_UBlasterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBlasterAnimInstance), 968626836U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterAnimInstance_h__Script_Blaster_1392749398(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterAnimInstance_h__Script_Blaster_191853148(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterAnimInstance_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Character_BlasterAnimInstance_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
