@@ -45,8 +45,12 @@ public:
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastElim();
 
+	UPROPERTY(Replicated)
+	bool bDisableGameplay = false;
+
 protected:
 	virtual void BeginPlay() override;
+	void RotateInPlace(float DeltaTime);
 	//poll for any relevant classes and init HUD
 	void PollInit();
 
@@ -267,4 +271,5 @@ public:
 	FORCEINLINE float GetHealth() const { return Health; }
 	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
 	FORCEINLINE ECombatState GetCombatState() const;
+	FORCEINLINE bool GetDisableGameplay() const { return bDisableGameplay; }
 };

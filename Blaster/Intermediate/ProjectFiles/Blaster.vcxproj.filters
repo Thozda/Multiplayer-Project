@@ -90,6 +90,9 @@
     <Filter Include="Source\Blaster\BlasterTypes">
       <UniqueIdentifier>{69A66E39-133C-39E2-987D-EBC64A18AEF7}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\BlasterTypes\CombatState.h">
+      <Filter>Source\Blaster\BlasterTypes</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\BlasterTypes\TurningInPlace.h">
       <Filter>Source\Blaster\BlasterTypes</Filter>
     </ClInclude>
@@ -120,9 +123,18 @@
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
       <Filter>Source\Blaster\Private\GameMode</Filter>
     </ClCompile>
+    <Filter Include="Source\Blaster\Private\GameState">
+      <UniqueIdentifier>{DA09CCC8-8220-3C4E-8ABB-54867D9E7645}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\GameState\BlasterGameState.cpp">
+      <Filter>Source\Blaster\Private\GameState</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Private\HUD">
       <UniqueIdentifier>{3AEEA2FD-5C5C-3B2A-A6B1-0BD5C2357D19}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\Announcement.cpp">
+      <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\BlasterHUD.cpp">
       <Filter>Source\Blaster\Private\HUD</Filter>
     </ClCompile>
@@ -195,9 +207,18 @@
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h">
       <Filter>Source\Blaster\Public\GameMode</Filter>
     </ClInclude>
+    <Filter Include="Source\Blaster\Public\GameState">
+      <UniqueIdentifier>{1DB7D38D-50CF-345D-B59C-AF4D4437EFFD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\GameState\BlasterGameState.h">
+      <Filter>Source\Blaster\Public\GameState</Filter>
+    </ClInclude>
     <Filter Include="Source\Blaster\Public\HUD">
       <UniqueIdentifier>{7044C1BC-C0F4-3D31-ABD5-E14C657CA533}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\Announcement.h">
+      <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\BlasterHUD.h">
       <Filter>Source\Blaster\Public\HUD</Filter>
     </ClInclude>
@@ -241,6 +262,9 @@
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\WeaponTypes.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
   </ItemGroup>

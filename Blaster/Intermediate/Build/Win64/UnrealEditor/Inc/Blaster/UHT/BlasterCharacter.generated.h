@@ -59,7 +59,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		OverlappingWeapon=NETFIELD_REP_START, \
+		bDisableGameplay=NETFIELD_REP_START, \
+		OverlappingWeapon, \
 		Health, \
 		NETFIELD_REP_END=Health	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)

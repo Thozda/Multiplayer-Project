@@ -14,6 +14,9 @@
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Assets/Animations/Reload_Rifle_Hip_Adjusted.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/Animation/AM_Reload.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/Character/Animation/ABP_BlasterCharacter.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/HUD/WBP_Announcement.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/HUD/BP_BlasterHUD.uasset",
+				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Blueprints/GameState/BP_BlasterGameState.uasset",
 				"P:/Coding/Unreal Projects/Multiplayer-Project/Blaster/Content/Assets/Animations/Reload_Rifle_Hip1.uasset"
 			]
 		}

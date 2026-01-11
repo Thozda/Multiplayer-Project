@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FHUDPackage *******************************************************
-#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_12_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_14_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FHUDPackage_Statics; \
 	BLASTER_API static class UScriptStruct* StaticStruct();
 
@@ -28,7 +28,7 @@ struct FHUDPackage;
 // ********** Begin Class ABlasterHUD **************************************************************
 BLASTER_API UClass* Z_Construct_UClass_ABlasterHUD_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_32_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_34_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABlasterHUD(); \
 	friend struct Z_Construct_UClass_ABlasterHUD_Statics; \
@@ -39,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(ABlasterHUD)
 
 
-#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_32_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_34_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABlasterHUD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -51,12 +51,12 @@ public: \
 	NO_API virtual ~ABlasterHUD();
 
 
-#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_29_PROLOG
-#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_32_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_31_PROLOG
+#define FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_34_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_32_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_32_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_34_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_34_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
