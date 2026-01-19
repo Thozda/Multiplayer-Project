@@ -19,27 +19,35 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FVector_NetQuantize;
 
 // ********** Begin Class UCombatComponent *********************************************************
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void Server_ThrowGrenade_Implementation(); \
 	virtual void ServerReload_Implementation(); \
 	virtual void MulticastFire_Implementation(FVector_NetQuantize const& TraceHitTarget); \
 	virtual void ServerFire_Implementation(FVector_NetQuantize const& TraceHitTarget); \
 	virtual void ServerHitTarget_Implementation(FVector_NetQuantize const& Target); \
 	virtual void ServerSetAiming_Implementation(bool bIsAiming); \
+	virtual void Server_LaunchGrenade_Implementation(FVector_NetQuantize const& Target); \
+	DECLARE_FUNCTION(execOnRep_Grenades); \
 	DECLARE_FUNCTION(execOnRep_CarriedAmmo); \
 	DECLARE_FUNCTION(execOnRep_CombatState); \
+	DECLARE_FUNCTION(execServer_ThrowGrenade); \
 	DECLARE_FUNCTION(execServerReload); \
 	DECLARE_FUNCTION(execMulticastFire); \
 	DECLARE_FUNCTION(execServerFire); \
 	DECLARE_FUNCTION(execServerHitTarget); \
 	DECLARE_FUNCTION(execServerSetAiming); \
 	DECLARE_FUNCTION(execOnRep_EquippedWeapon); \
+	DECLARE_FUNCTION(execServer_LaunchGrenade); \
+	DECLARE_FUNCTION(execLaunchGrenade); \
+	DECLARE_FUNCTION(execThrowGrenadeFinished); \
+	DECLARE_FUNCTION(execShotgunShellReload); \
 	DECLARE_FUNCTION(execFinishReloading);
 
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_CALLBACK_WRAPPERS
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_CALLBACK_WRAPPERS
 BLASTER_API UClass* Z_Construct_UClass_UCombatComponent_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCombatComponent(); \
 	friend struct Z_Construct_UClass_UCombatComponent_Statics; \
@@ -56,11 +64,12 @@ public: \
 		bAiming, \
 		EquippedWeapon, \
 		CarriedAmmo, \
-		NETFIELD_REP_END=CarriedAmmo	}; \
+		Grenades, \
+		NETFIELD_REP_END=Grenades	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCombatComponent(UCombatComponent&&) = delete; \
 	UCombatComponent(const UCombatComponent&) = delete; \
@@ -70,14 +79,14 @@ public: \
 	NO_API virtual ~UCombatComponent();
 
 
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_19_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_18_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_CALLBACK_WRAPPERS \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_CALLBACK_WRAPPERS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Components_CombatComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -26,11 +26,12 @@ public:
 	virtual void ReceivedPlayer() override; //Sync with server clock as soon as possible
 	void SetHUDHealth(float Health, float MaxHealth);
 	void SetHUDScore(float Score);
-	void SetHUDDefeats(int Defeats);
-	void SetHUDWeaponAmmo(int Ammo);
-	void SetHUDCarriedAmmo(int Ammo);
+	void SetHUDDefeats(int32 Defeats);
+	void SetHUDWeaponAmmo(int32 Ammo);
+	void SetHUDCarriedAmmo(int32 Ammo);
 	void SetHUDMatchCountdown(float CountdownTime);
 	void SetHUDAnnouncementCountdown(float CountdownTime);
+	void SetHUDGrenades(int32 Grenades);
 	void OnMatchStateSet(FName State);
 	void HandleMatchHasStarted();
 	void HandleCooldown();
@@ -83,6 +84,7 @@ private:
 	float HUDMaxHealth;
 	float HUDScore;
 	int32 HUDDefeats;
+	int32 HUDGrenades;
 	
 	UPROPERTY(ReplicatedUsing = OnRep_MatchState)
 	FName MatchState;

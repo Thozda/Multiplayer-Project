@@ -31,6 +31,7 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execServerEquipButtonPressed); \
 	DECLARE_FUNCTION(execOnRep_OverlappingWeapon); \
 	DECLARE_FUNCTION(execRecieveDamage); \
+	DECLARE_FUNCTION(execGrenadeButtonPressed); \
 	DECLARE_FUNCTION(execReloadButtonPressed); \
 	DECLARE_FUNCTION(execFireButtonReleased); \
 	DECLARE_FUNCTION(execFireButtonPressed); \

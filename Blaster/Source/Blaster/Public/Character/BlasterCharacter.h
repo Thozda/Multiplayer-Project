@@ -40,10 +40,14 @@ public:
 	void PlayFireMontage(bool bAiming);
 	void PlayElimMontage();
 	void PlayReloadMontage();
+	void PlayThrowGrenadeMontage();
 	void Elim();
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastElim();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void ShowSniperScopeWidget(bool bShowScope);
 
 	UPROPERTY(Replicated)
 	bool bDisableGameplay = false;
@@ -94,6 +98,9 @@ protected:
 	UFUNCTION()
 	void ReloadButtonPressed(const FInputActionValue& Value);
 
+	UFUNCTION()
+	void GrenadeButtonPressed(const FInputActionValue& Value);
+
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputMappingContext* InputMapping;
 
@@ -120,6 +127,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* ReloadAction;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* GrenadeAction;
 
 	//
 	//Damage
@@ -162,6 +172,12 @@ private:
 	void ServerEquipButtonPressed();
 
 	//
+	//Grenade
+	//
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* AttachedGrenade;
+
+	//
 	//Animations
 	//
 	void TurnInPlace(float DeltaTime);
@@ -191,6 +207,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = Combat)
 	UAnimMontage* ReloadMontage;
+
+	UPROPERTY(EditAnywhere, Category = Combat)
+	UAnimMontage* ThrowGrenadeMontage;
 
 	//
 	//Player Health
@@ -272,4 +291,7 @@ public:
 	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
 	FORCEINLINE ECombatState GetCombatState() const;
 	FORCEINLINE bool GetDisableGameplay() const { return bDisableGameplay; }
+	FORCEINLINE UAnimMontage* GetReloadMontage() const { return ReloadMontage; }
+	FORCEINLINE UCombatComponent* GetCombat() const { return Combat; }
+	FORCEINLINE UStaticMeshComponent* GetAttachedGrenade() const { return AttachedGrenade; }
 };

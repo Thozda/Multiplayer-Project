@@ -21,13 +21,13 @@ class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Class AProjectile **************************************************************
-#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnHit);
 
 
 BLASTER_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAProjectile(); \
 	friend struct Z_Construct_UClass_AProjectile_Statics; \
@@ -38,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(AProjectile)
 
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AProjectile(AProjectile&&) = delete; \
 	AProjectile(const AProjectile&) = delete; \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~AProjectile();
 
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_15_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_17_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Projectile_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

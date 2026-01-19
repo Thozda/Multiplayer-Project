@@ -168,13 +168,28 @@
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Casing.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\HitScanWeapon.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Projectile.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileBullet.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileGrenade.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileRocket.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\ProjectileWeapon.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\RocketMovementComponent.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Shotgun.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Weapon.cpp">
@@ -252,13 +267,28 @@
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Casing.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\HitScanWeapon.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Projectile.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileBullet.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileGrenade.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileRocket.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\ProjectileWeapon.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\RocketMovementComponent.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Shotgun.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h">

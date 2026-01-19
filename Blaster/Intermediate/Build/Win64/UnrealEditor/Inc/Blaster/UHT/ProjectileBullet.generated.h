@@ -31,8 +31,6 @@ public: \
 
 
 #define FID_Blaster_Source_Blaster_Public_Weapon_ProjectileBullet_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AProjectileBullet(); \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AProjectileBullet(AProjectileBullet&&) = delete; \
 	AProjectileBullet(const AProjectileBullet&) = delete; \

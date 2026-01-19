@@ -37,13 +37,31 @@ struct Z_Construct_UEnum_Blaster_EWeaponType_Statics
 		{ "BlueprintType", "true" },
 		{ "EWT_AssaultRifle.DisplayName", "Assault Rifle" },
 		{ "EWT_AssaultRifle.Name", "EWeaponType::EWT_AssaultRifle" },
+		{ "EWT_GrenadeLauncher.DisplayName", "Grenade Launcher" },
+		{ "EWT_GrenadeLauncher.Name", "EWeaponType::EWT_GrenadeLauncher" },
 		{ "EWT_MAX.DisplayName", "MAX" },
 		{ "EWT_MAX.Name", "EWeaponType::EWT_MAX" },
+		{ "EWT_Pistol.DisplayName", "Pistol" },
+		{ "EWT_Pistol.Name", "EWeaponType::EWT_Pistol" },
+		{ "EWT_RocketLauncher.DisplayName", "Rocket Launcher" },
+		{ "EWT_RocketLauncher.Name", "EWeaponType::EWT_RocketLauncher" },
+		{ "EWT_Shotgun.DisplayName", "Shotgun" },
+		{ "EWT_Shotgun.Name", "EWeaponType::EWT_Shotgun" },
+		{ "EWT_SniperRifle.DisplayName", "Sniper Rifle" },
+		{ "EWT_SniperRifle.Name", "EWeaponType::EWT_SniperRifle" },
+		{ "EWT_SubmachineGun.DisplayName", "Submachine Gun" },
+		{ "EWT_SubmachineGun.Name", "EWeaponType::EWT_SubmachineGun" },
 		{ "ModuleRelativePath", "Public/Weapon/WeaponTypes.h" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "EWeaponType::EWT_AssaultRifle", (int64)EWeaponType::EWT_AssaultRifle },
+		{ "EWeaponType::EWT_RocketLauncher", (int64)EWeaponType::EWT_RocketLauncher },
+		{ "EWeaponType::EWT_Pistol", (int64)EWeaponType::EWT_Pistol },
+		{ "EWeaponType::EWT_SubmachineGun", (int64)EWeaponType::EWT_SubmachineGun },
+		{ "EWeaponType::EWT_Shotgun", (int64)EWeaponType::EWT_Shotgun },
+		{ "EWeaponType::EWT_SniperRifle", (int64)EWeaponType::EWT_SniperRifle },
+		{ "EWeaponType::EWT_GrenadeLauncher", (int64)EWeaponType::EWT_GrenadeLauncher },
 		{ "EWeaponType::EWT_MAX", (int64)EWeaponType::EWT_MAX },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
@@ -74,10 +92,10 @@ UEnum* Z_Construct_UEnum_Blaster_EWeaponType()
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EWeaponType_StaticEnum, TEXT("EWeaponType"), &Z_Registration_Info_UEnum_EWeaponType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2147758921U) },
+		{ EWeaponType_StaticEnum, TEXT("EWeaponType"), &Z_Registration_Info_UEnum_EWeaponType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2438016219U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_1911140885(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_2200815046(TEXT("/Script/Blaster"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_Statics::EnumInfo));
