@@ -111,6 +111,9 @@
     <Filter Include="Source\Blaster\Private\Components">
       <UniqueIdentifier>{C8F012C3-08A6-355C-8A7D-DC88B86A82F1}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Components\BuffComponent.cpp">
+      <Filter>Source\Blaster\Private\Components</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp">
       <Filter>Source\Blaster\Private\Components</Filter>
     </ClCompile>
@@ -149,6 +152,30 @@
     </Filter>
     <ClCompile Include="..\..\Source\Blaster\Private\Interfaces\InteractWithCrosshairsInterface.cpp">
       <Filter>Source\Blaster\Private\Interfaces</Filter>
+    </ClCompile>
+    <Filter Include="Source\Blaster\Private\Pickups">
+      <UniqueIdentifier>{631CFECC-9584-3FE1-9349-16E5452098A7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\AmmoPickup.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\HealthPickup.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\JumpPickup.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\Pickup.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\PickupSpawnPoint.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\ShieldPickup.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Pickups\SpeedPickup.cpp">
+      <Filter>Source\Blaster\Private\Pickups</Filter>
     </ClCompile>
     <Filter Include="Source\Blaster\Private\PlayerController">
       <UniqueIdentifier>{75EDA697-8EF9-345C-AD08-4F5BE9D7693F}</UniqueIdentifier>
@@ -195,6 +222,9 @@
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Weapon.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\WeaponSpawnPoint.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Public">
       <UniqueIdentifier>{4DF4A405-29D2-3BF9-A1E7-AB6747806B7F}</UniqueIdentifier>
     </Filter>
@@ -210,6 +240,9 @@
     <Filter Include="Source\Blaster\Public\Components">
       <UniqueIdentifier>{5DD7ECB6-D376-31A5-BD09-4831FAA9590D}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Components\BuffComponent.h">
+      <Filter>Source\Blaster\Public\Components</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h">
       <Filter>Source\Blaster\Public\Components</Filter>
     </ClInclude>
@@ -248,6 +281,30 @@
     </Filter>
     <ClInclude Include="..\..\Source\Blaster\Public\Interfaces\InteractWithCrosshairsInterface.h">
       <Filter>Source\Blaster\Public\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\Blaster\Public\Pickups">
+      <UniqueIdentifier>{F0D7BFB4-37A2-3947-BC35-282326437190}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\AmmoPickup.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\HealthPickup.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\JumpPickup.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\Pickup.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\PickupSpawnPoint.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\ShieldPickup.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Pickups\SpeedPickup.h">
+      <Filter>Source\Blaster\Public\Pickups</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\PlayerController">
       <UniqueIdentifier>{6A1A9EDD-1E73-363E-8D02-A48466F2B3CE}</UniqueIdentifier>
@@ -292,6 +349,9 @@
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Weapon.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\WeaponSpawnPoint.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\WeaponTypes.h">

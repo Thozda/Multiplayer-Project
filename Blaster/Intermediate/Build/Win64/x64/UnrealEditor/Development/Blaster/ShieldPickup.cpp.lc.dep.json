@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\private\\pickups\\shieldpickup.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\blastereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\blaster\\definitions.blaster.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\pickups\\shieldpickup.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\pickups\\pickup.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\pickup.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\shieldpickup.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\character\\blastercharacter.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\blastertypes\\turninginplace.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\interfaces\\interactwithcrosshairsinterface.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\interactwithcrosshairsinterface.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\timelinecomponent.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\timelinecomponent.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\blastertypes\\combatstate.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blastercharacter.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\components\\buffcomponent.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\buffcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

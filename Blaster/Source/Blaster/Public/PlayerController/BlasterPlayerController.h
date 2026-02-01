@@ -25,6 +25,7 @@ public:
 	virtual float GetServerTime(); //Synced with server world clock
 	virtual void ReceivedPlayer() override; //Sync with server clock as soon as possible
 	void SetHUDHealth(float Health, float MaxHealth);
+	void SetHUDShield(float Shield, float MaxShield);
 	void SetHUDScore(float Score);
 	void SetHUDDefeats(int32 Defeats);
 	void SetHUDWeaponAmmo(int32 Ammo);
@@ -79,12 +80,22 @@ private:
 	float LevelStartingTime = 0.f;
 	uint32 CountdownInt = 0;
 
-	bool bInitializeCharacterOverlay = false;
+	bool bInitializeHealth = false;
 	float HUDHealth;
 	float HUDMaxHealth;
+	bool bInitializeShield = false;
+	float HUDShield;
+	float HUDMaxShield;
+	bool bInitializeScore = false;
 	float HUDScore;
+	bool bInitializeDefeats = false;
 	int32 HUDDefeats;
+	bool bInitializeGrenades = false;
 	int32 HUDGrenades;
+	bool bInitializeWeaponAmmo = false;
+	int32 HUDWeaponAmmo;
+	bool bInitializeCarriedAmmo = false;
+	int32 HUDCarriedAmmo;
 	
 	UPROPERTY(ReplicatedUsing = OnRep_MatchState)
 	FName MatchState;

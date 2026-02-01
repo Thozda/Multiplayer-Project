@@ -15,12 +15,14 @@ class UTexture2D;
 class ABlasterCharacter;
 class ABlasterPlayerController;
 class USoundCue;
+class AWeaponSpawnPoint;
 
 UENUM(BlueprintType)
 enum class EWeaponState : uint8
 {
 	EWS_Initial UMETA(DisplayName = "Initial State"),
 	EWS_Equipped UMETA(DisplayName = "Equipped"),
+	EWS_EquippedSecondary UMETA(DisplayName = "Equipped Secondary"),
 	EWS_Dropped UMETA(DisplayName = "Dropped"),
 	
 	EWS_MAX UMETA(DisplayName = "Default MAX")
@@ -84,6 +86,10 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
+	virtual void OnWeaponStateSet();
+	virtual void OnEquipped();
+	virtual void OnEquippedSecondary();
+	virtual void OnDropped();
 
 	UFUNCTION()
 	virtual void OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent*
@@ -125,6 +131,12 @@ private:
 	UWidgetComponent* PickupWidget;
 
 	//
+	//Spawner
+	//
+	UPROPERTY()
+	AWeaponSpawnPoint* SpawnPoint;
+
+	//
 	//Animation
 	//
 	UPROPERTY(EditAnywhere, Category = "Weapon Properties")
@@ -159,6 +171,16 @@ private:
 	UPROPERTY(EditAnywhere)
 	int32 MagCapacity;
 
+	//
+	//Dropped Timer
+	//
+	void DroppedTimerFinished();
+	
+	FTimerHandle DroppedTimer;
+	
+	UPROPERTY(EditAnywhere)
+	float DroppedTime = 30.f;
+
 public:
 	void SetWeaponState(EWeaponState state);
 	FORCEINLINE USphereComponent* GetAreaSphere() const { return AreaSphere; }
@@ -170,4 +192,5 @@ public:
 	FORCEINLINE EWeaponType GetWeaponType() const { return WeaponType; }
 	FORCEINLINE int32 GetAmmo() const { return Ammo; }
 	FORCEINLINE int32 GetMagCapacity() const { return MagCapacity; }
+	FORCEINLINE void SetSpawnPoint(AWeaponSpawnPoint* Spawner) { SpawnPoint = Spawner; }
 };

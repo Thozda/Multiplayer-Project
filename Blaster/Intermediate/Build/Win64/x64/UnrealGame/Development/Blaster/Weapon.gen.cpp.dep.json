@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealgame\\inc\\blaster\\uht\\weapon.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\blaster\\development\\engine\\sharedpch.engine.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\x64\\unrealgame\\development\\blaster\\definitions.blaster.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapon.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weapontypes.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealgame\\inc\\blaster\\uht\\weapon.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

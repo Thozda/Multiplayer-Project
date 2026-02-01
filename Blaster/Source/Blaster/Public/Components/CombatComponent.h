@@ -28,8 +28,10 @@ public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	void EquipWeapon(AWeapon* WeaponToEquip);
+	void SwapWeapons();
 	void Reload();
 	void JumpToShotgunEnd();
+	void PickupAmmo(EWeaponType WeaponType, int32 AmmoAmount);
 
 	UFUNCTION(BlueprintCallable)
 	void FinishReloading();
@@ -56,12 +58,18 @@ protected:
 	void DropEquippedWeapon();
 	void AttachActorToRightHand(AActor* ActorToAttach);
 	void AttachActorToLeftHand(AActor* ActorToAttach);
+	void AttachActorToBackpack(AActor* ActorToAttach);
 	void UpdateCarriedAmmo();
 	void ReloadEmptyWeapon();
-	void PlayEquipWeaponSound();
+	void PlayEquipWeaponSound(AWeapon* WeaponToEquip);
+	void EquipPrimaryWeapon(AWeapon* WeaponToEquip);
+	void EquipSecondaryWeapon(AWeapon* WeaponToEquip);
 	
 	UFUNCTION()
 	void OnRep_EquippedWeapon();
+
+	UFUNCTION()
+	void OnRep_SecondaryWeapon();
 
 	//
 	//Aim
@@ -112,6 +120,15 @@ protected:
 	TSubclassOf<AProjectile> GrenadeClass;
 
 private:
+	UPROPERTY()
+	ABlasterCharacter* Character;
+	
+	UPROPERTY(ReplicatedUsing = OnRep_EquippedWeapon)
+	AWeapon* EquippedWeapon;
+
+	UPROPERTY(ReplicatedUsing = OnRep_SecondaryWeapon)
+	AWeapon* SecondaryWeapon;
+
 	//
 	//Combat State
 	//
@@ -127,17 +144,11 @@ private:
 	bool bFireButtonPressed;
 	
 	UPROPERTY()
-	ABlasterCharacter* Character;
-	
-	UPROPERTY()
 	ABlasterPlayerController* Controller;
 	
 	UPROPERTY(Replicated)
 	bool bAiming;
 	
-	UPROPERTY(ReplicatedUsing = OnRep_EquippedWeapon)
-	AWeapon* EquippedWeapon;
-
 	UPROPERTY(EditAnywhere)
 	float BaseWalkSpeed;
 
@@ -200,6 +211,9 @@ private:
 	//Carried ammo for currently equipped weapon type
 	UPROPERTY(ReplicatedUsing = OnRep_CarriedAmmo)
 	int32 CarriedAmmo;
+	
+	UPROPERTY(EditAnywhere)
+	int32 MaxCarriedAmmo = 500;
 
 	UPROPERTY(EditAnywhere)
 	int32 StartingARAmmo = 60;
@@ -239,4 +253,5 @@ private:
 
 public:
 	FORCEINLINE int32 GetGrenades() const { return Grenades; }
+	bool ShouldSwapWeapons();
 };

@@ -21,6 +21,7 @@ class UAnimMontage;
 class ABlasterPlayerController;
 class USoundCue;
 class ABlasterPlayerState;
+class UBuffComponent;
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter, public IInteractWithCrosshairsInterface
@@ -37,10 +38,14 @@ public:
 	virtual void OnRep_ReplicatedMovement() override;
 	virtual void Destroyed() override;
 
+	void UpdateHUDHealth();
+	void UpdateHUDShield();
+	void UpdateHUDAmmo();
 	void PlayFireMontage(bool bAiming);
 	void PlayElimMontage();
 	void PlayReloadMontage();
 	void PlayThrowGrenadeMontage();
+	void SpawnDefaultWeapon();
 	void Elim();
 
 	UFUNCTION(NetMulticast, Reliable)
@@ -64,7 +69,6 @@ protected:
 	void AimOffset(float DeltaTime);
 	void SimProxiesTurn();
 	void PlayHitReactMontage();
-	void UpdateHUDHealth();
 
 	//
 	//Input
@@ -159,9 +163,14 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UCombatComponent* Combat;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UBuffComponent* Buff;
+
 	//
 	//Weapon
 	//
+	void DropOrDestroyWeapons();
+	
 	UPROPERTY(ReplicatedUsing = OnRep_OverlappingWeapon)
 	AWeapon* OverlappingWeapon;
 
@@ -214,9 +223,10 @@ private:
 	//
 	//Player Health
 	//
-	UFUNCTION()
-	void OnRep_Health();
 	void ElimTimerfinished();
+	
+	UFUNCTION()
+	void OnRep_Health(float LastHealth);
 	
 	bool bElimmed = false;
 	FTimerHandle ElimTimer;
@@ -232,6 +242,18 @@ private:
 	
 	UPROPERTY(EditDefaultsOnly)
 	float ElimDelay = 3.f;
+
+	//
+	//PlayerShield
+	//
+	UFUNCTION()
+	void OnRep_Shield(float LastShield);
+	
+	UPROPERTY(ReplicatedUsing = OnRep_Shield, EditAnywhere, Category = "Player Stats")
+	float Shield = 0.f;
+	
+	UPROPERTY(EditAnywhere, Category = "Player Stats")
+	float MaxShield = 100.f;
 
 	//
 	//Dissolve Effect
@@ -275,6 +297,12 @@ private:
 	UPROPERTY()
 	ABlasterPlayerState* BlasterPlayerState;
 	
+	//
+	//Default Weapon
+	//
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AWeapon> DefaultWeaponClass;
+	
 public:
 	void SetOverlappingWeapon(AWeapon* Weapon);
 	bool IsWeaponEquipped();
@@ -288,10 +316,15 @@ public:
 	FORCEINLINE bool ShouldRotateRootBone() const { return bRotateRootBone; }
 	FORCEINLINE bool IsElimmed() const { return bElimmed; }
 	FORCEINLINE float GetHealth() const { return Health; }
+	FORCEINLINE void SetHealth(float Ammount) { Health = Ammount; }
 	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
-	FORCEINLINE ECombatState GetCombatState() const;
+	FORCEINLINE float GetShield() const { return Shield; }
+	FORCEINLINE void SetShield(float Ammount) { Shield = Ammount; }
+	FORCEINLINE float GetMaxShield() const { return MaxShield; }
+	ECombatState GetCombatState() const;
 	FORCEINLINE bool GetDisableGameplay() const { return bDisableGameplay; }
 	FORCEINLINE UAnimMontage* GetReloadMontage() const { return ReloadMontage; }
 	FORCEINLINE UCombatComponent* GetCombat() const { return Combat; }
 	FORCEINLINE UStaticMeshComponent* GetAttachedGrenade() const { return AttachedGrenade; }
+	FORCEINLINE UBuffComponent* GetBuff() const { return Buff; }
 };

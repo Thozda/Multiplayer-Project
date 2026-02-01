@@ -117,7 +117,9 @@
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\playercontroller\\blasterplayercontroller.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\blasterplayercontroller.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\casing.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\casing.generated.h"
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\casing.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\weaponspawnpoint.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\weaponspawnpoint.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
