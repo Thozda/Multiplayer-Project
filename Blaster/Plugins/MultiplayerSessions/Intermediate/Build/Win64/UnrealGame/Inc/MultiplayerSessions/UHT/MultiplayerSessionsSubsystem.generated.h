@@ -30,17 +30,10 @@ MULTIPLAYERSESSIONS_API void FMultiplayerOnDestroySessionComplete_DelegateWrappe
 
 // ********** End Delegate FMultiplayerOnDestroySessionComplete ************************************
 
-// ********** Begin Delegate FMultiplayerOnStartSessionComplete ************************************
-#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_18_DELEGATE \
-MULTIPLAYERSESSIONS_API void FMultiplayerOnStartSessionComplete_DelegateWrapper(const FMulticastScriptDelegate& MultiplayerOnStartSessionComplete, bool bWasSuccessful);
-
-
-// ********** End Delegate FMultiplayerOnStartSessionComplete **************************************
-
 // ********** Begin Class UMultiplayerSessionsSubsystem ********************************************
 MULTIPLAYERSESSIONS_API UClass* Z_Construct_UClass_UMultiplayerSessionsSubsystem_NoRegister();
 
-#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMultiplayerSessionsSubsystem(); \
 	friend struct Z_Construct_UClass_UMultiplayerSessionsSubsystem_Statics; \
@@ -51,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(UMultiplayerSessionsSubsystem)
 
 
-#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_25_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UMultiplayerSessionsSubsystem(UMultiplayerSessionsSubsystem&&) = delete; \
 	UMultiplayerSessionsSubsystem(const UMultiplayerSessionsSubsystem&) = delete; \
@@ -61,12 +54,12 @@ public: \
 	NO_API virtual ~UMultiplayerSessionsSubsystem();
 
 
-#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_23_PROLOG
-#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_26_GENERATED_BODY \
+#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_22_PROLOG
+#define FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_26_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_26_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Plugins_MultiplayerSessions_Source_MultiplayerSessions_Public_MultiplayerSessionsSubsystem_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

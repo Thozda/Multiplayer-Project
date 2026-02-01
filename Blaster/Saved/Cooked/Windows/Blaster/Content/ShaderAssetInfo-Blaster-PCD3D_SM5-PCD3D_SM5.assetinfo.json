@@ -232,6 +232,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "1AA0D84B3FB85CC8C2E22F5895D96E6780BEDDE5",
+			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/M_Master_Fresnel"
+			]
+		},
+		{
 			"ShaderMapHash": "0D08394C855037C8A54E5FFA6417E7C9EF801E09",
 			"Assets": [
 				"/Engine/EditorLandscapeResources/SelectBrushMaterial"
@@ -313,6 +319,12 @@
 			"ShaderMapHash": "69A04E5EFD76147991F8097331DF691310DC95F0",
 			"Assets": [
 				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_GlowSphere_01"
+			]
+		},
+		{
+			"ShaderMapHash": "6D22DC5F50831C30EB0DBF74D5E96CE6904730AC",
+			"Assets": [
+				"/Game/Assets/Materials/PP_Highlight"
 			]
 		},
 		{
@@ -459,6 +471,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "6C288F8C74910CFBC3D3DBD1A51772426F0A3A7F",
+			"Assets": [
+				"/Game/Assets/LearningKit_Games/Assets/VFX/LightRay/M_vfx_lightray_01_bright"
+			]
+		},
+		{
 			"ShaderMapHash": "7FE4938DAA8F82860F8A575D7F61780BC9749B4E",
 			"Assets": [
 				"/Engine/EngineMaterials/WorldGridMaterial"
@@ -467,6 +485,7 @@
 		{
 			"ShaderMapHash": "F051EB8E957099858D40DCC63D479B7A2CB3230D",
 			"Assets": [
+				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_AssaultRifle_MuzzleFlash_4x1",
 				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_Pistol_Streaks_01"
 			]
 		},
@@ -640,6 +659,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "FFCAC5C113245BE449BC01AEE5074B8632E60614",
+			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/MI_Aura_1"
+			]
+		},
+		{
 			"ShaderMapHash": "7FE105C2FB203B2C002A9AC7D4F4BD15FD2FB010",
 			"Assets": [
 				"/Engine/EditorLandscapeResources/SelectBrushMaterial_SelectedRegion"
@@ -686,7 +711,8 @@
 		{
 			"ShaderMapHash": "5F3AE6C93D1A163B9E8796D4BA497590AE9B5001",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/_Shared/Materials/MI_Opaque_BaseInstance"
+				"/Game/Assets/LearningKit_Games/Assets/_Shared/Materials/MI_Opaque_BaseInstance",
+				"/Game/Assets/LearningKit_Games/Assets/Architecture/Gates/Material/MI_Large_Gate"
 			]
 		},
 		{
@@ -695,6 +721,12 @@
 				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Boots",
 				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Head",
 				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Tunic"
+			]
+		},
+		{
+			"ShaderMapHash": "DB380ED7612384AC0C3474A9B0B13BD269A3B271",
+			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/M_AdditiveScrollNiagara"
 			]
 		},
 		{
@@ -759,9 +791,21 @@
 			]
 		},
 		{
+			"ShaderMapHash": "06E691F945A19550CE153B12DA17C933A395B57C",
+			"Assets": [
+				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/Master_Material/M_Weapon_Master_USE"
+			]
+		},
+		{
 			"ShaderMapHash": "3B829FF9F0422FD637E1F06B3504C41D02C45C1F",
 			"Assets": [
 				"/SpeedTreeImporter/SpeedTree9/SpeedTreeMaster"
+			]
+		},
+		{
+			"ShaderMapHash": "58BC7DFA9D8E7E43292F8106B1C1A2A374B27234",
+			"Assets": [
+				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_Tracer_A"
 			]
 		},
 		{

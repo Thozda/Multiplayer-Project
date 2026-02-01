@@ -15,7 +15,6 @@ DECLARE_MULTICAST_DELEGATE_TwoParams(FMultiplayerOnFindSessionsComplete, const T
 	SessionResults, bool bWasSuccessful);
 DECLARE_MULTICAST_DELEGATE_OneParam(FMultiplayerOnJoinSessionComplete, EOnJoinSessionCompleteResult::Type Result);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMultiplayerOnDestroySessionComplete, bool, bWasSuccessful);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMultiplayerOnStartSessionComplete, bool, bWasSuccessful);
 
 /**
  * 
@@ -27,6 +26,9 @@ class MULTIPLAYERSESSIONS_API UMultiplayerSessionsSubsystem : public UGameInstan
 	
 public:
 	UMultiplayerSessionsSubsystem();
+	
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+	virtual void Deinitialize() override;
 
 	//
 	//To handle Session Functionality, the menu class will call these
@@ -35,7 +37,6 @@ public:
 	void FindSessions(int32 MaxSearchResults);
 	void JoinSession(const FOnlineSessionSearchResult& SessionResult);
 	void DestroySession();
-	void StartSession();
 
 	//
 	//Custom Delegates for the menu to bind callbacks to
@@ -44,7 +45,6 @@ public:
 	FMultiplayerOnFindSessionsComplete MultiplayerOnFindSessionsComplete;
 	FMultiplayerOnJoinSessionComplete MultiplayerOnJoinSessionComplete;
 	FMultiplayerOnDestroySessionComplete MultiplayerOnDestroySessionComplete;
-	FMultiplayerOnStartSessionComplete MultiplayerOnStartSessionComplete;
 	
 protected:
 	
@@ -56,7 +56,6 @@ protected:
 	void OnFindSessionComplete(bool bWasSuccessful);
 	void OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Result);
 	void OnDestroySessionComplete(FName SessionName, bool bWasSuccessful);
-	void OnStartSessionComplete(FName SessionName, bool bWasSuccessful);
 	
 private:
 	IOnlineSessionPtr SessionInterface;
@@ -71,7 +70,6 @@ private:
 	FOnFindSessionsCompleteDelegate FindSessionsCompleteDelegate;
 	FOnJoinSessionCompleteDelegate JoinSessionCompleteDelegate;
 	FOnDestroySessionCompleteDelegate DestroySessionCompleteDelegate;
-	FOnStartSessionCompleteDelegate StartSessionCompleteDelegate;
 
 	//
 	//Online Interface Delegate Handles
@@ -80,7 +78,6 @@ private:
 	FDelegateHandle FindSessionsCompleteDelegateHandle;
 	FDelegateHandle JoinSessionCompleteDelegateHandle;
 	FDelegateHandle DestroySessionCompleteDelegateHandle;
-	FDelegateHandle StartSessionCompleteDelegateHandle;
 
 	//Info needed when destroying sessions
 	bool bCreateSessionOnDestory{false};

@@ -14,6 +14,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "17562E026BC8C7DCE95CC3A979B3A6B0E97C8705",
+			"Assets": [
+				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_Tracer_A"
+			]
+		},
+		{
 			"ShaderMapHash": "605EED0280778399934BEA18B67DC896A06144A4",
 			"Assets": [
 				"/SpeedTreeImporter/SpeedTree9/SpeedTreeBillboardMaster"
@@ -76,6 +82,7 @@
 		{
 			"ShaderMapHash": "492FF1119C1DB5BB49C065CCC35881DDE5DAD6DD",
 			"Assets": [
+				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_AssaultRifle_MuzzleFlash_4x1",
 				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_Pistol_Streaks_01"
 			]
 		},
@@ -101,6 +108,12 @@
 			"ShaderMapHash": "71D2571C4C6F060A392CE0DFE04E65A1E8CD54E5",
 			"Assets": [
 				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_Shockwave_Refraction_01"
+			]
+		},
+		{
+			"ShaderMapHash": "1E3CC51DDBC0D699B7B32A85C24590BFD4BF45E8",
+			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/M_AdditiveScrollNiagara"
 			]
 		},
 		{
@@ -206,6 +219,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "2A28B04489597AF9591AABE106CCF4547EFDC7FF",
+			"Assets": [
+				"/Game/Assets/Materials/PP_Highlight"
+			]
+		},
+		{
 			"ShaderMapHash": "30000A455ABFCDC00C20FF127B2136B3CF53A8E3",
 			"Assets": [
 				"/DeformerGraph/Deformers/DG_LinearBlendSkin_Morph_Cloth_RecomputeNormals"
@@ -257,6 +276,12 @@
 			"ShaderMapHash": "CC2EA15EEECB13CE77C7004A88711FC89C1B011B",
 			"Assets": [
 				"/Game/Assets/MilitaryWeapSilver/FX/Materials/M_Debris_Tileable_01"
+			]
+		},
+		{
+			"ShaderMapHash": "B992A666377119282A31572882B5206B32B813BD",
+			"Assets": [
+				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/SMG11/M_SMG11_Rem"
 			]
 		},
 		{
@@ -317,6 +342,12 @@
 			"ShaderMapHash": "56CB2273CB1F0F2BBEA54CC218938A7D58B33477",
 			"Assets": [
 				"/Engine/EngineMaterials/FlattenMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "C5BCE274FD5E68F177C72AE87E1E69C7C64F56C3",
+			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/M_Master_Fresnel"
 			]
 		},
 		{
@@ -451,7 +482,8 @@
 		{
 			"ShaderMapHash": "B8EACD93A0D0630913227BE897D30C63DE7476F9",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/_Shared/Materials/MI_Opaque_BaseInstance"
+				"/Game/Assets/LearningKit_Games/Assets/_Shared/Materials/MI_Opaque_BaseInstance",
+				"/Game/Assets/LearningKit_Games/Assets/Architecture/Gates/Material/MI_Large_Gate"
 			]
 		},
 		{
@@ -568,6 +600,12 @@
 			"ShaderMapHash": "56F471B89A1D49DA9919B2DFFADF873FB0DEEE39",
 			"Assets": [
 				"/Game/Assets/LearningKit_Games/Assets/VFX/Pollen/VFX_Pollen"
+			]
+		},
+		{
+			"ShaderMapHash": "B04877B9FD7DFCA67EEF279F2DB3C4E615244F86",
+			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/MI_Aura_1"
 			]
 		},
 		{
@@ -712,6 +750,12 @@
 			"ShaderMapHash": "3D21B0E277C48FF5D1A4BF5DF4D6AE4B3E7864D7",
 			"Assets": [
 				"/Game/Assets/MarketplaceBlockout/Modern/Weapons/Materials/MasterMaterials/MM_Modern_Weapons_Textured"
+			]
+		},
+		{
+			"ShaderMapHash": "3CD7DDE207D310A2DAE32C3E2769FBC844D084FB",
+			"Assets": [
+				"/Game/Assets/LearningKit_Games/Assets/VFX/LightRay/M_vfx_lightray_01_bright"
 			]
 		},
 		{

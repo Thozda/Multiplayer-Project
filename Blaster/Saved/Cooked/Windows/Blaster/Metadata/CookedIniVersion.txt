@@ -363,7 +363,7 @@ ConfigSystem.<Editor>.Engine:/Script/Engine.Engine:WeightMapPlaceholderTextureNa
 ConfigSystem.<Editor>.Engine:/Script/Engine.Engine:WireframeMaterialName:0=/Engine/EngineDebugMaterials/WireframeMaterial.WireframeMaterial
 ConfigSystem.<Editor>.Engine:/Script/Engine.Engine:WorldSettingsClassName:0=/Script/Engine.WorldSettings
 ConfigSystem.<Editor>.Engine:/Script/Engine.GameEngine:MaxDeltaTime:0=0
-ConfigSystem.<Editor>.Engine:/Script/Engine.GameEngine:NetDriverDefinitions:0=(DefName="GameNetDriver",DriverClassName="/Script/SteamSockets.SteamSocketsNetDriver",DriverClassNameFallback="OnlineSubsystemUtils.IpNetDriver")
+ConfigSystem.<Editor>.Engine:/Script/Engine.GameEngine:NetDriverDefinitions:0=(DefName="GameNetDriver",DriverClassName="/Script/SteamSockets.SteamSocketsNetDriver",DriverClassNameFallback="/Script/OnlineSubsystemUtils.IpNetDriver")
 ConfigSystem.<Editor>.Engine:/Script/Engine.GameEngine:ServerFlushLogInterval:0=30
 ConfigSystem.<Editor>.Engine:/Script/Engine.GarbageCollectionSettings:gc.ActorClusteringEnabled:0=False
 ConfigSystem.<Editor>.Engine:/Script/Engine.GarbageCollectionSettings:gc.AllowParallelGC:0=True
@@ -1223,6 +1223,7 @@ ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:Internation
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:LocalizationTargetCatchAllChunkId:0=0
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:MapsToCook:0=(FilePath="/Game/Maps/GameStartupMap")
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:MapsToCook:1=(FilePath="/Game/Maps/Lobby")
+ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:MapsToCook:2=(FilePath="/Game/Maps/BlasterMap")
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:MaxChunkSize:0=0
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:PackageAdditionalCompressionOptions:0=
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:PackageCompressionFormat:0=Oodle

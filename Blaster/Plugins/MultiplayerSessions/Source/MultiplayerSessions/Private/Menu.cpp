@@ -6,7 +6,6 @@
 #include "OnlineSessionSettings.h"
 #include "OnlineSubsystem.h"
 #include "MultiplayerSessionsSubsystem.h"
-#include "OnlineSubsystemUtils.h"
 
 void UMenu::MenuSetup(int32 NumberOfPublicConnections, FString TypeOfMatch, FString LobbyPath)
 {
@@ -46,7 +45,6 @@ void UMenu::MenuSetup(int32 NumberOfPublicConnections, FString TypeOfMatch, FStr
 		MultiplayerSessionsSubsystem->MultiplayerOnFindSessionsComplete.AddUObject(this, &ThisClass::OnFindSessions);
 		MultiplayerSessionsSubsystem->MultiplayerOnJoinSessionComplete.AddUObject(this, &ThisClass::OnJoinSessions);
 		MultiplayerSessionsSubsystem->MultiplayerOnDestroySessionComplete.AddDynamic(this, &ThisClass::OnDestroySession);
-		MultiplayerSessionsSubsystem->MultiplayerOnStartSessionComplete.AddDynamic(this, &ThisClass::OnStartSession);
 	}
 }
 
@@ -94,6 +92,14 @@ void UMenu::MenuTearDown()
 {
 	RemoveFromParent();
 
+	if (MultiplayerSessionsSubsystem)
+	{
+		MultiplayerSessionsSubsystem->MultiplayerOnCreateSessionComplete.RemoveAll(this);
+		MultiplayerSessionsSubsystem->MultiplayerOnFindSessionsComplete.RemoveAll(this);
+		MultiplayerSessionsSubsystem->MultiplayerOnJoinSessionComplete.RemoveAll(this);
+		MultiplayerSessionsSubsystem->MultiplayerOnDestroySessionComplete.RemoveAll(this);
+	}
+
 	UWorld* World = GetWorld();
 	if (World)
 	{
@@ -118,11 +124,7 @@ void UMenu::OnCreateSession(bool bWasSuccessful)
 {
 	if (bWasSuccessful)
 	{
-		UWorld* World = GetWorld();
-		if (World)
-		{
-			World->ServerTravel(PathToLobby);
-		}
+		
 	}
 	else
 	{
@@ -153,28 +155,39 @@ void UMenu::OnFindSessions(const TArray<FOnlineSessionSearchResult>& SearchResul
 
 void UMenu::OnJoinSessions(EOnJoinSessionCompleteResult::Type Result)
 {
-	IOnlineSubsystem* Subsystem = Online::GetSubsystem(GetWorld());
-	if (Subsystem)
-	{
-		IOnlineSessionPtr SessionInterface = Subsystem->GetSessionInterface();
-
-		if (SessionInterface.IsValid())
-		{
-			FString Address;
-			SessionInterface->GetResolvedConnectString(NAME_GameSession, Address);
-
-			APlayerController* PlayerController = GetGameInstance()->GetFirstLocalPlayerController();
-			if (PlayerController)
-			{
-				PlayerController->ClientTravel(Address, TRAVEL_Absolute);
-			}
-		}
-	}
-
 	if (Result != EOnJoinSessionCompleteResult::Success)
 	{
-		JoinButton->SetIsEnabled(true);
+		if (JoinButton)
+		{
+			JoinButton->SetIsEnabled(true);
+		}
+		return;
 	}
+
+	IOnlineSubsystem* Subsystem = IOnlineSubsystem::Get();
+	if (!Subsystem) return;
+
+	IOnlineSessionPtr SessionInterface = Subsystem->GetSessionInterface();
+	if (!SessionInterface.IsValid()) return;
+
+	FString Address;
+	SessionInterface->GetResolvedConnectString(NAME_GameSession, Address);
+
+	APlayerController* PlayerController = GetGameInstance()->GetFirstLocalPlayerController();
+	if (PlayerController)
+	{
+		PlayerController->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+	}
+
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(
+     	-1, 10.f, FColor::Yellow,
+     	FString::Printf(TEXT("Resolved Address: %s"), *Address)
+		);
+	}
+	
+
 }
 
 void UMenu::OnDestroySession(bool bWasSuccessful)
