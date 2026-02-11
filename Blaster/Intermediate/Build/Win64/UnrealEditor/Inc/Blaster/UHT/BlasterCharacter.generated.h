@@ -23,7 +23,7 @@ class UDamageType;
 struct FInputActionValue;
 
 // ********** Begin Class ABlasterCharacter ********************************************************
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void ServerEquipButtonPressed_Implementation(); \
 	virtual void MulticastElim_Implementation(); \
 	DECLARE_FUNCTION(execUpdateDissolveMaterial); \
@@ -45,10 +45,10 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execMulticastElim);
 
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_CALLBACK_WRAPPERS
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_CALLBACK_WRAPPERS
 BLASTER_API UClass* Z_Construct_UClass_ABlasterCharacter_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABlasterCharacter(); \
 	friend struct Z_Construct_UClass_ABlasterCharacter_Statics; \
@@ -69,7 +69,7 @@ public: \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABlasterCharacter(ABlasterCharacter&&) = delete; \
 	ABlasterCharacter(const ABlasterCharacter&) = delete; \
@@ -79,14 +79,14 @@ public: \
 	NO_API virtual ~ABlasterCharacter();
 
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_26_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_28_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_CALLBACK_WRAPPERS \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_29_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_CALLBACK_WRAPPERS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

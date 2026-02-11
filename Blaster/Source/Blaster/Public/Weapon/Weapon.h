@@ -28,6 +28,16 @@ enum class EWeaponState : uint8
 	EWS_MAX UMETA(DisplayName = "Default MAX")
 };
 
+UENUM(BlueprintType)
+enum class EFireType : uint8
+{
+	EFT_HitScan UMETA(DisplayName = "Hit Scan Weapon"),
+	EFT_Projectile UMETA(DisplayName = "Projectile Weapon"),
+	EFT_Shotgun UMETA(DisplayName = "Shotgun Weapon"),
+	
+	EFT_MAX UMETA(DisplayName = "DefaultMax")
+};
+
 UCLASS()
 class BLASTER_API AWeapon : public AActor
 {
@@ -84,6 +94,17 @@ public:
 	//
 	void EnableCustomDepth(bool bEnable);
 
+	//
+	//FireType
+	//
+	FVector TraceEndWithScatter(const FVector& HitTarget);
+	
+	UPROPERTY(EditAnywhere)
+	EFireType FireType;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon Scatter")
+	bool bUseScatter = false;
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void OnWeaponStateSet();
@@ -99,15 +120,33 @@ protected:
 	virtual void OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent*
 		OtherComp, int32 OtherBodyIndex);
 
-private:
 	UPROPERTY(EditAnywhere)
-	EWeaponType WeaponType;
-	
+	float Damage = 20.f;
+
 	UPROPERTY()
 	ABlasterCharacter* BlasterOwnerCharacter;
 
 	UPROPERTY()
 	ABlasterPlayerController* BlasterOwnerController;
+	
+	//
+	//Weapon Scatter
+	//
+	UPROPERTY(EditAnywhere, Category = "Weapon Scatter")
+	float DistanceToSphere = 800.f;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon Scatter")
+	float SphereRadius = 75.f;
+
+	//
+	//Lag Comp
+	//
+	UPROPERTY(EditAnywhere)
+	bool bUseServerSideRewind = false;
+
+private:
+	UPROPERTY(EditAnywhere)
+	EWeaponType WeaponType;
 	
 	//
 	//Weapon State
@@ -162,14 +201,21 @@ private:
 	//
 	void SpendRound();
 
-	UFUNCTION()
-	void OnRep_Ammo();
+	UFUNCTION(Client, Reliable)
+	void ClientUpdateAmmo(int32 ServerAmmo);
 	
-	UPROPERTY(EditAnywhere, ReplicatedUsing = OnRep_Ammo)
+	UFUNCTION(Client, Reliable)
+	void ClientAddAmmo(int32 AmmoToAdd);
+	
+	UPROPERTY(EditAnywhere)
 	int32 Ammo;
 
 	UPROPERTY(EditAnywhere)
 	int32 MagCapacity;
+
+	//Number of unprocessed server request for ammo, incremented in spend round, decremented in client update ammo
+	UPROPERTY(EditAnywhere)
+	int32 Sequence = 0;
 
 	//
 	//Dropped Timer
@@ -193,4 +239,5 @@ public:
 	FORCEINLINE int32 GetAmmo() const { return Ammo; }
 	FORCEINLINE int32 GetMagCapacity() const { return MagCapacity; }
 	FORCEINLINE void SetSpawnPoint(AWeaponSpawnPoint* Spawner) { SpawnPoint = Spawner; }
+	FORCEINLINE float GetDamage() const { return Damage; }
 };

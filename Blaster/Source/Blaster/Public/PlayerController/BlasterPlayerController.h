@@ -36,6 +36,8 @@ public:
 	void OnMatchStateSet(FName State);
 	void HandleMatchHasStarted();
 	void HandleCooldown();
+
+	float SingleTripTime = 0.f;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -69,6 +71,13 @@ protected:
 
 	UFUNCTION(Client, Reliable)
 	void ClientJoinMidGame(FName StateOfMatch, float Warmup, float Match, float Cooldown, float Stating);
+
+	//
+	//Ping Warning
+	//
+	void CheckPing(float DeltaSeconds);
+	void HighPingWarning();
+	void StopHighPingWarning();
 	
 private:
 	UFUNCTION()
@@ -96,6 +105,18 @@ private:
 	int32 HUDWeaponAmmo;
 	bool bInitializeCarriedAmmo = false;
 	int32 HUDCarriedAmmo;
+
+	float HighPingRunningTime = 0.f;
+	float HighPingAnimationRunningTime = 0.f;
+
+	UPROPERTY(EditAnywhere)
+	float HighPingDuration = 5.f;
+
+	UPROPERTY(EditAnywhere)
+	float CheckPingFrequency = 20.f;
+
+	UPROPERTY(EditAnywhere)
+	float HighPingThreshold = 50.f;
 	
 	UPROPERTY(ReplicatedUsing = OnRep_MatchState)
 	FName MatchState;

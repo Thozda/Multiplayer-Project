@@ -47,6 +47,8 @@ public:
 
 	UFUNCTION(Server, Reliable)
 	void Server_LaunchGrenade(const FVector_NetQuantize& Target);
+
+	bool bLocallyReloading = false;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -95,6 +97,12 @@ protected:
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastFire(const FVector_NetQuantize& TraceHitTarget);
+
+	UFUNCTION(Server, Reliable)
+	void ServerShotgunFire(const TArray<FVector_NetQuantize>& TraceHitTargets);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastShotgunFire(const TArray<FVector_NetQuantize>& TraceHitTargets);
 
 	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 
@@ -146,9 +154,6 @@ private:
 	UPROPERTY()
 	ABlasterPlayerController* Controller;
 	
-	UPROPERTY(Replicated)
-	bool bAiming;
-	
 	UPROPERTY(EditAnywhere)
 	float BaseWalkSpeed;
 
@@ -174,6 +179,14 @@ private:
 	//
 	void InterpFOV(float DeltaTime);
 
+	UFUNCTION()
+	void OnRep_Aiming();
+
+	UPROPERTY(ReplicatedUsing = OnRep_Aiming)
+	bool bAiming = false;
+
+	bool bAimButtonPressed = false;
+	
 	//set to cameras base fov in begin play
 	float DefaultFOV;
 
@@ -190,6 +203,11 @@ private:
 	//
 	bool CanFire();
 	void Fire();
+	void FireProjectileWeapon();
+	void FireHitscanWeapon();
+	void FireShotgun();
+	void LocalFire(const FVector_NetQuantize& TraceHitTarget);
+	void ShotgunLocalFire(const TArray<FVector_NetQuantize>& TraceHitTargets);
 	void StartFireTimer();
 	void FireTimerFinished();
 

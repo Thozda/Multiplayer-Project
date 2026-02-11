@@ -90,8 +90,22 @@
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\intermediate\\build\\win64\\unrealeditor\\inc\\multiplayersessions\\uht\\multiplayersessionssubsystem.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\multiplayersessions\\permoduleinline.gen.cpp",
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\source\\multiplayersessions\\private\\menu.cpp",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\button.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\contentwidget.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\panelwidget.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\panelslot.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelslot.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelwidget.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\contentwidget.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\button.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesessionsettings.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystem.h",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemmodule.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\source\\multiplayersessions\\private\\multiplayersessions.cpp",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\source\\multiplayersessions\\public\\multiplayersessions.h"
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\source\\multiplayersessions\\public\\multiplayersessions.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\plugins\\multiplayersessions\\source\\multiplayersessions\\private\\multiplayersessionssubsystem.cpp",
+            "s:\\ue5\\ue_5.6\\engine\\plugins\\online\\onlinebase\\source\\public\\online\\onlinesessionnames.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

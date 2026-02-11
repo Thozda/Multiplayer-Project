@@ -117,6 +117,9 @@
     <ClCompile Include="..\..\Source\Blaster\Private\Components\CombatComponent.cpp">
       <Filter>Source\Blaster\Private\Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Components\LagCompensationComponent.cpp">
+      <Filter>Source\Blaster\Private\Components</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Private\GameMode">
       <UniqueIdentifier>{300C1047-325E-3658-9AB2-E341E274BC86}</UniqueIdentifier>
     </Filter>
@@ -244,6 +247,9 @@
       <Filter>Source\Blaster\Public\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h">
+      <Filter>Source\Blaster\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Components\LagCompensationComponent.h">
       <Filter>Source\Blaster\Public\Components</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\GameMode">

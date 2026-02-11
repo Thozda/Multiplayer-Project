@@ -10,6 +10,7 @@
 #include "Blaster/BlasterTypes/CombatState.h"
 #include "BlasterCharacter.generated.h"
 
+class ULagCompensationComponent;
 class UInputAction;
 class USpringArmComponent;
 class UCameraComponent;
@@ -22,6 +23,7 @@ class ABlasterPlayerController;
 class USoundCue;
 class ABlasterPlayerState;
 class UBuffComponent;
+class UBoxComponent;
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter, public IInteractWithCrosshairsInterface
@@ -57,6 +59,9 @@ public:
 	UPROPERTY(Replicated)
 	bool bDisableGameplay = false;
 
+	UPROPERTY()
+	TMap<FName, UBoxComponent*> HitCollisionBoxes;
+	
 protected:
 	virtual void BeginPlay() override;
 	void RotateInPlace(float DeltaTime);
@@ -142,6 +147,51 @@ protected:
 	void RecieveDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatorController,
 		AActor* DamageCauser);
 
+	//
+	//Hitboxes for Server-Side Rewind
+	//
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* HeadBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* PelvisBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* Spine02Box;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* Spine03Box;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* UpperArmLBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* UpperArmRBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* LowerArmLBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* LowerArmRBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* BackpackBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* BlanketBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* ThighLBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* ThighRBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* CalfLBox;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* CalfRBox;
+
 private:
 	//
 	//Components
@@ -165,6 +215,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UBuffComponent* Buff;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	ULagCompensationComponent* LagCompensation;
 
 	//
 	//Weapon
@@ -327,4 +380,6 @@ public:
 	FORCEINLINE UCombatComponent* GetCombat() const { return Combat; }
 	FORCEINLINE UStaticMeshComponent* GetAttachedGrenade() const { return AttachedGrenade; }
 	FORCEINLINE UBuffComponent* GetBuff() const { return Buff; }
+	bool IsLocallyReloading();
+	FORCEINLINE ULagCompensationComponent* GetLagCompensation() const { return LagCompensation; }
 };

@@ -21,16 +21,20 @@ class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Class AWeapon ******************************************************************
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnRep_Ammo); \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void ClientAddAmmo_Implementation(int32 AmmoToAdd); \
+	virtual void ClientUpdateAmmo_Implementation(int32 ServerAmmo); \
+	DECLARE_FUNCTION(execClientAddAmmo); \
+	DECLARE_FUNCTION(execClientUpdateAmmo); \
 	DECLARE_FUNCTION(execOnRep_WeaponState); \
 	DECLARE_FUNCTION(execOnSphereEndOverlap); \
 	DECLARE_FUNCTION(execOnSphereOverlap);
 
 
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_CALLBACK_WRAPPERS
 BLASTER_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeapon(); \
 	friend struct Z_Construct_UClass_AWeapon_Statics; \
@@ -43,12 +47,11 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		WeaponState=NETFIELD_REP_START, \
-		Ammo, \
-		NETFIELD_REP_END=Ammo	}; \
+		NETFIELD_REP_END=WeaponState	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AWeapon(AWeapon&&) = delete; \
 	AWeapon(const AWeapon&) = delete; \
@@ -58,13 +61,14 @@ public: \
 	NO_API virtual ~AWeapon();
 
 
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_31_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_41_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_34_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_CALLBACK_WRAPPERS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Weapon_Weapon_h_44_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -87,5 +91,16 @@ enum class EWeaponState : uint8;
 template<> struct TIsUEnumClass<EWeaponState> { enum { Value = true }; };
 template<> BLASTER_API UEnum* StaticEnum<EWeaponState>();
 // ********** End Enum EWeaponState ****************************************************************
+
+// ********** Begin Enum EFireType *****************************************************************
+#define FOREACH_ENUM_EFIRETYPE(op) \
+	op(EFireType::EFT_HitScan) \
+	op(EFireType::EFT_Projectile) \
+	op(EFireType::EFT_Shotgun) 
+
+enum class EFireType : uint8;
+template<> struct TIsUEnumClass<EFireType> { enum { Value = true }; };
+template<> BLASTER_API UEnum* StaticEnum<EFireType>();
+// ********** End Enum EFireType *******************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -510,6 +510,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Components\LagCompensationComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\BlasterGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -626,6 +630,7 @@
     <ClInclude Include="..\..\Source\Blaster\Public\Character\BlasterCharacter.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Components\BuffComponent.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\Components\CombatComponent.h"/>
+    <ClInclude Include="..\..\Source\Blaster\Public\Components\LagCompensationComponent.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\BlasterGameMode.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h"/>
     <ClInclude Include="..\..\Source\Blaster\Public\GameState\BlasterGameState.h"/>
