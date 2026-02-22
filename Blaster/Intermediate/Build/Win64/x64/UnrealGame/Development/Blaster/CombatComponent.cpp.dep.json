@@ -79,7 +79,11 @@
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\soundnode.generated.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\soundcue.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\projectile.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealgame\\inc\\blaster\\uht\\projectile.generated.h"
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealgame\\inc\\blaster\\uht\\projectile.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\shotgun.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\weapon\\hitscanweapon.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealgame\\inc\\blaster\\uht\\hitscanweapon.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealgame\\inc\\blaster\\uht\\shotgun.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

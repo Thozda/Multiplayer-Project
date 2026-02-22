@@ -25,6 +25,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ECombatState::ECS_Unoccupied) \
 	op(ECombatState::ECS_Reloading) \
 	op(ECombatState::ECS_ThrowingGrenade) \
+	op(ECombatState::ECS_SwappingWeapons) \
 	op(ECombatState::ECS_Max) 
 
 enum class ECombatState : uint8;

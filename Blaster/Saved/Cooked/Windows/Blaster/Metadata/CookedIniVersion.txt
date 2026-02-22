@@ -135,6 +135,7 @@ ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:CollisionChannelRed
 ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:CollisionChannelRedirects:2=(OldName="VehicleMovement",NewName="Vehicle")
 ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:CollisionChannelRedirects:3=(OldName="PawnMovement",NewName="Pawn")
 ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:DefaultChannelResponses:0=(Channel=ECC_GameTraceChannel1,DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False,Name="SkeletalMesh")
+ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:DefaultChannelResponses:1=(Channel=ECC_GameTraceChannel2,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="HitBox")
 ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:ProfileRedirects:0=(OldName="BlockingVolume",NewName="InvisibleWall")
 ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:ProfileRedirects:1=(OldName="InterpActor",NewName="IgnoreOnlyPawn")
 ConfigSystem.<Editor>.Engine:/Script/Engine.CollisionProfile:ProfileRedirects:2=(OldName="StaticMeshComponent",NewName="BlockAllDynamic")
@@ -937,7 +938,6 @@ ConfigSystem.<Editor>.Engine:DevOptions.Shaders:NumUnusedShaderCompilingThreads:
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:NumUnusedShaderCompilingThreadsDuringGame:0=4
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:ProcessGameThreadTargetTime:0=.01
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:ShaderCompilerCoreCountThreshold:0=12
-ConfigSystem.<Editor>.Engine:DevOptions.Shaders:WorkerProcessPriority:0=-1
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:WorkerTimeToLive:0=20
 ConfigSystem.<Editor>.Engine:Engine.ErrorHandling:bPromptForRemoteDebugging:0=false
 ConfigSystem.<Editor>.Engine:Engine.ErrorHandling:bPromptForRemoteDebugOnEnsure:0=false

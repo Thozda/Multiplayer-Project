@@ -75,73 +75,70 @@ ABlasterCharacter::ABlasterCharacter()
 	//Hitboxes for Server-Side Rewind
 	HeadBox = CreateDefaultSubobject<UBoxComponent>(TEXT("HeadBox"));
 	HeadBox->SetupAttachment(GetMesh(), FName("head"));
-	HeadBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("HeadBox"), HeadBox);
 	
 	PelvisBox = CreateDefaultSubobject<UBoxComponent>(TEXT("PelvisBox"));
 	PelvisBox->SetupAttachment(GetMesh(), FName("pelvis"));
-	PelvisBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("PelvisBox"), PelvisBox);
 	
 	Spine02Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Spine02Box"));
 	Spine02Box->SetupAttachment(GetMesh(), FName("spine_02"));
-	Spine02Box->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("Spine02Box"), Spine02Box);
 	
 	Spine03Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Spine03Box"));
 	Spine03Box->SetupAttachment(GetMesh(), FName("spine_03"));
-	Spine03Box->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("Spine03Box"), Spine03Box);
 	
 	UpperArmLBox = CreateDefaultSubobject<UBoxComponent>(TEXT("UpperArmLBox"));
 	UpperArmLBox->SetupAttachment(GetMesh(), FName("upperarm_l"));
-	UpperArmLBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("UpperArmLBox"), UpperArmLBox);
 	
 	UpperArmRBox = CreateDefaultSubobject<UBoxComponent>(TEXT("UpperArmRBox"));
 	UpperArmRBox->SetupAttachment(GetMesh(), FName("upperarm_r"));
-	UpperArmRBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("UpperArmRBox"), UpperArmRBox);
 	
 	LowerArmLBox = CreateDefaultSubobject<UBoxComponent>(TEXT("LowerArmLBox"));
 	LowerArmLBox->SetupAttachment(GetMesh(), FName("lowerarm_l"));
-	LowerArmLBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("LowerArmLBox"), LowerArmLBox);
 	
 	LowerArmRBox = CreateDefaultSubobject<UBoxComponent>(TEXT("LowerArmRBox"));
 	LowerArmRBox->SetupAttachment(GetMesh(), FName("lowerarm_r"));
-	LowerArmRBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("LowerArmRBox"), LowerArmRBox);
 	
 	BackpackBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BackpackBox"));
 	BackpackBox->SetupAttachment(GetMesh(), FName("backpack"));
-	BackpackBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("BackpackBox"), BackpackBox);
 	
 	BlanketBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BlanketBox"));
 	BlanketBox->SetupAttachment(GetMesh(), FName("blanket_l"));
-	BlanketBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("BlanketBox"), BlanketBox);
 	
 	ThighLBox = CreateDefaultSubobject<UBoxComponent>(TEXT("ThighLBox"));
 	ThighLBox->SetupAttachment(GetMesh(), FName("thigh_l"));
-	ThighLBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("ThighLBox"), ThighLBox);
 	
 	ThighRBox = CreateDefaultSubobject<UBoxComponent>(TEXT("ThighRBox"));
 	ThighRBox->SetupAttachment(GetMesh(), FName("thigh_r"));
-	ThighRBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("ThighRBox"), ThighRBox);
 	
 	CalfLBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CalfLBox"));
 	CalfLBox->SetupAttachment(GetMesh(), FName("calf_l"));
-	CalfLBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("CalfLBox"), CalfLBox);
 	
 	CalfRBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CalfRBox"));
 	CalfRBox->SetupAttachment(GetMesh(), FName("calf_r"));
-	CalfRBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HitCollisionBoxes.Add(FName("CalfRBox"), CalfRBox);
+
+	for (auto Box : HitCollisionBoxes)
+	{
+		if (Box.Value)
+		{
+			Box.Value->SetCollisionObjectType(ECC_HitBox);
+			Box.Value->SetCollisionResponseToAllChannels(ECR_Ignore);
+			Box.Value->SetCollisionResponseToChannel(ECC_HitBox, ECR_Block);
+			Box.Value->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		}
+	}
 	
 }
 
@@ -332,7 +329,14 @@ void ABlasterCharacter::EquipButtonPressed(const FInputActionValue& Value)
 	
 	if (Combat)
 	{
-		ServerEquipButtonPressed();
+		if (Combat->CombatState == ECombatState::ECS_Unoccupied) ServerEquipButtonPressed();
+		if (Combat->ShouldSwapWeapons() && !HasAuthority() && Combat->CombatState == ECombatState::ECS_Unoccupied &&
+			OverlappingWeapon == nullptr)
+		{
+			PlaySwapMontage();
+			Combat->CombatState = ECombatState::ECS_SwappingWeapons;
+			bFinishedSwapping = false;
+		}
 	}
 }
 
@@ -475,6 +479,15 @@ void ABlasterCharacter::PlayThrowGrenadeMontage()
 	if (AnimInstance && ThrowGrenadeMontage)
 	{
 		AnimInstance->Montage_Play(ThrowGrenadeMontage);
+	}
+}
+
+void ABlasterCharacter::PlaySwapMontage()
+{
+	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+	if (AnimInstance && SwapMontage)
+	{
+		AnimInstance->Montage_Play(SwapMontage);
 	}
 }
 

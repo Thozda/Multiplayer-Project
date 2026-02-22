@@ -16,12 +16,21 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+// ********** Begin Delegate FHighPingDelegate *****************************************************
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_9_DELEGATE \
+BLASTER_API void FHighPingDelegate_DelegateWrapper(const FMulticastScriptDelegate& HighPingDelegate, bool bPingTooHigh);
+
+
+// ********** End Delegate FHighPingDelegate *******************************************************
+
 // ********** Begin Class ABlasterPlayerController *************************************************
-#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void ServerReportPingStatus_Implementation(bool bHighPing); \
 	virtual void ClientJoinMidGame_Implementation(FName StateOfMatch, float Warmup, float Match, float Cooldown, float Stating); \
 	virtual void ServerCheckMatchState_Implementation(); \
 	virtual void ClientReportServerTime_Implementation(float TimeOfClientRequest, float TimeServerRecievedClientRequest); \
 	virtual void ServerRequestServerTime_Implementation(float TimeOfClientRequest); \
+	DECLARE_FUNCTION(execServerReportPingStatus); \
 	DECLARE_FUNCTION(execOnRep_MatchState); \
 	DECLARE_FUNCTION(execClientJoinMidGame); \
 	DECLARE_FUNCTION(execServerCheckMatchState); \
@@ -29,10 +38,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execServerRequestServerTime);
 
 
-#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_CALLBACK_WRAPPERS
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_CALLBACK_WRAPPERS
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerController_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABlasterPlayerController(); \
 	friend struct Z_Construct_UClass_ABlasterPlayerController_Statics; \
@@ -49,7 +58,7 @@ public: \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABlasterPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -61,14 +70,14 @@ public: \
 	NO_API virtual ~ABlasterPlayerController();
 
 
-#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_16_PROLOG
-#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_18_PROLOG
+#define FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_CALLBACK_WRAPPERS \
-	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_CALLBACK_WRAPPERS \
+	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

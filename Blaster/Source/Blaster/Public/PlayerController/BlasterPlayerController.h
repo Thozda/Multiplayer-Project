@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "BlasterPlayerController.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FHighPingDelegate, bool, bPingTooHigh);
+
 class ABlasterHUD;
 class UCharacterOverlay;
 class ABlasterGameMode;
@@ -38,6 +40,8 @@ public:
 	void HandleCooldown();
 
 	float SingleTripTime = 0.f;
+
+	FHighPingDelegate HighPingDelegate;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -82,6 +86,9 @@ protected:
 private:
 	UFUNCTION()
 	void OnRep_MatchState();
+
+	UFUNCTION(Server, Reliable)
+	void ServerReportPingStatus(bool bHighPing);
 
 	float WarmupTime = 0.f;
 	float MatchTime = 0.f;

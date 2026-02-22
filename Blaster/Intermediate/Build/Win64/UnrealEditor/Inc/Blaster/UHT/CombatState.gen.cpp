@@ -39,6 +39,8 @@ struct Z_Construct_UEnum_Blaster_ECombatState_Statics
 		{ "ECS_Max.Name", "ECombatState::ECS_Max" },
 		{ "ECS_Reloading.DisplayName", "Reloading" },
 		{ "ECS_Reloading.Name", "ECombatState::ECS_Reloading" },
+		{ "ECS_SwappingWeapons.DisplayName", "Swapping Weapons" },
+		{ "ECS_SwappingWeapons.Name", "ECombatState::ECS_SwappingWeapons" },
 		{ "ECS_ThrowingGrenade.DisplayName", "Throwing Grenade" },
 		{ "ECS_ThrowingGrenade.Name", "ECombatState::ECS_ThrowingGrenade" },
 		{ "ECS_Unoccupied.DisplayName", "Unoccupied" },
@@ -50,6 +52,7 @@ struct Z_Construct_UEnum_Blaster_ECombatState_Statics
 		{ "ECombatState::ECS_Unoccupied", (int64)ECombatState::ECS_Unoccupied },
 		{ "ECombatState::ECS_Reloading", (int64)ECombatState::ECS_Reloading },
 		{ "ECombatState::ECS_ThrowingGrenade", (int64)ECombatState::ECS_ThrowingGrenade },
+		{ "ECombatState::ECS_SwappingWeapons", (int64)ECombatState::ECS_SwappingWeapons },
 		{ "ECombatState::ECS_Max", (int64)ECombatState::ECS_Max },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
@@ -80,10 +83,10 @@ UEnum* Z_Construct_UEnum_Blaster_ECombatState()
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_BlasterTypes_CombatState_h__Script_Blaster_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ECombatState_StaticEnum, TEXT("ECombatState"), &Z_Registration_Info_UEnum_ECombatState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1724859208U) },
+		{ ECombatState_StaticEnum, TEXT("ECombatState"), &Z_Registration_Info_UEnum_ECombatState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4169793038U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_BlasterTypes_CombatState_h__Script_Blaster_2701188460(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_BlasterTypes_CombatState_h__Script_Blaster_4144775676(TEXT("/Script/Blaster"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_BlasterTypes_CombatState_h__Script_Blaster_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_BlasterTypes_CombatState_h__Script_Blaster_Statics::EnumInfo));

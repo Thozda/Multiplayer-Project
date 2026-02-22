@@ -43,12 +43,17 @@ public:
 	void UpdateHUDHealth();
 	void UpdateHUDShield();
 	void UpdateHUDAmmo();
+	
 	void PlayFireMontage(bool bAiming);
 	void PlayElimMontage();
 	void PlayReloadMontage();
 	void PlayThrowGrenadeMontage();
+	void PlaySwapMontage();
+	
 	void SpawnDefaultWeapon();
 	void Elim();
+
+	bool bFinishedSwapping;
 
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastElim();
@@ -272,6 +277,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = Combat)
 	UAnimMontage* ThrowGrenadeMontage;
+
+	UPROPERTY(EditAnywhere, Category = Combat)
+	UAnimMontage* SwapMontage;
 
 	//
 	//Player Health

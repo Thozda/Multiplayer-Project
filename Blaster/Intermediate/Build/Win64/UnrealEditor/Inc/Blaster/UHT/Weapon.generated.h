@@ -27,6 +27,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execClientAddAmmo); \
 	DECLARE_FUNCTION(execClientUpdateAmmo); \
 	DECLARE_FUNCTION(execOnRep_WeaponState); \
+	DECLARE_FUNCTION(execOnPingTooHigh); \
 	DECLARE_FUNCTION(execOnSphereEndOverlap); \
 	DECLARE_FUNCTION(execOnSphereOverlap);
 
@@ -46,7 +47,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		WeaponState=NETFIELD_REP_START, \
+		bUseServerSideRewind=NETFIELD_REP_START, \
+		WeaponState, \
 		NETFIELD_REP_END=WeaponState	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 

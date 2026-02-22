@@ -2,27 +2,66 @@
 
 
 #include "Weapon/ProjectileBullet.h"
+
+#include "Character/BlasterCharacter.h"
+#include "Components/LagCompensationComponent.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "PlayerController/BlasterPlayerController.h"
 
 AProjectileBullet::AProjectileBullet()
 {
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
 	ProjectileMovementComponent->bRotationFollowsVelocity = true;
 	ProjectileMovementComponent->SetIsReplicated(true);
+	ProjectileMovementComponent->InitialSpeed = InitialSpeed;
+	ProjectileMovementComponent->MaxSpeed = InitialSpeed;
+}
+
+#if WITH_EDITOR
+void AProjectileBullet::PostEditChangeProperty(struct FPropertyChangedEvent& Event)
+{
+	Super::PostEditChangeProperty(Event);
+
+	FName PropertyName = Event.Property != nullptr ? Event.Property->GetFName() : NAME_None;
+	if (PropertyName == GET_MEMBER_NAME_CHECKED(AProjectileBullet, InitialSpeed))
+	{
+		if (ProjectileMovementComponent)
+		{
+			ProjectileMovementComponent->InitialSpeed = InitialSpeed;
+			ProjectileMovementComponent->MaxSpeed = InitialSpeed;
+		}
+	}
+}
+#endif
+
+void AProjectileBullet::BeginPlay()
+{
+	Super::BeginPlay();
 }
 
 void AProjectileBullet::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
                               FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner()))
+	if (ABlasterCharacter* OwnerCharacter = Cast<ABlasterCharacter>(GetOwner()))
 	{
-		if (AController* OwnerController = OwnerCharacter->Controller)
+		if (ABlasterPlayerController* OwnerController = Cast<ABlasterPlayerController>(OwnerCharacter->Controller))
 		{
-			UGameplayStatics::ApplyDamage(OtherActor, Damage, OwnerController, this, UDamageType::StaticClass());
+			if (OwnerCharacter->HasAuthority() && !bUseServerSideRewind)
+			{
+				UGameplayStatics::ApplyDamage(OtherActor, Damage, OwnerController, this, UDamageType::StaticClass());
+				Super::OnHit(HitComponent, OtherActor, OtherComp, NormalImpulse, Hit); //Destroys Projectile
+				return;
+			}
+			ABlasterCharacter* HitCharacter = Cast<ABlasterCharacter>(OtherActor);
+			if (bUseServerSideRewind && OwnerCharacter->GetLagCompensation() && OwnerCharacter->IsLocallyControlled()
+				&& HitCharacter)
+			{
+				OwnerCharacter->GetLagCompensation()->ProjectileServerScoreRequest(HitCharacter, TraceStart, InitialVelocity,
+					OwnerController->GetServerTime() - OwnerController->SingleTripTime)
+				;
+			}
 		}
 	}
-	
-	Super::OnHit(HitComponent, OtherActor, OtherComp, NormalImpulse, Hit); //Destroys Projectile
 }

@@ -25,6 +25,17 @@ public:
 
 	virtual void Destroyed() override;
 
+	//
+	//Server-Side Rewind
+	//
+	bool bUseServerSideRewind = false;
+	FVector_NetQuantize TraceStart;
+	FVector_NetQuantize100 InitialVelocity;
+	float Damage = 20.f;
+
+	UPROPERTY(EditAnywhere)
+	float InitialSpeed = 15000;
+
 protected:
 	virtual void BeginPlay() override;
 	void SpawnTrailSystem();
@@ -51,9 +62,6 @@ protected:
 	//
 	//Damage
 	//
-	UPROPERTY(EditAnywhere)
-	float Damage = 20.f;
-	
 	UPROPERTY(EditAnywhere)
 	float DamageInnerRadius = 200.f;
 	

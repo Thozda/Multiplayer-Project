@@ -84,7 +84,11 @@ void UBlasterAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 			RightHandTransform.GetLocation() + (RightHandTransform.GetLocation() - BlasterCharacter->GetHitTarget()));
 		RightHandRotation = FMath::RInterpTo(RightHandRotation, LookAtRotation, DeltaSeconds, 30.f);
 	}
-	if (BlasterCharacter->IsLocallyReloading() && BlasterCharacter->GetCombatState() != ECombatState::ECS_ThrowingGrenade)
+	bool bFABRIKOverride = BlasterCharacter->IsLocallyReloading() &&
+		BlasterCharacter->GetCombatState() != ECombatState::ECS_ThrowingGrenade &&
+		BlasterCharacter->GetCombatState() != ECombatState::ECS_SwappingWeapons &&
+		BlasterCharacter->bFinishedSwapping;
+	if (bFABRIKOverride)
 	{
 		bUseFABRIK = !BlasterCharacter->IsLocallyReloading();
 	}

@@ -281,6 +281,8 @@
 		{
 			"ShaderMapHash": "B992A666377119282A31572882B5206B32B813BD",
 			"Assets": [
+				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/Master_Material/M_Weapon_Master_USE",
+				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/SMG11/M_SMG11",
 				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/SMG11/M_SMG11_Rem"
 			]
 		},
@@ -605,6 +607,7 @@
 		{
 			"ShaderMapHash": "B04877B9FD7DFCA67EEF279F2DB3C4E615244F86",
 			"Assets": [
+				"/Game/Assets/sA_PickupSet_1/Materials/M_sA_Aura",
 				"/Game/Assets/sA_PickupSet_1/Materials/MI_Aura_1"
 			]
 		},

@@ -16,9 +16,13 @@ class BLASTER_API AProjectileBullet : public AProjectile
 
 public:
 	AProjectileBullet();
+
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(struct FPropertyChangedEvent& Event) override;
+#endif
 	
 protected:
+	virtual void BeginPlay() override;
 	virtual void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
 		FVector NormalImpulse, const FHitResult& Hit ) override;
-
 };

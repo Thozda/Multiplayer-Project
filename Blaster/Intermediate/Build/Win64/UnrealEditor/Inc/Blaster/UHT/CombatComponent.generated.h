@@ -23,9 +23,11 @@ struct FVector_NetQuantize;
 	virtual void Server_ThrowGrenade_Implementation(); \
 	virtual void ServerReload_Implementation(); \
 	virtual void MulticastShotgunFire_Implementation(TArray<FVector_NetQuantize> const& TraceHitTargets); \
-	virtual void ServerShotgunFire_Implementation(TArray<FVector_NetQuantize> const& TraceHitTargets); \
+	virtual bool ServerShotgunFire_Validate(TArray<FVector_NetQuantize> const& , float ); \
+	virtual void ServerShotgunFire_Implementation(TArray<FVector_NetQuantize> const& TraceHitTargets, float FireDelay); \
 	virtual void MulticastFire_Implementation(FVector_NetQuantize const& TraceHitTarget); \
-	virtual void ServerFire_Implementation(FVector_NetQuantize const& TraceHitTarget); \
+	virtual bool ServerFire_Validate(FVector_NetQuantize const& , float ); \
+	virtual void ServerFire_Implementation(FVector_NetQuantize const& TraceHitTarget, float FireDelay); \
 	virtual void ServerHitTarget_Implementation(FVector_NetQuantize const& Target); \
 	virtual void ServerSetAiming_Implementation(bool bIsAiming); \
 	virtual void Server_LaunchGrenade_Implementation(FVector_NetQuantize const& Target); \
@@ -47,6 +49,8 @@ struct FVector_NetQuantize;
 	DECLARE_FUNCTION(execLaunchGrenade); \
 	DECLARE_FUNCTION(execThrowGrenadeFinished); \
 	DECLARE_FUNCTION(execShotgunShellReload); \
+	DECLARE_FUNCTION(execFinishSwapAttachWeapons); \
+	DECLARE_FUNCTION(execFinishSwap); \
 	DECLARE_FUNCTION(execFinishReloading);
 
 

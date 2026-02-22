@@ -141,7 +141,10 @@ protected:
 	//
 	//Lag Comp
 	//
-	UPROPERTY(EditAnywhere)
+	UFUNCTION()
+	void OnPingTooHigh(bool bPingTooHigh);
+	
+	UPROPERTY(Replicated, EditAnywhere)
 	bool bUseServerSideRewind = false;
 
 private:

@@ -7,23 +7,27 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBlaster_init() {}
+	BLASTER_API UFunction* Z_Construct_UDelegateFunction_Blaster_HighPingDelegate__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_Blaster;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_Blaster()
 	{
 		if (!Z_Registration_Info_UPackage__Script_Blaster.OuterSingleton)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_Blaster_HighPingDelegate__DelegateSignature,
+			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Blaster",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x46BB006F,
-				0x1380C4DA,
+				0x7C1F1C69,
+				0x539CCBDE,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Blaster.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Blaster.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Blaster(Z_Construct_UPackage__Script_Blaster, TEXT("/Script/Blaster"), Z_Registration_Info_UPackage__Script_Blaster, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x46BB006F, 0x1380C4DA));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Blaster(Z_Construct_UPackage__Script_Blaster, TEXT("/Script/Blaster"), Z_Registration_Info_UPackage__Script_Blaster, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x7C1F1C69, 0x539CCBDE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

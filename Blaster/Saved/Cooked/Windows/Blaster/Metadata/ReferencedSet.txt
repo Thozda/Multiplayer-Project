@@ -362,6 +362,7 @@
 /game/assets/animations/crouch_walk_rt_rifle_hip
 /game/assets/animations/crouch_walk_rt_rifle_ironsights
 /game/assets/animations/elim
+/game/assets/animations/equip_rifle_standing
 /game/assets/animations/fire_rifle_hip
 /game/assets/animations/fire_rifle_ironsights
 /game/assets/animations/hit_react_1_add
@@ -1011,6 +1012,7 @@
 /game/assets/textures/crosshairs/shotgun/shotgun_small_left
 /game/assets/textures/crosshairs/shotgun/shotgun_small_right
 /game/assets/textures/grenades/grenadeicon
+/game/assets/textures/overlay/wifi_signal
 /game/assets/textures/sniperscope/blkbg1920x1080
 /game/assets/textures/sniperscope/sniperscopenobg
 /game/blueprints/character/animation/abp_blastercharacter
@@ -1018,6 +1020,7 @@
 /game/blueprints/character/animation/am_fireweapon
 /game/blueprints/character/animation/am_hitreact
 /game/blueprints/character/animation/am_reload
+/game/blueprints/character/animation/am_swap
 /game/blueprints/character/animation/am_throwgrenade
 /game/blueprints/character/animation/bs_aimwalk
 /game/blueprints/character/animation/bs_crouchaimwalk
@@ -1072,6 +1075,7 @@
 /game/blueprints/weapon/projectiles/bp_projectilebullet
 /game/blueprints/weapon/projectiles/bp_projectilegrenade
 /game/blueprints/weapon/projectiles/bp_rocket
+/game/blueprints/weapon/projectiles/bp_serversiderewindprojectilebullet
 /game/blueprints/weapon/projectiles/bp_throwgrenade
 /game/maps/blastermap
 /game/maps/gamestartupmap
