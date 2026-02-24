@@ -181,10 +181,10 @@ AProjectileGrenade::~AProjectileGrenade() {}
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_ProjectileGrenade_h__Script_Blaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProjectileGrenade, AProjectileGrenade::StaticClass, TEXT("AProjectileGrenade"), &Z_Registration_Info_UClass_AProjectileGrenade, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProjectileGrenade), 3364707970U) },
+		{ Z_Construct_UClass_AProjectileGrenade, AProjectileGrenade::StaticClass, TEXT("AProjectileGrenade"), &Z_Registration_Info_UClass_AProjectileGrenade, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProjectileGrenade), 2697166175U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_ProjectileGrenade_h__Script_Blaster_1977713906(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_ProjectileGrenade_h__Script_Blaster_1816430134(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_ProjectileGrenade_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_ProjectileGrenade_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

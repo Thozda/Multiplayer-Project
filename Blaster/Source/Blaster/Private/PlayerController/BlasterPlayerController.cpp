@@ -3,6 +3,7 @@
 
 #include "PlayerController/BlasterPlayerController.h"
 
+#include "EnhancedInputComponent.h"
 #include "Character/BlasterCharacter.h"
 #include "Components/CombatComponent.h"
 #include "Components/Image.h"
@@ -13,6 +14,7 @@
 #include "HUD/Announcement.h"
 #include "HUD/BlasterHUD.h"
 #include "HUD/CharacterOverlay.h"
+#include "HUD/ReturnToMainMenu.h"
 #include "Kismet/GameplayStatics.h"
 #include "Net/UnrealNetwork.h"
 #include "PlayerState/BlasterPlayerState.h"
@@ -73,6 +75,17 @@ void ABlasterPlayerController::PollInit()
 	}
 }
 
+void ABlasterPlayerController::SetupInputComponent()
+{
+	Super::SetupInputComponent();
+	if (InputComponent == nullptr) return;
+
+	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(InputComponent))
+	{
+		EnhancedInputComponent->BindAction(QuitAction, ETriggerEvent::Started, this, &ThisClass::ShowReturnToMainMenu);
+	}
+}
+
 void ABlasterPlayerController::CheckPing(float DeltaSeconds)
 {
 	HighPingRunningTime += DeltaSeconds;
@@ -81,7 +94,6 @@ void ABlasterPlayerController::CheckPing(float DeltaSeconds)
 		PlayerState = PlayerState == nullptr ? GetPlayerState<APlayerState>() : PlayerState.Get();
 		if (PlayerState)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("PlayerState->GetPingInMilliseconds(): %f"), PlayerState->GetPingInMilliseconds())
 			if (PlayerState->GetPingInMilliseconds() > HighPingThreshold)
 			{
 				HighPingWarning();
@@ -533,6 +545,73 @@ void ABlasterPlayerController::StopHighPingWarning()
 		if (BlasterHUD->CharacterOverlay->IsAnimationPlaying(BlasterHUD->CharacterOverlay->HighPingAnimation))
 		{
 			BlasterHUD->CharacterOverlay->StopAnimation(BlasterHUD->CharacterOverlay->HighPingAnimation);
+		}
+	}
+}
+
+//
+//Return to Menu
+//
+void ABlasterPlayerController::ShowReturnToMainMenu()
+{
+	//Show Return To Main Menu Widget
+	if (ReturnToMainMenuWidget == nullptr) return;
+
+	if (ReturnToMainMenu == nullptr)
+	{
+		ReturnToMainMenu = CreateWidget<UReturnToMainMenu>(this, ReturnToMainMenuWidget);
+	}
+	if (ReturnToMainMenu)
+	{
+		bReturnToMainMenuOpen = !bReturnToMainMenuOpen;
+		if (bReturnToMainMenuOpen)
+		{
+			ReturnToMainMenu->MenuSetup();
+		}
+		else
+		{
+			ReturnToMainMenu->MenuTearDown();
+		}
+	}
+}
+
+//
+//Elim Announcement
+//
+void ABlasterPlayerController::BroadcastElim(APlayerState* Attacker, APlayerState* Vicim)
+{
+	ClientElimAnnounement(Attacker, Vicim);
+}
+
+void ABlasterPlayerController::ClientElimAnnounement_Implementation(APlayerState* Attacker, APlayerState* Victim)
+{
+	APlayerState* Self = GetPlayerState<APlayerState>();
+	if (Attacker && Victim && Self)
+	{
+		BlasterHUD = BlasterHUD == nullptr ? Cast<ABlasterHUD>(GetHUD()) : BlasterHUD;
+		if (BlasterHUD)
+		{
+			if (Attacker == Self && Victim != Self)
+			{
+				BlasterHUD->AddElimAnnounement("You", Victim->GetPlayerName());
+				return;
+			}
+			if (Victim == Self && Attacker != Self)
+			{
+				BlasterHUD->AddElimAnnounement(Attacker->GetPlayerName(), "You");
+				return;
+			}
+			if (Attacker == Victim && Attacker == Self)
+			{
+				BlasterHUD->AddElimAnnounement("You", "Yourself");
+				return;
+			}
+			if (Attacker == Victim && Attacker != Self)
+			{
+				BlasterHUD->AddElimAnnounement(Attacker->GetPlayerName(), "Themselves");
+				return;
+			}
+			BlasterHUD->AddElimAnnounement(Attacker->GetPlayerName(), Victim->GetPlayerName());
 		}
 	}
 }

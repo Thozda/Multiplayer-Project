@@ -147,7 +147,13 @@
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\CharacterOverlay.cpp">
       <Filter>Source\Blaster\Private\HUD</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\ElimAnnouncement.cpp">
+      <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\HUD\OverheadWidget.cpp">
+      <Filter>Source\Blaster\Private\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\HUD\ReturnToMainMenu.cpp">
       <Filter>Source\Blaster\Private\HUD</Filter>
     </ClCompile>
     <Filter Include="Source\Blaster\Private\Interfaces">
@@ -279,7 +285,13 @@
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\CharacterOverlay.h">
       <Filter>Source\Blaster\Public\HUD</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\ElimAnnouncement.h">
+      <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\HUD\OverheadWidget.h">
+      <Filter>Source\Blaster\Public\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\HUD\ReturnToMainMenu.h">
       <Filter>Source\Blaster\Public\HUD</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\Interfaces">

@@ -17,8 +17,13 @@ BLASTER_API UClass* Z_Construct_UClass_ABlasterHUD_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerController();
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerController_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_UCharacterOverlay_NoRegister();
+BLASTER_API UClass* Z_Construct_UClass_UReturnToMainMenu_NoRegister();
 BLASTER_API UFunction* Z_Construct_UDelegateFunction_Blaster_HighPingDelegate__DelegateSignature();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_APlayerController();
+ENGINE_API UClass* Z_Construct_UClass_APlayerState_NoRegister();
+ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Blaster();
 // ********** End Cross Module References **********************************************************
 
@@ -70,6 +75,68 @@ void FHighPingDelegate_DelegateWrapper(const FMulticastScriptDelegate& HighPingD
 	HighPingDelegate.ProcessMulticastDelegate<UObject>(&Parms);
 }
 // ********** End Delegate FHighPingDelegate *******************************************************
+
+// ********** Begin Class ABlasterPlayerController Function ClientElimAnnounement ******************
+struct BlasterPlayerController_eventClientElimAnnounement_Parms
+{
+	APlayerState* Attacker;
+	APlayerState* Victim;
+};
+static FName NAME_ABlasterPlayerController_ClientElimAnnounement = FName(TEXT("ClientElimAnnounement"));
+void ABlasterPlayerController::ClientElimAnnounement(APlayerState* Attacker, APlayerState* Victim)
+{
+	BlasterPlayerController_eventClientElimAnnounement_Parms Parms;
+	Parms.Attacker=Attacker;
+	Parms.Victim=Victim;
+	UFunction* Func = FindFunctionChecked(NAME_ABlasterPlayerController_ClientElimAnnounement);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n//Elim Announcement\n//\n" },
+#endif
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Elim Announcement" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Attacker;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Victim;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::NewProp_Attacker = { "Attacker", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BlasterPlayerController_eventClientElimAnnounement_Parms, Attacker), Z_Construct_UClass_APlayerState_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::NewProp_Victim = { "Victim", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BlasterPlayerController_eventClientElimAnnounement_Parms, Victim), Z_Construct_UClass_APlayerState_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::NewProp_Attacker,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::NewProp_Victim,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABlasterPlayerController, nullptr, "ClientElimAnnounement", Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::PropPointers), sizeof(BlasterPlayerController_eventClientElimAnnounement_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01080CC0, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(BlasterPlayerController_eventClientElimAnnounement_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABlasterPlayerController::execClientElimAnnounement)
+{
+	P_GET_OBJECT(APlayerState,Z_Param_Attacker);
+	P_GET_OBJECT(APlayerState,Z_Param_Victim);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientElimAnnounement_Implementation(Z_Param_Attacker,Z_Param_Victim);
+	P_NATIVE_END;
+}
+// ********** End Class ABlasterPlayerController Function ClientElimAnnounement ********************
 
 // ********** Begin Class ABlasterPlayerController Function ClientJoinMidGame **********************
 struct BlasterPlayerController_eventClientJoinMidGame_Parms
@@ -350,11 +417,11 @@ struct Z_Construct_UFunction_ABlasterPlayerController_ServerRequestServerTime_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//\n//Sync Time between Client and Server\n//\n//Requests current server time passing in clients time when the request was sent\n" },
+		{ "Comment", "//Requests current server time passing in clients time when the request was sent\n" },
 #endif
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Sync Time between Client and Server\n\nRequests current server time passing in clients time when the request was sent" },
+		{ "ToolTip", "Requests current server time passing in clients time when the request was sent" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -393,6 +460,7 @@ void ABlasterPlayerController::StaticRegisterNativesABlasterPlayerController()
 {
 	UClass* Class = ABlasterPlayerController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientElimAnnounement", &ABlasterPlayerController::execClientElimAnnounement },
 		{ "ClientJoinMidGame", &ABlasterPlayerController::execClientJoinMidGame },
 		{ "ClientReportServerTime", &ABlasterPlayerController::execClientReportServerTime },
 		{ "OnRep_MatchState", &ABlasterPlayerController::execOnRep_MatchState },
@@ -446,6 +514,19 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 		{ "Category", "Time" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MatchState_MetaData[] = {
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlasterGameMode_MetaData[] = {
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlasterHUD_MetaData[] = {
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CharacterOverlay_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HighPingDuration_MetaData[] = {
 		{ "Category", "BlasterPlayerController" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
@@ -458,37 +539,40 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 		{ "Category", "BlasterPlayerController" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MatchState_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnToMainMenuWidget_MetaData[] = {
+		{ "Category", "HUD" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlasterHUD_MetaData[] = {
-		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CharacterOverlay_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnToMainMenu_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlasterGameMode_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_QuitAction_MetaData[] = {
+		{ "Category", "BlasterPlayerController" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TimeSyncFrequency;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_MatchState;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlasterGameMode;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlasterHUD;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CharacterOverlay;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HighPingDuration;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CheckPingFrequency;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HighPingThreshold;
-	static const UECodeGen_Private::FNamePropertyParams NewProp_MatchState;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlasterHUD;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CharacterOverlay;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlasterGameMode;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ReturnToMainMenuWidget;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnToMainMenu;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABlasterPlayerController_ClientElimAnnounement, "ClientElimAnnounement" }, // 353495248
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ClientJoinMidGame, "ClientJoinMidGame" }, // 1111940327
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ClientReportServerTime, "ClientReportServerTime" }, // 324595013
 		{ &Z_Construct_UFunction_ABlasterPlayerController_OnRep_MatchState, "OnRep_MatchState" }, // 2911612603
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerCheckMatchState, "ServerCheckMatchState" }, // 572383824
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerReportPingStatus, "ServerReportPingStatus" }, // 810116334
-		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerRequestServerTime, "ServerRequestServerTime" }, // 1117671654
+		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerRequestServerTime, "ServerRequestServerTime" }, // 918257225
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -497,22 +581,28 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_TimeSyncFrequency = { "TimeSyncFrequency", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, TimeSyncFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeSyncFrequency_MetaData), NewProp_TimeSyncFrequency_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_MatchState = { "MatchState", "OnRep_MatchState", (EPropertyFlags)0x0040000100000020, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, MatchState), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MatchState_MetaData), NewProp_MatchState_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterGameMode = { "BlasterGameMode", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, BlasterGameMode), Z_Construct_UClass_ABlasterGameMode_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlasterGameMode_MetaData), NewProp_BlasterGameMode_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterHUD = { "BlasterHUD", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, BlasterHUD), Z_Construct_UClass_ABlasterHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlasterHUD_MetaData), NewProp_BlasterHUD_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_CharacterOverlay = { "CharacterOverlay", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, CharacterOverlay), Z_Construct_UClass_UCharacterOverlay_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterOverlay_MetaData), NewProp_CharacterOverlay_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_HighPingDuration = { "HighPingDuration", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, HighPingDuration), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HighPingDuration_MetaData), NewProp_HighPingDuration_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_CheckPingFrequency = { "CheckPingFrequency", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, CheckPingFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CheckPingFrequency_MetaData), NewProp_CheckPingFrequency_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_HighPingThreshold = { "HighPingThreshold", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, HighPingThreshold), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HighPingThreshold_MetaData), NewProp_HighPingThreshold_MetaData) };
-const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_MatchState = { "MatchState", "OnRep_MatchState", (EPropertyFlags)0x0040000100000020, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, MatchState), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MatchState_MetaData), NewProp_MatchState_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterHUD = { "BlasterHUD", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, BlasterHUD), Z_Construct_UClass_ABlasterHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlasterHUD_MetaData), NewProp_BlasterHUD_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_CharacterOverlay = { "CharacterOverlay", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, CharacterOverlay), Z_Construct_UClass_UCharacterOverlay_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterOverlay_MetaData), NewProp_CharacterOverlay_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterGameMode = { "BlasterGameMode", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, BlasterGameMode), Z_Construct_UClass_ABlasterGameMode_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlasterGameMode_MetaData), NewProp_BlasterGameMode_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_ReturnToMainMenuWidget = { "ReturnToMainMenuWidget", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, ReturnToMainMenuWidget), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnToMainMenuWidget_MetaData), NewProp_ReturnToMainMenuWidget_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_ReturnToMainMenu = { "ReturnToMainMenu", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, ReturnToMainMenu), Z_Construct_UClass_UReturnToMainMenu_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnToMainMenu_MetaData), NewProp_ReturnToMainMenu_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_QuitAction = { "QuitAction", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, QuitAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitAction_MetaData), NewProp_QuitAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlasterPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_TimeSyncFrequency,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_MatchState,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterGameMode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterHUD,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_CharacterOverlay,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_HighPingDuration,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_CheckPingFrequency,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_HighPingThreshold,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_MatchState,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterHUD,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_CharacterOverlay,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterGameMode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_ReturnToMainMenuWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_ReturnToMainMenu,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_QuitAction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABlasterPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABlasterPlayerController_Statics::DependentSingletons[])() = {
@@ -561,10 +651,10 @@ ABlasterPlayerController::~ABlasterPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlasterPlayerController, ABlasterPlayerController::StaticClass, TEXT("ABlasterPlayerController"), &Z_Registration_Info_UClass_ABlasterPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterPlayerController), 2130909639U) },
+		{ Z_Construct_UClass_ABlasterPlayerController, ABlasterPlayerController::StaticClass, TEXT("ABlasterPlayerController"), &Z_Registration_Info_UClass_ABlasterPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterPlayerController), 254890892U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_135791620(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_4109222956(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -16,9 +16,11 @@ BLASTER_API UClass* Z_Construct_UClass_ABlasterHUD();
 BLASTER_API UClass* Z_Construct_UClass_ABlasterHUD_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_UAnnouncement_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_UCharacterOverlay_NoRegister();
+BLASTER_API UClass* Z_Construct_UClass_UElimAnnouncement_NoRegister();
 BLASTER_API UScriptStruct* Z_Construct_UScriptStruct_FHUDPackage();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AHUD();
+ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Blaster();
 // ********** End Cross Module References **********************************************************
@@ -70,9 +72,65 @@ UScriptStruct* Z_Construct_UScriptStruct_FHUDPackage()
 }
 // ********** End ScriptStruct FHUDPackage *********************************************************
 
+// ********** Begin Class ABlasterHUD Function ElimAnnouncementTimerFinished ***********************
+struct Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics
+{
+	struct BlasterHUD_eventElimAnnouncementTimerFinished_Parms
+	{
+		UElimAnnouncement* MessageToRemove;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n//Elim Announcement\n//\n" },
+#endif
+		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Elim Announcement" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MessageToRemove_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MessageToRemove;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::NewProp_MessageToRemove = { "MessageToRemove", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BlasterHUD_eventElimAnnouncementTimerFinished_Parms, MessageToRemove), Z_Construct_UClass_UElimAnnouncement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MessageToRemove_MetaData), NewProp_MessageToRemove_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::NewProp_MessageToRemove,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABlasterHUD, nullptr, "ElimAnnouncementTimerFinished", Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::BlasterHUD_eventElimAnnouncementTimerFinished_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::BlasterHUD_eventElimAnnouncementTimerFinished_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABlasterHUD::execElimAnnouncementTimerFinished)
+{
+	P_GET_OBJECT(UElimAnnouncement,Z_Param_MessageToRemove);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ElimAnnouncementTimerFinished(Z_Param_MessageToRemove);
+	P_NATIVE_END;
+}
+// ********** End Class ABlasterHUD Function ElimAnnouncementTimerFinished *************************
+
 // ********** Begin Class ABlasterHUD **************************************************************
 void ABlasterHUD::StaticRegisterNativesABlasterHUD()
 {
+	UClass* Class = ABlasterHUD::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ElimAnnouncementTimerFinished", &ABlasterHUD::execElimAnnouncementTimerFinished },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 FClassRegistrationInfo Z_Registration_Info_UClass_ABlasterHUD;
 UClass* ABlasterHUD::GetPrivateStaticClass()
@@ -131,8 +189,23 @@ struct Z_Construct_UClass_ABlasterHUD_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OwningPlayer_MetaData[] = {
+		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CrosshairSpreadMax_MetaData[] = {
 		{ "Category", "BlasterHUD" },
+		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ElimAnnouncementClass_MetaData[] = {
+		{ "Category", "BlasterHUD" },
+		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ElimAnnouncementTime_MetaData[] = {
+		{ "Category", "BlasterHUD" },
+		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ElimMessages_MetaData[] = {
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/HUD/BlasterHUD.h" },
 	};
 #endif // WITH_METADATA
@@ -140,9 +213,18 @@ struct Z_Construct_UClass_ABlasterHUD_Statics
 	static const UECodeGen_Private::FClassPropertyParams NewProp_AnnouncementClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CharacterOverlay;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Announcement;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningPlayer;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CrosshairSpreadMax;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ElimAnnouncementClass;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ElimAnnouncementTime;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ElimMessages_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ElimMessages;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABlasterHUD_ElimAnnouncementTimerFinished, "ElimAnnouncementTimerFinished" }, // 1393226972
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABlasterHUD>::IsAbstract,
 	};
@@ -152,13 +234,23 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABlasterHUD_Sta
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_AnnouncementClass = { "AnnouncementClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, AnnouncementClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnnouncementClass_MetaData), NewProp_AnnouncementClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_CharacterOverlay = { "CharacterOverlay", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, CharacterOverlay), Z_Construct_UClass_UCharacterOverlay_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterOverlay_MetaData), NewProp_CharacterOverlay_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_Announcement = { "Announcement", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, Announcement), Z_Construct_UClass_UAnnouncement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Announcement_MetaData), NewProp_Announcement_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_OwningPlayer = { "OwningPlayer", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, OwningPlayer), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OwningPlayer_MetaData), NewProp_OwningPlayer_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_CrosshairSpreadMax = { "CrosshairSpreadMax", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, CrosshairSpreadMax), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CrosshairSpreadMax_MetaData), NewProp_CrosshairSpreadMax_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimAnnouncementClass = { "ElimAnnouncementClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, ElimAnnouncementClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UElimAnnouncement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ElimAnnouncementClass_MetaData), NewProp_ElimAnnouncementClass_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimAnnouncementTime = { "ElimAnnouncementTime", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, ElimAnnouncementTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ElimAnnouncementTime_MetaData), NewProp_ElimAnnouncementTime_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimMessages_Inner = { "ElimMessages", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UElimAnnouncement_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimMessages = { "ElimMessages", nullptr, (EPropertyFlags)0x0040008000000008, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterHUD, ElimMessages), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ElimMessages_MetaData), NewProp_ElimMessages_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlasterHUD_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_CharacterOverlayClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_AnnouncementClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_CharacterOverlay,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_Announcement,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_OwningPlayer,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_CrosshairSpreadMax,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimAnnouncementClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimAnnouncementTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimMessages_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterHUD_Statics::NewProp_ElimMessages,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABlasterHUD_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABlasterHUD_Statics::DependentSingletons[])() = {
@@ -171,11 +263,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ABlasterHUD_Statics::Cl
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ABlasterHUD_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ABlasterHUD_Statics::PropPointers),
 	0,
 	0x009003ACu,
@@ -201,10 +293,10 @@ struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h_
 		{ FHUDPackage::StaticStruct, Z_Construct_UScriptStruct_FHUDPackage_Statics::NewStructOps, TEXT("HUDPackage"), &Z_Registration_Info_UScriptStruct_FHUDPackage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FHUDPackage), 3572198540U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlasterHUD, ABlasterHUD::StaticClass, TEXT("ABlasterHUD"), &Z_Registration_Info_UClass_ABlasterHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterHUD), 572218782U) },
+		{ Z_Construct_UClass_ABlasterHUD, ABlasterHUD::StaticClass, TEXT("ABlasterHUD"), &Z_Registration_Info_UClass_ABlasterHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterHUD), 239725558U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h__Script_Blaster_953433875(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h__Script_Blaster_2142463441(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h__Script_Blaster_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h__Script_Blaster_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_HUD_BlasterHUD_h__Script_Blaster_Statics::ScriptStructInfo),
 	nullptr, 0);

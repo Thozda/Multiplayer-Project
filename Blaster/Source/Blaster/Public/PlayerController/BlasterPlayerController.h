@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "BlasterPlayerController.generated.h"
 
+class UInputAction;
+class UReturnToMainMenu;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FHighPingDelegate, bool, bPingTooHigh);
 
 class ABlasterHUD;
@@ -38,6 +40,7 @@ public:
 	void OnMatchStateSet(FName State);
 	void HandleMatchHasStarted();
 	void HandleCooldown();
+	void BroadcastElim(APlayerState* Attacker, APlayerState* Vicim);
 
 	float SingleTripTime = 0.f;
 
@@ -45,13 +48,15 @@ public:
 	
 protected:
 	virtual void BeginPlay() override;
-	void CheckTimeSync(float DeltaSeconds);
+	virtual void SetupInputComponent() override;
 	void PollInit();
-	void SetHUDTime();
 
 	//
 	//Sync Time between Client and Server
 	//
+	void SetHUDTime();
+	void CheckTimeSync(float DeltaSeconds);
+
 	//Requests current server time passing in clients time when the request was sent
 	UFUNCTION(Server, Reliable)
 	void ServerRequestServerTime(float TimeOfClientRequest);
@@ -82,6 +87,17 @@ protected:
 	void CheckPing(float DeltaSeconds);
 	void HighPingWarning();
 	void StopHighPingWarning();
+
+	//
+	//Quit to menu
+	//
+	void ShowReturnToMainMenu();
+
+	//
+	//Elim Announcement
+	//
+	UFUNCTION(Client, Reliable)
+	void ClientElimAnnounement(APlayerState* Attacker, APlayerState* Victim);
 	
 private:
 	UFUNCTION()
@@ -90,12 +106,24 @@ private:
 	UFUNCTION(Server, Reliable)
 	void ServerReportPingStatus(bool bHighPing);
 
+	UPROPERTY(ReplicatedUsing = OnRep_MatchState)
+	FName MatchState;
+	
+	UPROPERTY()
+	ABlasterGameMode* BlasterGameMode;
+	
+	//
+	//Timers
+	//
 	float WarmupTime = 0.f;
 	float MatchTime = 0.f;
 	float CooldownTime = 0.f;
 	float LevelStartingTime = 0.f;
 	uint32 CountdownInt = 0;
 
+	//
+	//HUD
+	//
 	bool bInitializeHealth = false;
 	float HUDHealth;
 	float HUDMaxHealth;
@@ -113,6 +141,15 @@ private:
 	bool bInitializeCarriedAmmo = false;
 	int32 HUDCarriedAmmo;
 
+	UPROPERTY()
+	ABlasterHUD* BlasterHUD;
+
+	UPROPERTY()
+	UCharacterOverlay* CharacterOverlay;
+
+	//
+	//High Ping
+	//
 	float HighPingRunningTime = 0.f;
 	float HighPingAnimationRunningTime = 0.f;
 
@@ -124,17 +161,19 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float HighPingThreshold = 50.f;
+
+	//
+	//Return to menu
+	//
+	bool bReturnToMainMenuOpen;
 	
-	UPROPERTY(ReplicatedUsing = OnRep_MatchState)
-	FName MatchState;
-	
-	UPROPERTY()
-	ABlasterHUD* BlasterHUD;
+	UPROPERTY(EditAnywhere, Category = HUD)
+	TSubclassOf<UUserWidget> ReturnToMainMenuWidget;
 
 	UPROPERTY()
-	UCharacterOverlay* CharacterOverlay;
+	UReturnToMainMenu* ReturnToMainMenu;
 
-	UPROPERTY()
-	ABlasterGameMode* BlasterGameMode;
+	UPROPERTY(EditAnywhere)
+	UInputAction* QuitAction;
 	
 };

@@ -10,6 +10,7 @@
 #include "Blaster/BlasterTypes/CombatState.h"
 #include "BlasterCharacter.generated.h"
 
+class UNiagaraSystem;
 class ULagCompensationComponent;
 class UInputAction;
 class USpringArmComponent;
@@ -24,6 +25,9 @@ class USoundCue;
 class ABlasterPlayerState;
 class UBuffComponent;
 class UBoxComponent;
+class UNiagaraComponent;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLeftGame);
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter, public IInteractWithCrosshairsInterface
@@ -51,12 +55,18 @@ public:
 	void PlaySwapMontage();
 	
 	void SpawnDefaultWeapon();
-	void Elim();
+	void Elim(bool bPlayerLeftGame);
 
 	bool bFinishedSwapping;
+	
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastElim(bool bPlayerLeftGame);
 
 	UFUNCTION(NetMulticast, Reliable)
-	void MulticastElim();
+	void MulticastGainedTheLead();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastLostTheLead();
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void ShowSniperScopeWidget(bool bShowScope);
@@ -66,6 +76,14 @@ public:
 
 	UPROPERTY()
 	TMap<FName, UBoxComponent*> HitCollisionBoxes;
+	
+	//
+	//Leave Game
+	//
+	UFUNCTION(Server, Reliable)
+	void ServerLeaveGame();
+	
+	FOnLeftGame OnLeftGame;
 	
 protected:
 	virtual void BeginPlay() override;
@@ -341,7 +359,7 @@ private:
 	UMaterialInstance* DissolveMaterialInstance;
 
 	//
-	//ElimBot
+	//ElimFX
 	//
 	UPROPERTY(EditAnywhere)
 	UParticleSystem* ElimBotEffect;
@@ -351,6 +369,12 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	USoundBase* ElimBotSound;
+
+	UPROPERTY(EditAnywhere)
+	UNiagaraSystem* CrownSystem;
+
+	UPROPERTY()
+	UNiagaraComponent* CrownComponent;
 
 	//
 	//Score
@@ -363,6 +387,11 @@ private:
 	//
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AWeapon> DefaultWeaponClass;
+
+	//
+	//Leave Game
+	//
+	bool bLeftGame;
 	
 public:
 	void SetOverlappingWeapon(AWeapon* Weapon);

@@ -7,6 +7,7 @@
 #include "PlayerController/BlasterPlayerController.h"
 #include "BlasterGameMode.generated.h"
 
+class ABlasterPlayerState;
 class ABlasterCharacter;
 class ABlasterPlayerController;
 
@@ -30,6 +31,7 @@ public:
 		ABlasterPlayerController* AttackerController);
 
 	virtual void RequestRespawn(ACharacter* ElimmedCharacter, AController* ElimmedController);
+	void PlayerLeftGame(ABlasterPlayerState* PlayerLeaving);
 
 	float LevelStartingTime = 0.f;
 

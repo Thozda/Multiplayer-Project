@@ -90,7 +90,7 @@ public:
 	//HitScan
 	UFUNCTION(Server, Reliable)
 	void ServerScoreRequest(ABlasterCharacter* HitCharacter, const FVector_NetQuantize& TraceStart,
-		const FVector_NetQuantize& HitLocation, const float HitTime, AWeapon* DamageCauser);
+		const FVector_NetQuantize& HitLocation, const float HitTime);
 
 	//Projectile
 	UFUNCTION(Server, Reliable)
@@ -100,8 +100,7 @@ public:
 	//Shotgun
 	UFUNCTION(Server, Reliable)
 	void ShotgunServerScoreRequest(const TArray<ABlasterCharacter*>& HitCharacters,
-		const FVector_NetQuantize& TraceStart, const TArray<FVector_NetQuantize>& HitLocations, const float HitTime,
-		AWeapon* DamageCauser);
+		const FVector_NetQuantize& TraceStart, const TArray<FVector_NetQuantize>& HitLocations, const float HitTime);
 
 protected:
 	virtual void BeginPlay() override;

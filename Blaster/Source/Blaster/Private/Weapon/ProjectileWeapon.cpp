@@ -34,10 +34,11 @@ void AProjectileWeapon::Fire(const FVector& HitTarget)
 						ToTarget.Rotation(), SpawnParams);
 					SpawnedProjectile->bUseServerSideRewind = false;
 					SpawnedProjectile->Damage = Damage;
+					SpawnedProjectile->HeadshotDamage = HeadshotDamage;
 				}
 				else
 				{
-					//Non-Local Player on Server - Non-Replicated Projectile - SSR
+					//Non-Local Player on Server - Non-Replicated Projectile - Use SSR
 					SpawnedProjectile = World->SpawnActor<AProjectile>(ServerSideRewindProjectileClass, SocketTransform.GetLocation(),
 						ToTarget.Rotation(), SpawnParams);
 					SpawnedProjectile->bUseServerSideRewind = true;
@@ -53,7 +54,6 @@ void AProjectileWeapon::Fire(const FVector& HitTarget)
 					SpawnedProjectile->bUseServerSideRewind = true;
 					SpawnedProjectile->TraceStart = SocketTransform.GetLocation();
 					SpawnedProjectile->InitialVelocity = SpawnedProjectile->GetActorForwardVector() * SpawnedProjectile->InitialSpeed;
-					SpawnedProjectile->Damage = Damage;
 				}
 				else
 				{
@@ -73,6 +73,7 @@ void AProjectileWeapon::Fire(const FVector& HitTarget)
 					ToTarget.Rotation(), SpawnParams);
 				SpawnedProjectile->bUseServerSideRewind = false;
 				SpawnedProjectile->Damage = Damage;
+				SpawnedProjectile->HeadshotDamage = HeadshotDamage;
 			}
 		}
 	}

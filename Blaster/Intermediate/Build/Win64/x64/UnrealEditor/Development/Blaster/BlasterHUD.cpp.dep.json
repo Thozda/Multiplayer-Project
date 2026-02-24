@@ -84,8 +84,21 @@
             "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\moviescene\\public\\evaluation\\moviescenepreanimatedstate.h",
             "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\characteroverlay.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetlayoutlibrary.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetlayoutlibrary.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\canvaspanelslot.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sconstraintcanvas.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\panelslot.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelslot.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\canvaspanelslot.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\horizontalbox.h",
+            "s:\\ue5\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\panelwidget.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelwidget.generated.h",
+            "s:\\ue5\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\horizontalbox.generated.h",
             "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\hud\\announcement.h",
-            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\announcement.generated.h"
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\announcement.generated.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\source\\blaster\\public\\hud\\elimannouncement.h",
+            "p:\\coding\\unreal projects\\multiplayer-project\\blaster\\intermediate\\build\\win64\\unrealeditor\\inc\\blaster\\uht\\elimannouncement.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
