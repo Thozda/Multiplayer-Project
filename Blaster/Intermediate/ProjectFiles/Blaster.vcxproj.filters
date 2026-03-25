@@ -90,7 +90,13 @@
     <Filter Include="Source\Blaster\BlasterTypes">
       <UniqueIdentifier>{69A66E39-133C-39E2-987D-EBC64A18AEF7}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Blaster\BlasterTypes\Announcement.h">
+      <Filter>Source\Blaster\BlasterTypes</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\BlasterTypes\CombatState.h">
+      <Filter>Source\Blaster\BlasterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\BlasterTypes\Team.h">
       <Filter>Source\Blaster\BlasterTypes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\BlasterTypes\TurningInPlace.h">
@@ -99,6 +105,12 @@
     <Filter Include="Source\Blaster\Private">
       <UniqueIdentifier>{578AA910-0706-3D25-9BC3-42F9A2EF24CD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Blaster\Private\CaptureTheFlag">
+      <UniqueIdentifier>{BA406D61-BF27-3E29-AB41-2927F760E664}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\CaptureTheFlag\FlagZone.cpp">
+      <Filter>Source\Blaster\Private\CaptureTheFlag</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Private\Character">
       <UniqueIdentifier>{C6392E4B-E003-359F-BA8E-1E3D7B11B8ED}</UniqueIdentifier>
     </Filter>
@@ -126,7 +138,13 @@
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\BlasterGameMode.cpp">
       <Filter>Source\Blaster\Private\GameMode</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\GameMode\CaptureTheFlagGameMode.cpp">
+      <Filter>Source\Blaster\Private\GameMode</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\GameMode\LobbyGameMode.cpp">
+      <Filter>Source\Blaster\Private\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\GameMode\TeamsGameMode.cpp">
       <Filter>Source\Blaster\Private\GameMode</Filter>
     </ClCompile>
     <Filter Include="Source\Blaster\Private\GameState">
@@ -192,6 +210,12 @@
     <ClCompile Include="..\..\Source\Blaster\Private\PlayerController\BlasterPlayerController.cpp">
       <Filter>Source\Blaster\Private\PlayerController</Filter>
     </ClCompile>
+    <Filter Include="Source\Blaster\Private\PlayerStart">
+      <UniqueIdentifier>{7353A9A9-2AA6-3CDE-8672-039119C6F014}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Blaster\Private\PlayerStart\TeamPlayerStart.cpp">
+      <Filter>Source\Blaster\Private\PlayerStart</Filter>
+    </ClCompile>
     <Filter Include="Source\Blaster\Private\PlayerState">
       <UniqueIdentifier>{21018D01-7D2E-3B55-AE58-8AA070DF11BB}</UniqueIdentifier>
     </Filter>
@@ -202,6 +226,9 @@
       <UniqueIdentifier>{32B21630-46DC-3A8D-BC3D-F307B4A5F5F9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Casing.cpp">
+      <Filter>Source\Blaster\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Blaster\Private\Weapon\Flag.cpp">
       <Filter>Source\Blaster\Private\Weapon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Blaster\Private\Weapon\HitScanWeapon.cpp">
@@ -237,6 +264,12 @@
     <Filter Include="Source\Blaster\Public">
       <UniqueIdentifier>{4DF4A405-29D2-3BF9-A1E7-AB6747806B7F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Blaster\Public\CaptureTheFlag">
+      <UniqueIdentifier>{85CEFB53-6BCC-3612-AA93-ACCB82B7A382}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\CaptureTheFlag\FlagZone.h">
+      <Filter>Source\Blaster\Public\CaptureTheFlag</Filter>
+    </ClInclude>
     <Filter Include="Source\Blaster\Public\Character">
       <UniqueIdentifier>{453C402C-31A1-3420-877F-11B3A084A1C1}</UniqueIdentifier>
     </Filter>
@@ -264,7 +297,13 @@
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\BlasterGameMode.h">
       <Filter>Source\Blaster\Public\GameMode</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\GameMode\CaptureTheFlagGameMode.h">
+      <Filter>Source\Blaster\Public\GameMode</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\GameMode\LobbyGameMode.h">
+      <Filter>Source\Blaster\Public\GameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\GameMode\TeamsGameMode.h">
       <Filter>Source\Blaster\Public\GameMode</Filter>
     </ClInclude>
     <Filter Include="Source\Blaster\Public\GameState">
@@ -330,6 +369,12 @@
     <ClInclude Include="..\..\Source\Blaster\Public\PlayerController\BlasterPlayerController.h">
       <Filter>Source\Blaster\Public\PlayerController</Filter>
     </ClInclude>
+    <Filter Include="Source\Blaster\Public\PlayerStart">
+      <UniqueIdentifier>{5CC6152B-A411-3BF6-91B0-3C0C4D5A5A6B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Blaster\Public\PlayerStart\TeamPlayerStart.h">
+      <Filter>Source\Blaster\Public\PlayerStart</Filter>
+    </ClInclude>
     <Filter Include="Source\Blaster\Public\PlayerState">
       <UniqueIdentifier>{70548E4F-C738-3812-A188-F35F48565DFF}</UniqueIdentifier>
     </Filter>
@@ -340,6 +385,9 @@
       <UniqueIdentifier>{DB344B61-2AE6-3B99-B6FC-C5F41F328357}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Casing.h">
+      <Filter>Source\Blaster\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Blaster\Public\Weapon\Flag.h">
       <Filter>Source\Blaster\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Blaster\Public\Weapon\HitScanWeapon.h">

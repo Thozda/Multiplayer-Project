@@ -32,8 +32,10 @@ public:
 
 	virtual void RequestRespawn(ACharacter* ElimmedCharacter, AController* ElimmedController);
 	void PlayerLeftGame(ABlasterPlayerState* PlayerLeaving);
+	virtual float CalculateDamage(AController* Attacker, AController* Victim, float BaseDamage);
 
 	float LevelStartingTime = 0.f;
+	bool bTeamsMatch = false;
 
 	UPROPERTY(EditDefaultsOnly)
 	float WarmupTime = 10.f;

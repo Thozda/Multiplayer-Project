@@ -280,6 +280,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "41ED855630858C781E43FB806715A9F05AF1BA09",
+			"Assets": [
+				"/Game/Assets/Materials/M_Wood"
+			]
+		},
+		{
 			"ShaderMapHash": "97CE8A58C22D60FC689BD0A3F67DA0EAE9A56BB0",
 			"Assets": [
 				"/Game/Assets/FX/RocketTrail/M_TrailSmoke"
@@ -372,7 +378,7 @@
 		{
 			"ShaderMapHash": "8F542C6AA25122062D5E77EBDDA4FBE50465FA05",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/M_EpicCharacter_Optimized"
+				"/Game/Assets/Materials/CharacterMaterials/MI_BlueTeam"
 			]
 		},
 		{
@@ -424,6 +430,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "5AD4297DE7458E53D44FB55C5CCAF6E363C0DB44",
+			"Assets": [
+				"/Game/Assets/Materials/CharacterMaterials/M_EpicCharacter_Dissolve"
+			]
+		},
+		{
 			"ShaderMapHash": "03D6037F28318E325F3F889970A73731B7E8E877",
 			"Assets": [
 				"/CameraCalibrationCore/Materials/M_DefaultEvenSquare"
@@ -432,8 +444,7 @@
 		{
 			"ShaderMapHash": "CD1CFA7F3014B922848ABBD8A7042E314552F548",
 			"Assets": [
-				"/Engine/EngineMaterials/Widget3DPassThrough",
-				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided"
+				"/Engine/EngineMaterials/Widget3DPassThrough"
 			]
 		},
 		{
@@ -451,10 +462,7 @@
 		{
 			"ShaderMapHash": "DD671285BC97132DFC4AF31E562C904D6809FAA2",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Backpack",
 				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_BedRoll",
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Skin",
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_SleevesShorts",
 				"/Game/Assets/LearningKit_Games/Assets/Environment/Clouds/Material/MI_Cloud_01"
 			]
 		},
@@ -474,6 +482,12 @@
 			"ShaderMapHash": "6C288F8C74910CFBC3D3DBD1A51772426F0A3A7F",
 			"Assets": [
 				"/Game/Assets/LearningKit_Games/Assets/VFX/LightRay/M_vfx_lightray_01_bright"
+			]
+		},
+		{
+			"ShaderMapHash": "E7843A8D0F509A1CB445677C692B4E196EA95D1D",
+			"Assets": [
+				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_EpicCharacter_Optimized"
 			]
 		},
 		{
@@ -558,8 +572,7 @@
 		{
 			"ShaderMapHash": "8162F59EFE908B41191A8CD1E400331EFF189AC4",
 			"Assets": [
-				"/Engine/EditorLandscapeResources/MaskBrushMaterial",
-				"/Engine/EditorLandscapeResources/MaskBrushMaterial_MaskedRegion"
+				"/Engine/EditorLandscapeResources/MaskBrushMaterial"
 			]
 		},
 		{
@@ -635,9 +648,9 @@
 			]
 		},
 		{
-			"ShaderMapHash": "22BED9BD6A10701955D514ABF450C0C5D7A34D81",
+			"ShaderMapHash": "8993FDBB6216773A71F678626C3774801463D9BC",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/M_EpicCharacter_Dissolve"
+				"/Game/Blueprints/Weapon/Flag/M_Flag"
 			]
 		},
 		{
@@ -661,7 +674,6 @@
 		{
 			"ShaderMapHash": "FFCAC5C113245BE449BC01AEE5074B8632E60614",
 			"Assets": [
-				"/Game/Assets/sA_PickupSet_1/Materials/M_sA_Aura",
 				"/Game/Assets/sA_PickupSet_1/Materials/MI_Aura_1"
 			]
 		},
@@ -712,16 +724,13 @@
 		{
 			"ShaderMapHash": "5F3AE6C93D1A163B9E8796D4BA497590AE9B5001",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/_Shared/Materials/MI_Opaque_BaseInstance",
 				"/Game/Assets/LearningKit_Games/Assets/Architecture/Gates/Material/MI_Large_Gate"
 			]
 		},
 		{
 			"ShaderMapHash": "829740D11F1344DEABF207AEA25AD153F86F634D",
 			"Assets": [
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Boots",
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Head",
-				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Tunic"
+				"/Game/Assets/LearningKit_Games/Assets/Characters/Character/Material/MI_epicCharacter_Boots"
 			]
 		},
 		{
@@ -794,8 +803,6 @@
 		{
 			"ShaderMapHash": "06E691F945A19550CE153B12DA17C933A395B57C",
 			"Assets": [
-				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/Master_Material/M_Weapon_Master_USE",
-				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/SMG11/M_SMG11",
 				"/Game/Assets/FPS_Weapon_Bundle/Weapons/Materials/SMG11/M_SMG11_Rem"
 			]
 		},

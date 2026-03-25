@@ -8,6 +8,7 @@
 #include "Interfaces/InteractWithCrosshairsInterface.h"
 #include "Components/TimelineComponent.h"
 #include "Blaster/BlasterTypes/CombatState.h"
+#include "Blaster/BlasterTypes/Team.h"
 #include "BlasterCharacter.generated.h"
 
 class UNiagaraSystem;
@@ -26,6 +27,7 @@ class ABlasterPlayerState;
 class UBuffComponent;
 class UBoxComponent;
 class UNiagaraComponent;
+class ABlasterGameMode;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLeftGame);
 
@@ -53,7 +55,8 @@ public:
 	void PlayReloadMontage();
 	void PlayThrowGrenadeMontage();
 	void PlaySwapMontage();
-	
+
+	void SetTeamColour(ETeam Team);
 	void SpawnDefaultWeapon();
 	void Elim(bool bPlayerLeftGame);
 
@@ -90,6 +93,11 @@ protected:
 	void RotateInPlace(float DeltaTime);
 	//poll for any relevant classes and init HUD
 	void PollInit();
+
+	//
+	//Team Spawn
+	//
+	void SetSpawnPoint();
 
 	//
 	//Animation
@@ -216,6 +224,8 @@ protected:
 	UBoxComponent* CalfRBox;
 
 private:
+	void OnPlayerStateInitialized();
+	
 	//
 	//Components
 	//
@@ -309,7 +319,8 @@ private:
 	
 	bool bElimmed = false;
 	FTimerHandle ElimTimer;
-
+	ABlasterGameMode* BlasterGameMode;
+	
 	UPROPERTY()
 	ABlasterPlayerController* BlasterPlayerController;
 	
@@ -357,6 +368,27 @@ private:
 	//Material instance set in blueprint used by dynamic instance
 	UPROPERTY(EditAnywhere, Category = Elim)
 	UMaterialInstance* DissolveMaterialInstance;
+
+	//
+	//Team colours
+	//
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* PurpleDissolveMatInst;
+	
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* PurpleMaterial;
+	
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* BlueDissolveMatInst;
+
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* BlueMaterial;
+
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* OriginalDissolveMatInst;
+
+	UPROPERTY(EditAnywhere, Category = Elim)
+	UMaterialInstance* OriginalMaterial;
 
 	//
 	//ElimFX
@@ -419,4 +451,7 @@ public:
 	FORCEINLINE UBuffComponent* GetBuff() const { return Buff; }
 	bool IsLocallyReloading();
 	FORCEINLINE ULagCompensationComponent* GetLagCompensation() const { return LagCompensation; }
+	bool IsHoldingTheFlag() const;
+	ETeam GetTeam();
+	void SetHoldingTheFlag(bool bHolding);
 };

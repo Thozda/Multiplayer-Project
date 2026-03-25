@@ -17,7 +17,6 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 class ABlasterCharacter;
-class AWeapon;
 struct FVector_NetQuantize100;
 struct FVector_NetQuantize;
 
@@ -59,9 +58,9 @@ struct FShotgunServerSideRewindResult;
 
 // ********** Begin Class ULagCompensationComponent ************************************************
 #define FID_Blaster_Source_Blaster_Public_Components_LagCompensationComponent_h_69_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual void ShotgunServerScoreRequest_Implementation(TArray<ABlasterCharacter*> const& HitCharacters, FVector_NetQuantize const& TraceStart, TArray<FVector_NetQuantize> const& HitLocations, const float HitTime, AWeapon* DamageCauser); \
+	virtual void ShotgunServerScoreRequest_Implementation(TArray<ABlasterCharacter*> const& HitCharacters, FVector_NetQuantize const& TraceStart, TArray<FVector_NetQuantize> const& HitLocations, const float HitTime); \
 	virtual void ProjectileServerScoreRequest_Implementation(ABlasterCharacter* HitCharacter, FVector_NetQuantize const& TraceStart, FVector_NetQuantize100 const& InitialVelocity, const float HitTime); \
-	virtual void ServerScoreRequest_Implementation(ABlasterCharacter* HitCharacter, FVector_NetQuantize const& TraceStart, FVector_NetQuantize const& HitLocation, const float HitTime, AWeapon* DamageCauser); \
+	virtual void ServerScoreRequest_Implementation(ABlasterCharacter* HitCharacter, FVector_NetQuantize const& TraceStart, FVector_NetQuantize const& HitLocation, const float HitTime); \
 	DECLARE_FUNCTION(execShotgunServerScoreRequest); \
 	DECLARE_FUNCTION(execProjectileServerScoreRequest); \
 	DECLARE_FUNCTION(execServerScoreRequest);

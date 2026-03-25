@@ -31,6 +31,7 @@ struct FVector_NetQuantize;
 	virtual void ServerHitTarget_Implementation(FVector_NetQuantize const& Target); \
 	virtual void ServerSetAiming_Implementation(bool bIsAiming); \
 	virtual void Server_LaunchGrenade_Implementation(FVector_NetQuantize const& Target); \
+	DECLARE_FUNCTION(execOnRep_HoldingTheFlag); \
 	DECLARE_FUNCTION(execOnRep_Grenades); \
 	DECLARE_FUNCTION(execOnRep_CarriedAmmo); \
 	DECLARE_FUNCTION(execOnRep_Aiming); \
@@ -76,7 +77,8 @@ public: \
 		bAiming, \
 		CarriedAmmo, \
 		Grenades, \
-		NETFIELD_REP_END=Grenades	}; \
+		bHoldingTheFlag, \
+		NETFIELD_REP_END=bHoldingTheFlag	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 

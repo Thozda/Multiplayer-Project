@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "BlasterPlayerController.generated.h"
 
+class ABlasterGameState;
+class ABlasterPlayerState;
 class UInputAction;
 class UReturnToMainMenu;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FHighPingDelegate, bool, bPingTooHigh);
@@ -37,10 +39,14 @@ public:
 	void SetHUDMatchCountdown(float CountdownTime);
 	void SetHUDAnnouncementCountdown(float CountdownTime);
 	void SetHUDGrenades(int32 Grenades);
-	void OnMatchStateSet(FName State);
-	void HandleMatchHasStarted();
+	void OnMatchStateSet(FName State, bool bTeamsMatch = false);
+	void HandleMatchHasStarted(bool bTeamsMatch = false);
 	void HandleCooldown();
 	void BroadcastElim(APlayerState* Attacker, APlayerState* Vicim);
+	void HideTeamScores();
+	void InitTeamScores();
+	void SetHUDPurpleTeamScore(int32 PurpleScore);
+	void SetHUDBlueTeamScore(int32 BlueScore);
 
 	float SingleTripTime = 0.f;
 
@@ -80,6 +86,18 @@ protected:
 
 	UFUNCTION(Client, Reliable)
 	void ClientJoinMidGame(FName StateOfMatch, float Warmup, float Match, float Cooldown, float Stating);
+
+	FString GetInfoText(const TArray<ABlasterPlayerState*>& Players);
+	FString GetTeamsInfoText(ABlasterGameState* BlasterGameState);
+
+	//
+	//Teams
+	//
+	UFUNCTION()
+	void OnRep_ShowTeamScores();
+
+	UPROPERTY(ReplicatedUsing = OnRep_ShowTeamScores)
+	bool bShowTeamScores = false;
 
 	//
 	//Ping Warning
@@ -140,6 +158,10 @@ private:
 	int32 HUDWeaponAmmo;
 	bool bInitializeCarriedAmmo = false;
 	int32 HUDCarriedAmmo;
+	bool bInitializeBlueTeam = false;
+	int32 BlueTeamScore;
+	bool bInitializePurpleTeam = false;
+	int32 PurpleTeamScore;
 
 	UPROPERTY()
 	ABlasterHUD* BlasterHUD;

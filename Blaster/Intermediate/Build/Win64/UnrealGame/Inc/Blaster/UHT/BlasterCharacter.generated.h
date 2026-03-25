@@ -22,10 +22,20 @@ class AWeapon;
 class UDamageType;
 struct FInputActionValue;
 
+// ********** Begin Delegate FOnLeftGame ***********************************************************
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_32_DELEGATE \
+BLASTER_API void FOnLeftGame_DelegateWrapper(const FMulticastScriptDelegate& OnLeftGame);
+
+
+// ********** End Delegate FOnLeftGame *************************************************************
+
 // ********** Begin Class ABlasterCharacter ********************************************************
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void ServerEquipButtonPressed_Implementation(); \
-	virtual void MulticastElim_Implementation(); \
+	virtual void ServerLeaveGame_Implementation(); \
+	virtual void MulticastLostTheLead_Implementation(); \
+	virtual void MulticastGainedTheLead_Implementation(); \
+	virtual void MulticastElim_Implementation(bool bPlayerLeftGame); \
 	DECLARE_FUNCTION(execUpdateDissolveMaterial); \
 	DECLARE_FUNCTION(execOnRep_Shield); \
 	DECLARE_FUNCTION(execOnRep_Health); \
@@ -42,13 +52,16 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execEquipButtonPressed); \
 	DECLARE_FUNCTION(execLook); \
 	DECLARE_FUNCTION(execMove); \
+	DECLARE_FUNCTION(execServerLeaveGame); \
+	DECLARE_FUNCTION(execMulticastLostTheLead); \
+	DECLARE_FUNCTION(execMulticastGainedTheLead); \
 	DECLARE_FUNCTION(execMulticastElim);
 
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_CALLBACK_WRAPPERS
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_CALLBACK_WRAPPERS
 BLASTER_API UClass* Z_Construct_UClass_ABlasterCharacter_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABlasterCharacter(); \
 	friend struct Z_Construct_UClass_ABlasterCharacter_Statics; \
@@ -69,7 +82,7 @@ public: \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABlasterCharacter(ABlasterCharacter&&) = delete; \
 	ABlasterCharacter(const ABlasterCharacter&) = delete; \
@@ -79,14 +92,14 @@ public: \
 	NO_API virtual ~ABlasterCharacter();
 
 
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_28_PROLOG
-#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_34_PROLOG
+#define FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_CALLBACK_WRAPPERS \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_31_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_CALLBACK_WRAPPERS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_Character_BlasterCharacter_h_37_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -47,6 +47,15 @@ public:
 	UTextBlock* GrenadesText;
 	
 	UPROPERTY(meta = (BindWidget))
+	UTextBlock* BlueTeamScore;
+	
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* PurpleTeamScore;
+	
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* ScoreSpacerText;
+	
+	UPROPERTY(meta = (BindWidget))
 	UImage* HighPingIcon;
 
 	UPROPERTY(meta = (BindWidgetAnim), Transient)

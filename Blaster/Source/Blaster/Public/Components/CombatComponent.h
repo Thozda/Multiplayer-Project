@@ -66,6 +66,7 @@ protected:
 	void DropEquippedWeapon();
 	void AttachActorToRightHand(AActor* ActorToAttach);
 	void AttachActorToLeftHand(AActor* ActorToAttach);
+	void AttachFlagToLeftHand(AWeapon* Flag);
 	void AttachActorToBackpack(AActor* ActorToAttach);
 	void UpdateCarriedAmmo();
 	void ReloadEmptyWeapon();
@@ -274,6 +275,18 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	int32 MaxGrenades = 4;
+
+	//
+	//Flag
+	//
+	UFUNCTION()
+	void OnRep_HoldingTheFlag();
+	
+	UPROPERTY(ReplicatedUsing = OnRep_HoldingTheFlag)
+	bool bHoldingTheFlag = false;
+
+	UPROPERTY()
+	AWeapon* TheFlag;
 
 public:
 	FORCEINLINE int32 GetGrenades() const { return Grenades; }

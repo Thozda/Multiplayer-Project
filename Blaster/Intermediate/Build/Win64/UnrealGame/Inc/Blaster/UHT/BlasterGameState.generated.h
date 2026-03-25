@@ -17,6 +17,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ABlasterGameState ********************************************************
+#define FID_Blaster_Source_Blaster_Public_GameState_BlasterGameState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnRep_BlueTeamScore); \
+	DECLARE_FUNCTION(execOnRep_PurpleTeamScore);
+
+
 BLASTER_API UClass* Z_Construct_UClass_ABlasterGameState_NoRegister();
 
 #define FID_Blaster_Source_Blaster_Public_GameState_BlasterGameState_h_17_INCLASS_NO_PURE_DECLS \
@@ -32,7 +37,9 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		TopScoringPlayers=NETFIELD_REP_START, \
-		NETFIELD_REP_END=TopScoringPlayers	}; \
+		PurpleTeamScore, \
+		BlueTeamScore, \
+		NETFIELD_REP_END=BlueTeamScore	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
@@ -52,6 +59,7 @@ public: \
 #define FID_Blaster_Source_Blaster_Public_GameState_BlasterGameState_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Blaster_Source_Blaster_Public_GameState_BlasterGameState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Blaster_Source_Blaster_Public_GameState_BlasterGameState_h_17_INCLASS_NO_PURE_DECLS \
 	FID_Blaster_Source_Blaster_Public_GameState_BlasterGameState_h_17_ENHANCED_CONSTRUCTORS \
 private: \

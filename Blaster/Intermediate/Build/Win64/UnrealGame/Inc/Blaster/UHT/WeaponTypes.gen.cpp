@@ -37,6 +37,8 @@ struct Z_Construct_UEnum_Blaster_EWeaponType_Statics
 		{ "BlueprintType", "true" },
 		{ "EWT_AssaultRifle.DisplayName", "Assault Rifle" },
 		{ "EWT_AssaultRifle.Name", "EWeaponType::EWT_AssaultRifle" },
+		{ "EWT_Flag.DisplayName", "Flag" },
+		{ "EWT_Flag.Name", "EWeaponType::EWT_Flag" },
 		{ "EWT_GrenadeLauncher.DisplayName", "Grenade Launcher" },
 		{ "EWT_GrenadeLauncher.Name", "EWeaponType::EWT_GrenadeLauncher" },
 		{ "EWT_MAX.DisplayName", "MAX" },
@@ -62,6 +64,7 @@ struct Z_Construct_UEnum_Blaster_EWeaponType_Statics
 		{ "EWeaponType::EWT_Shotgun", (int64)EWeaponType::EWT_Shotgun },
 		{ "EWeaponType::EWT_SniperRifle", (int64)EWeaponType::EWT_SniperRifle },
 		{ "EWeaponType::EWT_GrenadeLauncher", (int64)EWeaponType::EWT_GrenadeLauncher },
+		{ "EWeaponType::EWT_Flag", (int64)EWeaponType::EWT_Flag },
 		{ "EWeaponType::EWT_MAX", (int64)EWeaponType::EWT_MAX },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
@@ -92,10 +95,10 @@ UEnum* Z_Construct_UEnum_Blaster_EWeaponType()
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EWeaponType_StaticEnum, TEXT("EWeaponType"), &Z_Registration_Info_UEnum_EWeaponType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2438016219U) },
+		{ EWeaponType_StaticEnum, TEXT("EWeaponType"), &Z_Registration_Info_UEnum_EWeaponType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3281173892U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_2200815046(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_314691145(TEXT("/Script/Blaster"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_Weapon_WeaponTypes_h__Script_Blaster_Statics::EnumInfo));

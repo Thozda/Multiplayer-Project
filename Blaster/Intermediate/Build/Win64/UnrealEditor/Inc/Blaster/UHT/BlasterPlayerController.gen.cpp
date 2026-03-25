@@ -303,6 +303,41 @@ DEFINE_FUNCTION(ABlasterPlayerController::execOnRep_MatchState)
 }
 // ********** End Class ABlasterPlayerController Function OnRep_MatchState *************************
 
+// ********** Begin Class ABlasterPlayerController Function OnRep_ShowTeamScores *******************
+struct Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n//Teams\n//\n" },
+#endif
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Teams" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABlasterPlayerController, nullptr, "OnRep_ShowTeamScores", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABlasterPlayerController::execOnRep_ShowTeamScores)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ShowTeamScores();
+	P_NATIVE_END;
+}
+// ********** End Class ABlasterPlayerController Function OnRep_ShowTeamScores *********************
+
 // ********** Begin Class ABlasterPlayerController Function ServerCheckMatchState ******************
 static FName NAME_ABlasterPlayerController_ServerCheckMatchState = FName(TEXT("ServerCheckMatchState"));
 void ABlasterPlayerController::ServerCheckMatchState()
@@ -464,6 +499,7 @@ void ABlasterPlayerController::StaticRegisterNativesABlasterPlayerController()
 		{ "ClientJoinMidGame", &ABlasterPlayerController::execClientJoinMidGame },
 		{ "ClientReportServerTime", &ABlasterPlayerController::execClientReportServerTime },
 		{ "OnRep_MatchState", &ABlasterPlayerController::execOnRep_MatchState },
+		{ "OnRep_ShowTeamScores", &ABlasterPlayerController::execOnRep_ShowTeamScores },
 		{ "ServerCheckMatchState", &ABlasterPlayerController::execServerCheckMatchState },
 		{ "ServerReportPingStatus", &ABlasterPlayerController::execServerReportPingStatus },
 		{ "ServerRequestServerTime", &ABlasterPlayerController::execServerRequestServerTime },
@@ -514,6 +550,9 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 		{ "Category", "Time" },
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShowTeamScores_MetaData[] = {
+		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MatchState_MetaData[] = {
 		{ "ModuleRelativePath", "Public/PlayerController/BlasterPlayerController.h" },
 	};
@@ -553,6 +592,8 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TimeSyncFrequency;
+	static void NewProp_bShowTeamScores_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShowTeamScores;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_MatchState;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlasterGameMode;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlasterHUD;
@@ -570,6 +611,7 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ClientJoinMidGame, "ClientJoinMidGame" }, // 1111940327
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ClientReportServerTime, "ClientReportServerTime" }, // 324595013
 		{ &Z_Construct_UFunction_ABlasterPlayerController_OnRep_MatchState, "OnRep_MatchState" }, // 2911612603
+		{ &Z_Construct_UFunction_ABlasterPlayerController_OnRep_ShowTeamScores, "OnRep_ShowTeamScores" }, // 44557519
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerCheckMatchState, "ServerCheckMatchState" }, // 572383824
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerReportPingStatus, "ServerReportPingStatus" }, // 810116334
 		{ &Z_Construct_UFunction_ABlasterPlayerController_ServerRequestServerTime, "ServerRequestServerTime" }, // 918257225
@@ -581,6 +623,11 @@ struct Z_Construct_UClass_ABlasterPlayerController_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_TimeSyncFrequency = { "TimeSyncFrequency", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, TimeSyncFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeSyncFrequency_MetaData), NewProp_TimeSyncFrequency_MetaData) };
+void Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_bShowTeamScores_SetBit(void* Obj)
+{
+	((ABlasterPlayerController*)Obj)->bShowTeamScores = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_bShowTeamScores = { "bShowTeamScores", "OnRep_ShowTeamScores", (EPropertyFlags)0x0020080100000020, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABlasterPlayerController), &Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_bShowTeamScores_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bShowTeamScores_MetaData), NewProp_bShowTeamScores_MetaData) };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_MatchState = { "MatchState", "OnRep_MatchState", (EPropertyFlags)0x0040000100000020, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, MatchState), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MatchState_MetaData), NewProp_MatchState_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterGameMode = { "BlasterGameMode", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, BlasterGameMode), Z_Construct_UClass_ABlasterGameMode_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlasterGameMode_MetaData), NewProp_BlasterGameMode_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterHUD = { "BlasterHUD", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, BlasterHUD), Z_Construct_UClass_ABlasterHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlasterHUD_MetaData), NewProp_BlasterHUD_MetaData) };
@@ -593,6 +640,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayer
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_QuitAction = { "QuitAction", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerController, QuitAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitAction_MetaData), NewProp_QuitAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlasterPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_TimeSyncFrequency,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_bShowTeamScores,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_MatchState,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterGameMode,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerController_Statics::NewProp_BlasterHUD,
@@ -636,8 +684,10 @@ UClass* Z_Construct_UClass_ABlasterPlayerController()
 #if VALIDATE_CLASS_REPS
 void ABlasterPlayerController::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 {
+	static FName Name_bShowTeamScores(TEXT("bShowTeamScores"));
 	static FName Name_MatchState(TEXT("MatchState"));
 	const bool bIsValid = true
+		&& Name_bShowTeamScores == ClassReps[(int32)ENetFields_Private::bShowTeamScores].Property->GetFName()
 		&& Name_MatchState == ClassReps[(int32)ENetFields_Private::MatchState].Property->GetFName();
 	checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ABlasterPlayerController"));
 }
@@ -651,10 +701,10 @@ ABlasterPlayerController::~ABlasterPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlasterPlayerController, ABlasterPlayerController::StaticClass, TEXT("ABlasterPlayerController"), &Z_Registration_Info_UClass_ABlasterPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterPlayerController), 254890892U) },
+		{ Z_Construct_UClass_ABlasterPlayerController, ABlasterPlayerController::StaticClass, TEXT("ABlasterPlayerController"), &Z_Registration_Info_UClass_ABlasterPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterPlayerController), 2433309701U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_4109222956(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_3780777359(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerController_BlasterPlayerController_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

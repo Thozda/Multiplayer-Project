@@ -17,13 +17,14 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ABlasterPlayerState ******************************************************
-#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnRep_Team); \
 	DECLARE_FUNCTION(execOnRep_Defeats);
 
 
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerState_NoRegister();
 
-#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABlasterPlayerState(); \
 	friend struct Z_Construct_UClass_ABlasterPlayerState_Statics; \
@@ -36,11 +37,12 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		Defeats=NETFIELD_REP_START, \
-		NETFIELD_REP_END=Defeats	}; \
+		Team, \
+		NETFIELD_REP_END=Team	}; \
 	DECLARE_VALIDATE_GENERATED_REP_ENUMS(NO_API)
 
 
-#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABlasterPlayerState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -52,13 +54,13 @@ public: \
 	NO_API virtual ~ABlasterPlayerState();
 
 
-#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_14_PROLOG
-#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_GENERATED_BODY \
+#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_15_PROLOG
+#define FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

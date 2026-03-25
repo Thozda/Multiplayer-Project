@@ -16,6 +16,7 @@ BLASTER_API UClass* Z_Construct_UClass_ABlasterCharacter_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerController_NoRegister();
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerState();
 BLASTER_API UClass* Z_Construct_UClass_ABlasterPlayerState_NoRegister();
+BLASTER_API UEnum* Z_Construct_UEnum_Blaster_ETeam();
 ENGINE_API UClass* Z_Construct_UClass_APlayerState();
 UPackage* Z_Construct_UPackage__Script_Blaster();
 // ********** End Cross Module References **********************************************************
@@ -49,12 +50,42 @@ DEFINE_FUNCTION(ABlasterPlayerState::execOnRep_Defeats)
 }
 // ********** End Class ABlasterPlayerState Function OnRep_Defeats *********************************
 
+// ********** Begin Class ABlasterPlayerState Function OnRep_Team **********************************
+struct Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PlayerState/BlasterPlayerState.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ABlasterPlayerState, nullptr, "OnRep_Team", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABlasterPlayerState::execOnRep_Team)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_Team();
+	P_NATIVE_END;
+}
+// ********** End Class ABlasterPlayerState Function OnRep_Team ************************************
+
 // ********** Begin Class ABlasterPlayerState ******************************************************
 void ABlasterPlayerState::StaticRegisterNativesABlasterPlayerState()
 {
 	UClass* Class = ABlasterPlayerState::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnRep_Defeats", &ABlasterPlayerState::execOnRep_Defeats },
+		{ "OnRep_Team", &ABlasterPlayerState::execOnRep_Team },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -108,14 +139,20 @@ struct Z_Construct_UClass_ABlasterPlayerState_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Defeats_MetaData[] = {
 		{ "ModuleRelativePath", "Public/PlayerState/BlasterPlayerState.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Team_MetaData[] = {
+		{ "ModuleRelativePath", "Public/PlayerState/BlasterPlayerState.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Character;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Controller;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Defeats;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Team_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Team;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABlasterPlayerState_OnRep_Defeats, "OnRep_Defeats" }, // 81546775
+		{ &Z_Construct_UFunction_ABlasterPlayerState_OnRep_Team, "OnRep_Team" }, // 783111906
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -126,10 +163,14 @@ struct Z_Construct_UClass_ABlasterPlayerState_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Character = { "Character", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerState, Character), Z_Construct_UClass_ABlasterCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Character_MetaData), NewProp_Character_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Controller = { "Controller", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerState, Controller), Z_Construct_UClass_ABlasterPlayerController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Controller_MetaData), NewProp_Controller_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Defeats = { "Defeats", "OnRep_Defeats", (EPropertyFlags)0x0040000100000020, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerState, Defeats), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Defeats_MetaData), NewProp_Defeats_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Team_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Team = { "Team", "OnRep_Team", (EPropertyFlags)0x0040000100000020, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlasterPlayerState, Team), Z_Construct_UEnum_Blaster_ETeam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Team_MetaData), NewProp_Team_MetaData) }; // 3922529676
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlasterPlayerState_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Character,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Controller,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Defeats,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Team_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlasterPlayerState_Statics::NewProp_Team,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABlasterPlayerState_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABlasterPlayerState_Statics::DependentSingletons[])() = {
@@ -164,8 +205,10 @@ UClass* Z_Construct_UClass_ABlasterPlayerState()
 void ABlasterPlayerState::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 {
 	static FName Name_Defeats(TEXT("Defeats"));
+	static FName Name_Team(TEXT("Team"));
 	const bool bIsValid = true
-		&& Name_Defeats == ClassReps[(int32)ENetFields_Private::Defeats].Property->GetFName();
+		&& Name_Defeats == ClassReps[(int32)ENetFields_Private::Defeats].Property->GetFName()
+		&& Name_Team == ClassReps[(int32)ENetFields_Private::Team].Property->GetFName();
 	checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ABlasterPlayerState"));
 }
 #endif
@@ -178,10 +221,10 @@ ABlasterPlayerState::~ABlasterPlayerState() {}
 struct Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h__Script_Blaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlasterPlayerState, ABlasterPlayerState::StaticClass, TEXT("ABlasterPlayerState"), &Z_Registration_Info_UClass_ABlasterPlayerState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterPlayerState), 274312576U) },
+		{ Z_Construct_UClass_ABlasterPlayerState, ABlasterPlayerState::StaticClass, TEXT("ABlasterPlayerState"), &Z_Registration_Info_UClass_ABlasterPlayerState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlasterPlayerState), 4221982274U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h__Script_Blaster_231320407(TEXT("/Script/Blaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h__Script_Blaster_288772065(TEXT("/Script/Blaster"),
 	Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h__Script_Blaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Blaster_Source_Blaster_Public_PlayerState_BlasterPlayerState_h__Script_Blaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
